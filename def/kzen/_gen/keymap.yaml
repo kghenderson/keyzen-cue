@@ -1,0 +1,191 @@
+SublimeText:
+  Commands:
+    caret.move.up:
+      AppLabel: Up
+      Binds: []
+    caret.move.left:
+      Binds: []
+    caret.move.right:
+      Binds: []
+    caret.move.up.with-select:
+      Binds: []
+    caret.move.down.with-select:
+      Binds: []
+    caret.move.left.with-select:
+      Binds: []
+    caret.move.right.with-select:
+      Binds: []
+    caret.move.line.begin:
+      Binds: []
+    caret.move.line.end:
+      Binds: []
+    caret.move.line.begin.with-select:
+      Binds: []
+    caret.move.line.end.with-select:
+      Binds: []
+    caret.move.word.start:
+      Binds: []
+    caret.move.word.end:
+      Binds: []
+    caret.move.word.start.with-select:
+      Binds: []
+    caret.move.word.end.with-select:
+      Binds: []
+    caret.move.subword.start:
+      Binds: []
+    caret.move.subword.end:
+      Binds: []
+    caret.move.subword.start.with-select:
+      Binds: []
+    caret.move.subword.end.with-select:
+      Binds: []
+    cut:
+      Binds: []
+    copy:
+      Binds: []
+    paste:
+      Binds: []
+    undo:
+      Binds: []
+    caret.clone.above:
+      Binds: []
+    find:
+      Binds: []
+    find-in-files:
+      Binds: []
+    replace:
+      Binds: []
+    redo:
+      Binds: []
+    caret.clone.below:
+      Binds: []
+    replace-in-files:
+      Binds: []
+Jetbrains:
+  Commands:
+    caret.move.up:
+      AppLabel: Up
+      Binds:
+        - ctrl+alt+super+i
+    cut:
+      AppLabel: Cut
+      Binds: []
+    caret.clone.above:
+      AppLabel: Clone Caret Above
+      Binds: []
+    find:
+      AppLabel: Find
+      Binds: []
+    rename:
+      AppLabel: Rename
+      Binds: []
+    copy:
+      AppLabel: Copy
+      Binds: []
+    paste:
+      AppLabel: Paste
+      Binds: []
+    undo:
+      AppLabel: Undo
+      Binds: []
+    find-in-files:
+      AppLabel: Find in Files
+      Binds: []
+    find-next:
+      AppLabel: Find Next / Move to Next Occurrence
+      Binds: []
+    find-previous:
+      AppLabel: Find Previous / Move to Previous Occurrence
+      Binds: []
+    replace:
+      AppLabel: Replace
+      Binds: []
+    caret.move.down:
+      AppLabel: Down
+      Binds:
+        - ctrl+alt+super+k
+    caret.move.left:
+      AppLabel: Left
+      Binds:
+        - ctrl+alt+super+j
+    caret.move.right:
+      AppLabel: Right
+      Binds:
+        - ctrl+alt+super+l
+    caret.move.up.with-select:
+      AppLabel: Up with Selection
+      Binds:
+        - ctrl+alt+super+shift+i
+    caret.move.down.with-select:
+      AppLabel: Down with Selection
+      Binds:
+        - ctrl+alt+super+shift+k
+    caret.move.left.with-select:
+      AppLabel: Left with Selection
+      Binds:
+        - ctrl+alt+super+shift+j
+    caret.move.right.with-select:
+      AppLabel: Right with Selection
+      Binds:
+        - ctrl+alt+super+shift+l
+    caret.move.line.begin:
+      AppLabel: Move Caret to Line Start
+      Binds:
+        - home
+        - cmd+ctrl+right
+    caret.move.line.end:
+      AppLabel: Move Caret to Line End
+      Binds:
+        - end
+        - cmd+ctrl+left
+    caret.move.line.begin.with-select:
+      AppLabel: Move Caret to Line Start with Selection
+      Binds:
+        - shift+home
+        - cmd+ctrl+shift+right
+    caret.move.line.end.with-select:
+      AppLabel: Move Caret to Line End with Selection
+      Binds:
+        - shift+end
+        - cmd+ctrl+shift+right
+    caret.move.word.start:
+      AppLabel: Move Caret to Previous Word
+      Binds:
+        - cmd+left
+    caret.move.word.end:
+      AppLabel: Move Caret to Next Word
+      Binds:
+        - cmd+right
+    caret.move.word.start.with-select:
+      AppLabel: Move Caret to Previous Word with Selection
+      Binds:
+        - cmd+shift+left
+    caret.move.word.end.with-select:
+      AppLabel: Move Caret to Next Word with Selection
+      Binds:
+        - cmd+shift+right
+    caret.move.subword.start:
+      AppLabel: Move Caret to Previous Word in Different 'CamelHumps' Mode
+      Binds: []
+    caret.move.subword.end:
+      AppLabel: Move Caret to Next Word in Different 'CamelHumps' Mode
+      Binds: []
+    caret.move.subword.start.with-select:
+      AppLabel: Move Caret to Previous Word with Selection in Different 'CamelHumps' Mode
+      Binds: []
+    caret.move.subword.end.with-select:
+      AppLabel: Move Caret to Next Word with Selection in Different 'CamelHumps' Mode
+      Binds: []
+    goto:
+      AppLabel: GoTo
+      Binds:
+        - cmd+g
+    redo:
+      AppLabel: Redo
+      Binds: []
+    caret.clone.below:
+      AppLabel: Clone Caret Below
+      Binds: []
+    replace-in-files:
+      AppLabel: Replace in Files
+      Binds: []

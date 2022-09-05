@@ -1,0 +1,13 @@
+Caret
+
+Hyper(semi-hyper, no shift)
+
+---
+| 01-Nav | Move Caret Up | Hyper-I
+
+
+
+
+Windows: Ctrl+Shift:
+Mac:
+Ctrl+Shift

@@ -1,0 +1,16 @@
+
+Inspired by the Trampoline files for VI & Kakoune.
+
+Hyper Key is optional:
+
+# Basic Navigation:
+
+
+# Moving Statements
+Up
+Down
+Left (Unindent, Dedent, Move Out)
+Right (Indent, Move In)
+
+
+Preferences:
