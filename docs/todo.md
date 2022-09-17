@@ -17,3 +17,5 @@ Plugins
 - PSI Viewer
 - DotEnv support
 - 
+                       
+- Alt+Shift for tables/move
