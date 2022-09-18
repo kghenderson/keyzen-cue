@@ -5,7 +5,6 @@ package cue2
 // CommandNames are the central/global names for all commands
 #CommandName: string
 
-
 //
 
 #CommandDetails: [cmdName=#CommandName]: {
@@ -17,7 +16,6 @@ package cue2
 }
 
 #AppCommandMap: {...}
-
 
 #Command: {
 	Name:               string

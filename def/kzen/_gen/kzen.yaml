@@ -1,31 +1,41 @@
 KZ:
   commandNamesLookup:
     CursorMoveToLineBackward: true
-    CursorMoveToLineForward: true
-    CursorMoveToCharBackward: true
-    CursorMoveToCharForward: true
-    CursorMoveToPageBackward: true
-    CursorMoveToPageForward: true
-    CursorMoveToLineBegin: true
-    CursorMoveToLineEnd: true
-    CursorMoveToTextBegin: true
-    CursorMoveToTextEnd: true
-    CursorMoveToWordBackward: true
-    CursorMoveToWordForward: true
-    CursorMoveToSubwordBackward: true
-    CursorMoveToSubwordForward: true
-    CursorMoveToLineForwardSelect: true
     CursorMoveToLineBackwardSelect: true
-    CursorMoveToCharForwardSelect: true
+    CursorMoveToLineForward: true
+    CursorMoveToLineForwardSelect: true
+    CursorMoveToCharBackward: true
     CursorMoveToCharBackwardSelect: true
-    CursorMoveToLineEndSelect: true
+    CursorMoveToCharForward: true
+    CursorMoveToCharForwardSelect: true
+    CursorMoveToPageBackward: true
+    CursorMoveToPageBackwardSelect: true
+    CursorMoveToPageForward: true
+    CursorMoveToPageForwardSelect: true
+    CursorMoveToLineBegin: true
     CursorMoveToLineBeginSelect: true
-    CursorMoveToTextEndSelect: true
+    CursorMoveToLineEnd: true
+    CursorMoveToLineEndSelect: true
+    CursorMoveToTextBegin: true
     CursorMoveToTextBeginSelect: true
-    CursorMoveToWordForwardSelect: true
+    CursorMoveToTextEnd: true
+    CursorMoveToTextEndSelect: true
+    CursorMoveToWordBackward: true
     CursorMoveToWordBackwardSelect: true
-    CursorMoveToSubwordForwardSelect: true
+    CursorMoveToWordForward: true
+    CursorMoveToWordForwardSelect: true
+    CursorMoveToSubwordBackward: true
     CursorMoveToSubwordBackwardSelect: true
+    CursorMoveToSubwordForward: true
+    CursorMoveToSubwordForwardSelect: true
+    CursorSelectionExpand: true
+    CursorSelectionContract: true
+    EditNodeMoveLineUp: true
+    EditNodeMoveLineDown: true
+    EditNodeMoveLineOut: true
+    EditNodeMoveLineIn: true
+    EditNodeRename: true
+    EditNodeDelete: true
   commandNamesSorted:
     - CursorMoveToCharBackward
     - CursorMoveToCharBackwardSelect
@@ -40,7 +50,9 @@ KZ:
     - CursorMoveToLineForward
     - CursorMoveToLineForwardSelect
     - CursorMoveToPageBackward
+    - CursorMoveToPageBackwardSelect
     - CursorMoveToPageForward
+    - CursorMoveToPageForwardSelect
     - CursorMoveToSubwordBackward
     - CursorMoveToSubwordBackwardSelect
     - CursorMoveToSubwordForward
@@ -53,35 +65,90 @@ KZ:
     - CursorMoveToWordBackwardSelect
     - CursorMoveToWordForward
     - CursorMoveToWordForwardSelect
+    - CursorSelectionContract
+    - CursorSelectionExpand
+    - EditNodeDelete
+    - EditNodeMoveLineDown
+    - EditNodeMoveLineIn
+    - EditNodeMoveLineOut
+    - EditNodeMoveLineUp
+    - EditNodeRename
   checkCommandNamesUnique: true
   CommandNames:
     - CursorMoveToLineBackward
-    - CursorMoveToLineForward
-    - CursorMoveToCharBackward
-    - CursorMoveToCharForward
-    - CursorMoveToPageBackward
-    - CursorMoveToPageForward
-    - CursorMoveToLineBegin
-    - CursorMoveToLineEnd
-    - CursorMoveToTextBegin
-    - CursorMoveToTextEnd
-    - CursorMoveToWordBackward
-    - CursorMoveToWordForward
-    - CursorMoveToSubwordBackward
-    - CursorMoveToSubwordForward
-    - CursorMoveToLineForwardSelect
     - CursorMoveToLineBackwardSelect
-    - CursorMoveToCharForwardSelect
+    - CursorMoveToLineForward
+    - CursorMoveToLineForwardSelect
+    - CursorMoveToCharBackward
     - CursorMoveToCharBackwardSelect
-    - CursorMoveToLineEndSelect
+    - CursorMoveToCharForward
+    - CursorMoveToCharForwardSelect
+    - CursorMoveToPageBackward
+    - CursorMoveToPageBackwardSelect
+    - CursorMoveToPageForward
+    - CursorMoveToPageForwardSelect
+    - CursorMoveToLineBegin
     - CursorMoveToLineBeginSelect
-    - CursorMoveToTextEndSelect
+    - CursorMoveToLineEnd
+    - CursorMoveToLineEndSelect
+    - CursorMoveToTextBegin
     - CursorMoveToTextBeginSelect
-    - CursorMoveToWordForwardSelect
+    - CursorMoveToTextEnd
+    - CursorMoveToTextEndSelect
+    - CursorMoveToWordBackward
     - CursorMoveToWordBackwardSelect
-    - CursorMoveToSubwordForwardSelect
+    - CursorMoveToWordForward
+    - CursorMoveToWordForwardSelect
+    - CursorMoveToSubwordBackward
     - CursorMoveToSubwordBackwardSelect
+    - CursorMoveToSubwordForward
+    - CursorMoveToSubwordForwardSelect
+    - CursorSelectionExpand
+    - CursorSelectionContract
+    - EditNodeMoveLineUp
+    - EditNodeMoveLineDown
+    - EditNodeMoveLineOut
+    - EditNodeMoveLineIn
+    - EditNodeRename
+    - EditNodeDelete
   checkCommandsInCommandNames: true
+  checkAllCommandsNamesHaveCommands:
+    CursorMoveToLineBackward: true
+    CursorMoveToLineBackwardSelect: true
+    CursorMoveToLineForward: true
+    CursorMoveToLineForwardSelect: true
+    CursorMoveToCharBackward: true
+    CursorMoveToCharBackwardSelect: true
+    CursorMoveToCharForward: true
+    CursorMoveToCharForwardSelect: true
+    CursorMoveToPageBackward: true
+    CursorMoveToPageBackwardSelect: true
+    CursorMoveToPageForward: true
+    CursorMoveToPageForwardSelect: true
+    CursorMoveToLineBegin: true
+    CursorMoveToLineBeginSelect: true
+    CursorMoveToLineEnd: true
+    CursorMoveToLineEndSelect: true
+    CursorMoveToTextBegin: true
+    CursorMoveToTextBeginSelect: true
+    CursorMoveToTextEnd: true
+    CursorMoveToTextEndSelect: true
+    CursorMoveToWordBackward: true
+    CursorMoveToWordBackwardSelect: true
+    CursorMoveToWordForward: true
+    CursorMoveToWordForwardSelect: true
+    CursorMoveToSubwordBackward: true
+    CursorMoveToSubwordBackwardSelect: true
+    CursorMoveToSubwordForward: true
+    CursorMoveToSubwordForwardSelect: true
+    CursorSelectionExpand: true
+    CursorSelectionContract: true
+    EditNodeMoveLineUp: true
+    EditNodeMoveLineDown: true
+    EditNodeMoveLineOut: true
+    EditNodeMoveLineIn: true
+    EditNodeRename: true
+    EditNodeDelete: true
   Commands:
     CursorMoveToLineBackward:
       JetbrainsCommand: Up
@@ -92,6 +159,7 @@ KZ:
         - hyper+i
       Name: CursorMoveToLineBackward
       Category: Cursor
+      Subcategory: ""
       Human: Up
     CursorMoveToLineBackwardSelect:
       JetbrainsCommand: Up with Selection
@@ -101,8 +169,9 @@ KZ:
         - shift+up
         - hyper+shift+i
       Name: CursorMoveToLineBackwardSelect
-      Category: Select
-      Human: Up
+      Category: Cursor
+      Subcategory: ""
+      Human: Up+
     CursorMoveToLineForward:
       JetbrainsCommand: Down
       SublimeTextCommand: '{"command": "move_to", "args": {"by": "lines", "forward": true, "extend": false}}'
@@ -112,6 +181,7 @@ KZ:
         - hyper+k
       Name: CursorMoveToLineForward
       Category: Cursor
+      Subcategory: ""
       Human: Down
     CursorMoveToLineForwardSelect:
       JetbrainsCommand: Down with Selection
@@ -121,8 +191,9 @@ KZ:
         - shift+down
         - hyper+shift+k
       Name: CursorMoveToLineForwardSelect
-      Category: Select
-      Human: Down
+      Category: Cursor
+      Subcategory: ""
+      Human: Down+
     CursorMoveToCharBackward:
       JetbrainsCommand: Left
       SublimeTextCommand: '{"command": "move_to", "args": {"by": "characters", "forward": false, "extend": false}}'
@@ -132,6 +203,7 @@ KZ:
         - hyper+j
       Name: CursorMoveToCharBackward
       Category: Cursor
+      Subcategory: ""
       Human: Left
     CursorMoveToCharBackwardSelect:
       JetbrainsCommand: Left with Selection
@@ -141,8 +213,9 @@ KZ:
         - shift+left
         - hyper+shift+j
       Name: CursorMoveToCharBackwardSelect
-      Category: Select
-      Human: Left
+      Category: Cursor
+      Subcategory: ""
+      Human: Left+
     CursorMoveToCharForward:
       JetbrainsCommand: Right
       SublimeTextCommand: '{"command": "move_to", "args": {"by": "characters", "forward": true, "extend": false}}'
@@ -152,6 +225,7 @@ KZ:
         - hyper+l
       Name: CursorMoveToCharForward
       Category: Cursor
+      Subcategory: ""
       Human: Right
     CursorMoveToCharForwardSelect:
       JetbrainsCommand: Right with Selection
@@ -161,8 +235,9 @@ KZ:
         - shift+right
         - hyper+shift+k
       Name: CursorMoveToCharForwardSelect
-      Category: Select
-      Human: Right
+      Category: Cursor
+      Subcategory: ""
+      Human: Right+
     CursorMoveToPageBackward:
       JetbrainsCommand: Page Up
       SublimeTextCommand: '{"command": "move_to", "args": {"by": "pages", "forward": false, "extend": false}}'
@@ -172,7 +247,13 @@ KZ:
         - hyper+y
       Name: CursorMoveToPageBackward
       Category: Cursor
+      Subcategory: ""
       Human: Page Up
+    CursorMoveToPageBackwardSelect:
+      Name: CursorMoveToPageBackwardSelect
+      Category: Cursor
+      Subcategory: ""
+      Human: Page Up+
     CursorMoveToPageForward:
       JetbrainsCommand: Page Down
       SublimeTextCommand: '{"command": "move_to", "args": {"by": "pages", "forward": true, "extend": false}}'
@@ -182,132 +263,200 @@ KZ:
         - hyper+h
       Name: CursorMoveToPageForward
       Category: Cursor
+      Subcategory: ""
+      Human: Page Down
+    CursorMoveToPageForwardSelect:
+      Name: CursorMoveToPageForwardSelect
+      Category: Cursor
+      Subcategory: ""
       Human: Page Down
     CursorMoveToLineBegin:
       JetbrainsCommand: Move Caret to Line Start
       SublimeTextCommand: '{"command": "move_to", "args": {"to": "bol", "extend": false}}'
-      VsCodeCommand: ""
+      VsCodeCommand: cursorLineStart
       Bindings:
         - home
         - hyper+u
         - pinky+thumb+left
       Name: CursorMoveToLineBegin
       Category: Cursor
+      Subcategory: ""
       Human: Line Begin
     CursorMoveToLineBeginSelect:
       JetbrainsCommand: Move Caret to Line Start with Selection
       SublimeTextCommand: '{"command": "move_to", "args": {"to": "bol", "extend": true}}'
-      VsCodeCommand: ""
+      VsCodeCommand: cursorLineStartSelect
       Bindings:
         - shift+home
         - hyper+shift+u
       Name: CursorMoveToLineBeginSelect
-      Category: Select
-      Human: Line Begin
+      Category: Cursor
+      Subcategory: ""
+      Human: Line Begin+
     CursorMoveToLineEnd:
       JetbrainsCommand: Move Caret to Line End
       SublimeTextCommand: '{"command": "move_to", "args": {"to": "eol", "extend": false}}'
-      VsCodeCommand: ""
+      VsCodeCommand: cursorLineEnd
       Bindings:
         - home
         - hyper+o
         - pinky+thumb+right
       Name: CursorMoveToLineEnd
       Category: Cursor
+      Subcategory: ""
       Human: Line End
     CursorMoveToLineEndSelect:
       JetbrainsCommand: Move Caret to Line End with Selection
       SublimeTextCommand: '{"command": "move_to", "args": {"to": "eol", "extend": true}}'
-      VsCodeCommand: ""
+      VsCodeCommand: cursorLineEndSelect
       Bindings:
         - shift+end
         - hyper+shift+o
       Name: CursorMoveToLineEndSelect
-      Category: Select
-      Human: Line End
+      Category: Cursor
+      Subcategory: ""
+      Human: Line End+
     CursorMoveToTextBegin:
       JetbrainsCommand: Move Caret to Text Start
       SublimeTextCommand: '{"command": "move_to", "args": {"to": "bof", "extend": false}}'
-      VsCodeCommand: ""
+      VsCodeCommand: cursorTop
       Bindings:
         - home
         - hyper+t
       Name: CursorMoveToTextBegin
       Category: Cursor
+      Subcategory: ""
       Human: File Begin
     CursorMoveToTextBeginSelect:
       JetbrainsCommand: Move Caret to Text Begin with Selection
       SublimeTextCommand: '{"command": "move_to", "args": {"to": "bof", "extend": true}}'
-      VsCodeCommand: ""
+      VsCodeCommand: cursorTopSelect
       Bindings:
         - ctrl+shift+end
         - hyper+shift+b
       Name: CursorMoveToTextBeginSelect
-      Category: Select
-      Human: Text Begin
+      Category: Cursor
+      Subcategory: ""
+      Human: Text Begin+
     CursorMoveToTextEnd:
       JetbrainsCommand: Move Caret to Text End
       SublimeTextCommand: '{"command": "move_to", "args": {"to": "eof", "extend": false}}'
-      VsCodeCommand: ""
+      VsCodeCommand: cursorBottom
       Bindings:
         - home
         - hyper+b
       Name: CursorMoveToTextEnd
       Category: Cursor
+      Subcategory: ""
       Human: File End
     CursorMoveToTextEndSelect:
       JetbrainsCommand: Move Caret to Text End with Selection
       SublimeTextCommand: '{"command": "move_to", "args": {"to": "eof", "extend": true}}'
-      VsCodeCommand: ""
+      VsCodeCommand: cursorBottomSelect
       Bindings:
         - ctrl+shift+end
         - hyper+shift+b
       Name: CursorMoveToTextEndSelect
-      Category: Select
-      Human: Text End
+      Category: Cursor
+      Subcategory: ""
+      Human: Text End+
     CursorMoveToWordForward:
       JetbrainsCommand: Move Caret to Next Word
       SublimeTextCommand: '{"command": "move_to", "args": {"by": "words", "forward": true}}'
-      VsCodeCommand: ""
+      VsCodeCommand: cursorWordRight
       Bindings: []
       Name: CursorMoveToWordForward
       Category: Cursor
+      Subcategory: ""
       Human: Word Right
     CursorMoveToWordForwardSelect:
-      VsCodeCommand: ""
+      VsCodeCommand: cursorWordRightSelect
       Name: CursorMoveToWordForwardSelect
       Category: Cursor
+      Subcategory: ""
       Human: Word Right
     CursorMoveToWordBackward:
       JetbrainsCommand: Move Caret to Previous Word
       SublimeTextCommand: '{"command": "move_to", "args": {"by": "words", "forward": false}}'
-      VsCodeCommand: ""
+      VsCodeCommand: cursorWordLeft
       Bindings: []
       Name: CursorMoveToWordBackward
       Category: Cursor
+      Subcategory: ""
       Human: Word Left
     CursorMoveToWordBackwardSelect:
-      VsCodeCommand: ""
+      VsCodeCommand: cursorWordLeftSelect
       Name: CursorMoveToWordBackwardSelect
       Category: Cursor
-      Human: Word Left
+      Subcategory: ""
+      Human: Word Left+
     CursorMoveToSubwordForward:
-      VsCodeCommand: ""
+      JetbrainsCommand: Move Caret to Next Word in Different "CamelHumps" Mode
+      VsCodeCommand: cursorWordPartRight
       Name: CursorMoveToSubwordForward
       Category: Cursor
+      Subcategory: ""
       Human: Subword Right
     CursorMoveToSubwordForwardSelect:
-      VsCodeCommand: ""
+      JetbrainsCommand: Move Caret to Next Word in Different "CamelHumps" Mode with Selection
+      VsCodeCommand: cursorWordPartRightSelect
       Name: CursorMoveToSubwordForwardSelect
       Category: Cursor
-      Human: Subword Right
+      Subcategory: ""
+      Human: Subword Right+
     CursorMoveToSubwordBackward:
-      VsCodeCommand: ""
+      JetbrainsCommand: Move Caret to Previous Word in Different "CamelHumps" Mode
+      VsCodeCommand: cursorWordPartLeft
       Name: CursorMoveToSubwordBackward
       Category: Cursor
+      Subcategory: ""
       Human: Subword Left
     CursorMoveToSubwordBackwardSelect:
-      VsCodeCommand: ""
+      JetbrainsCommand: Move Caret to Previous Word in Different "CamelHumps" Mode with Selection
+      VsCodeCommand: cursorWordPartLeftSelect
       Name: CursorMoveToSubwordBackwardSelect
       Category: Cursor
-      Human: Subword Left
+      Subcategory: ""
+      Human: Subword Left+
+    CursorSelectionContract:
+      JetbrainsCommand: ""
+      Name: CursorSelectionContract
+      Category: Cursor
+      Subcategory: ""
+      Human: Expand Selection
+    CursorSelectionExpand:
+      JetbrainsCommand: ""
+      Name: CursorSelectionExpand
+      Category: Cursor
+      Subcategory: ""
+      Human: Contract Selection
+    EditNodeMoveLineUp:
+      JetbrainsCommand: Move Line Up
+      Name: EditNodeMoveLineUp
+      Category: Edit
+      Human: Move Up
+    EditNodeMoveLineDown:
+      JetbrainsCommand: Move Line Down
+      Name: EditNodeMoveLineDown
+      Category: Edit
+      Human: Move Down
+    EditNodeMoveLineIn:
+      JetbrainsCommand: Move Line Right
+      Name: EditNodeMoveLineIn
+      Category: Edit
+      Human: Move Left
+    EditNodeMoveLineOut:
+      JetbrainsCommand: Move Line Left
+      Name: EditNodeMoveLineOut
+      Category: Edit
+      Human: Move Right
+    EditNodeDelete:
+      JetbrainsCommand: ""
+      Name: EditNodeDelete
+      Category: Edit
+      Human: Delete
+    EditNodeRename:
+      JetbrainsCommand: ""
+      Name: EditNodeRename
+      Category: Edit
+      Human: Rename

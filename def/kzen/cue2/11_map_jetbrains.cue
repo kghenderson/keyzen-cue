@@ -46,9 +46,18 @@ KZ: Commands: {
 	"CursorMoveToWordForward": {
 		JetbrainsCommand: "Move Caret to Next Word"
 	}
-
-
-
+	"CursorMoveToSubwordBackward": {
+		JetbrainsCommand: #"Move Caret to Previous Word in Different "CamelHumps" Mode"#
+	}
+	"CursorMoveToSubwordBackwardSelect": {
+		JetbrainsCommand: #"Move Caret to Previous Word in Different "CamelHumps" Mode with Selection"#
+	}
+	"CursorMoveToSubwordForward": {
+		JetbrainsCommand: #"Move Caret to Next Word in Different "CamelHumps" Mode"#
+	}
+	"CursorMoveToSubwordForwardSelect": {
+		JetbrainsCommand: #"Move Caret to Next Word in Different "CamelHumps" Mode with Selection"#
+	}
 	"CursorMoveToCharForwardSelect": {
 		JetbrainsCommand: "Right with Selection"
 	}
@@ -58,12 +67,38 @@ KZ: Commands: {
 	"CursorMoveToLineEndSelect": {
 		JetbrainsCommand: "Move Caret to Line End with Selection"
 	}
-
 	"CursorMoveToTextBeginSelect": {
 		JetbrainsCommand: "Move Caret to Text Begin with Selection"
 	}
 	"CursorMoveToTextEndSelect": {
 		JetbrainsCommand: "Move Caret to Text End with Selection"
+	}
+
+	"CursorSelectionExpand": {
+		JetbrainsCommand: ""
+	}
+	"CursorSelectionContract": {
+		JetbrainsCommand: ""
+	}
+
+	// EDIT
+	"EditNodeMoveLineUp": {
+		JetbrainsCommand: "Move Line Up"
+	}
+	"EditNodeMoveLineDown": {
+		JetbrainsCommand: "Move Line Down"
+	}
+	"EditNodeMoveLineOut": {
+		JetbrainsCommand: "Move Line Left"
+	}
+	"EditNodeMoveLineIn": {
+		JetbrainsCommand: "Move Line Right"
+	}
+	"EditNodeRename": {
+		JetbrainsCommand: ""
+	}
+	"EditNodeDelete": {
+		JetbrainsCommand: ""
 	}
 
 }

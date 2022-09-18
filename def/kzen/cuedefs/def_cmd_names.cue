@@ -1,8 +1,9 @@
-package cue2
+package cuedefs
 
 import (
 	"list"
 )
+
 
 KZ: commandNamesLookup: {
 	for _, cmdName in KZ.CommandNames {"\(cmdName)": true}

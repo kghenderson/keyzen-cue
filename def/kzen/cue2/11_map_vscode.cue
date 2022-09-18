@@ -1,21 +1,31 @@
 package cue2
 
-
-
 KZ: Commands: {
 
 	// cursor movements
 	"CursorMoveToLineForward": {
 		VsCodeCommand: "cursorUp"
 	}
+	"CursorMoveToLineForwardSelect": {
+		VsCodeCommand: "cursorUpSelect"
+	}
 	"CursorMoveToLineBackward": {
 		VsCodeCommand: "cursorDown"
+	}
+	"CursorMoveToLineBackwardSelect": {
+		VsCodeCommand: "cursorDownSelect"
 	}
 	"CursorMoveToCharForward": {
 		VsCodeCommand: "cursorRight"
 	}
+	"CursorMoveToCharForwardSelect": {
+		VsCodeCommand: "cursorRightSelect"
+	}
 	"CursorMoveToCharBackward": {
 		VsCodeCommand: "cursorLeft"
+	}
+	"CursorMoveToCharBackwardSelect": {
+		VsCodeCommand: "cursorLeftSelect"
 	}
 	"CursorMoveToPageForward": {
 		VsCodeCommand: "cursorPageDown"
@@ -24,66 +34,53 @@ KZ: Commands: {
 		VsCodeCommand: "cursorPageUp"
 	}
 	"CursorMoveToLineEnd": {
-		VsCodeCommand: ""
-	}
-	"CursorMoveToLineBegin": {
-		VsCodeCommand: ""
-	}
-	"CursorMoveToTextEnd": {
-		VsCodeCommand: ""
-	}
-	"CursorMoveToTextBegin": {
-		VsCodeCommand: ""
-	}
-	"CursorMoveToWordForward": {
-		VsCodeCommand: ""
-	}
-	"CursorMoveToWordBackward": {
-		VsCodeCommand: ""
-	}
-	"CursorMoveToSubwordForward": {
-		VsCodeCommand: ""
-	}
-	"CursorMoveToSubwordBackward": {
-		VsCodeCommand: ""
-	}
-
-	// cursor selections
-	"CursorMoveToLineForwardSelect": {
-		VsCodeCommand: "cursorUpSelect"
-	}
-	"CursorMoveToLineBackwardSelect": {
-		VsCodeCommand: "cursorDownSelect"
-	}
-	"CursorMoveToCharForwardSelect": {
-		VsCodeCommand: "cursorRightSelect"
-	}
-	"CursorMoveToCharBackwardSelect": {
-		VsCodeCommand: "cursorLeftSelect"
+		VsCodeCommand: "cursorLineEnd"
 	}
 	"CursorMoveToLineEndSelect": {
-		VsCodeCommand: ""
+		VsCodeCommand: "cursorLineEndSelect"
+	}
+	"CursorMoveToLineBegin": {
+		VsCodeCommand: "cursorLineStart"
 	}
 	"CursorMoveToLineBeginSelect": {
-		VsCodeCommand: ""
+		VsCodeCommand: "cursorLineStartSelect"
 	}
-	"CursorMoveToTextEndSelect": {
-		VsCodeCommand: ""
+	"CursorMoveToTextBegin": {
+		VsCodeCommand: "cursorTop"
 	}
 	"CursorMoveToTextBeginSelect": {
-		VsCodeCommand: ""
+		VsCodeCommand: "cursorTopSelect"
+	}
+	"CursorMoveToTextEnd": {
+		VsCodeCommand: "cursorBottom"
+	}
+	"CursorMoveToTextEndSelect": {
+		VsCodeCommand: "cursorBottomSelect"
+	}
+	"CursorMoveToWordForward": {
+		VsCodeCommand: "cursorWordRight"
 	}
 	"CursorMoveToWordForwardSelect": {
-		VsCodeCommand: ""
+		VsCodeCommand: "cursorWordRightSelect"
+	}
+	"CursorMoveToWordBackward": {
+		VsCodeCommand: "cursorWordLeft"
 	}
 	"CursorMoveToWordBackwardSelect": {
-		VsCodeCommand: ""
+		VsCodeCommand: "cursorWordLeftSelect"
+	}
+	"CursorMoveToSubwordForward": {
+		VsCodeCommand: "cursorWordPartRight"
 	}
 	"CursorMoveToSubwordForwardSelect": {
-		VsCodeCommand: ""
+		VsCodeCommand: "cursorWordPartRightSelect"
 	}
+	"CursorMoveToSubwordBackward": {
+		VsCodeCommand: "cursorWordPartLeft"
+	}
+
 	"CursorMoveToSubwordBackwardSelect": {
-		VsCodeCommand: ""
+		VsCodeCommand: "cursorWordPartLeftSelect"
 	}
 
 }

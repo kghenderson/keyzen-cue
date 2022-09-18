@@ -5,7 +5,7 @@ hello:
 	echo "hello, $(whoami)"
 
 .PHONY: "all"
-all: exp doc
+all: fmt exp doc
 
 
 .PHONY: "init"
