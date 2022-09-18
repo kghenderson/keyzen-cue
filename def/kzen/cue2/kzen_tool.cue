@@ -28,6 +28,7 @@ command: doc: {
 
 // language=gotemplate
 let MdTmpl = ###"""
+	{{- $lastCategory := ""}}
 	# Commands
 	{{/* header */}}
 	{{  print "|" "Cat" }}
@@ -45,19 +46,30 @@ let MdTmpl = ###"""
 	{{- print "|" "---" }}
 	{{- print "|" }}
 	{{- range $cmdIdx, $cmd := . }}
+	{{- $thisCategory := $cmd.Category}}
+	{{- if and (gt $cmdIdx 0) (ne $lastCategory $thisCategory) }}
+	{{  print "|" "---" }}
+	{{- print "|" "---" }}
+	{{- print "|" "---" }}
+	{{- print "|" "---" }}
+	{{- print "|" "---" }}
+	{{- print "|" "---" }}
+	{{- print "|" }}
+	{{- end }}{{/* if ne $lastCategory $thisCategory */}}
 	{{ print "|" $cmd.Category }}
 	{{- print "|" $cmd.Human }}
 	{{- print "|" }}
 	{{- if $cmd.Bindings}}
 	{{- range $bindIdx, $bind := $cmd.Bindings }}
-	{{- if lt 0 $bindIdx}}<br />{{end}}"{{$bind}}"
+	{{- if gt $bindIdx 0}}<br />{{end}}"{{$bind}}"
 	{{- /*print "|" $cmd.Bindings */}}
-	{{- end }}
+	{{- end }}{{/* range $cmd.Bindings */}}
 	{{- else }}-
-	{{- end }}
+	{{- end }}{{/* $cmd.Bindings */}}
 	{{- print "|" $cmd.Name}}
 	{{- print "|" }}{{if $cmd.JetbrainsCommand}}{{$cmd.JetbrainsCommand}}{{else}}-{{end}}
 	{{- print "|"}}{{if $cmd.SublimeTextCommand}}{{$cmd.SublimeTextCommand}}{{else}}-{{end}}
 	{{- print "|" }}
-	{{- end }}
+	{{- $lastCategory = $thisCategory}}
+	{{- end }}{{/* range .CommandList */}}
 	"""###

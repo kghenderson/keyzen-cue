@@ -1,3 +1,4 @@
+
 # Commands
 
 |Cat|Human|Bindings|CommandName|JetbrainsName|SublimeTextName|
@@ -12,6 +13,7 @@
 |Cursor|Line End|"home"<br />"hyper+o"<br />"pinky+thumb+right"|CursorMoveLineEnd|Move Caret to Line End|move_to", "args": {"to": "eol", "extend": false}|
 |Cursor|Text Begin|"home"<br />"hyper+t"|CursorMoveTextBegin|Move Caret to Text Start|move_to", "args": {"to": "bof", "extend": false}|
 |Cursor|Text End|"home"<br />"hyper+b"|CursorMoveTextEnd|Move Caret to Text End|move_to", "args": {"to": "eof", "extend": false}|
+|---|---|---|---|---|---|
 |Select|Up|"shift+up"<br />"hyper+shift+i"|CursorSelectLineBackward|Up with Selection|move_to", "args": {"by": "lines", "forward": false, "extend": true}|
 |Select|Down|"shift+down"<br />"hyper+shift+k"|CursorSelectLineForward|Down with Selection|move_to", "args": {"by": "lines", "forward": true, "extend": true}|
 |Select|Left|"shift+left"<br />"hyper+shift+j"|CursorSelectCharBackward|Left with Selection|move_to", "args": {"by": "characters", "forward": false, "extend": true}|
