@@ -7,10 +7,10 @@ import (
 )
 
 command: doc: {
-	outFileName: "_gen/CommandDoc.md"
+	outFileName: "../_gen/CommandDoc.md"
 
 	do: {
-		outText: template.Execute(MdTmpl, Commands)
+		outText: template.Execute(MdTmpl, KZ)
 
 		write: file.Create & {
 			filename: outFileName
@@ -28,6 +28,7 @@ command: doc: {
 
 // language=gotemplate
 let MdTmpl = ###"""
+	{{- $cmds := .Commands}}
 	{{- $lastCategory := ""}}
 	# Commands
 	{{/* header */}}
@@ -36,6 +37,7 @@ let MdTmpl = ###"""
 	{{- print "|" "Bindings" }}
 	{{- print "|" "CommandName" }}
 	{{- print "|" "JetbrainsName" }}
+	{{- print "|" "VsCodeName" }}
 	{{- print "|" "SublimeTextName" }}
 	{{- print "|" }}
 	{{  print "|" "---" }}
@@ -44,11 +46,15 @@ let MdTmpl = ###"""
 	{{- print "|" "---" }}
 	{{- print "|" "---" }}
 	{{- print "|" "---" }}
+	{{- print "|" "---" }}
 	{{- print "|" }}
-	{{- range $cmdIdx, $cmd := . }}
+	{{- range $cmdIdx, $cmdName := .CommandNames }}
+	{{- /* $cmdName */}}
+	{{- $cmd := index $cmds $cmdName   }}
 	{{- $thisCategory := $cmd.Category}}
 	{{- if and (gt $cmdIdx 0) (ne $lastCategory $thisCategory) }}
 	{{  print "|" "---" }}
+	{{- print "|" "---" }}
 	{{- print "|" "---" }}
 	{{- print "|" "---" }}
 	{{- print "|" "---" }}
@@ -66,8 +72,9 @@ let MdTmpl = ###"""
 	{{- end }}{{/* range $cmd.Bindings */}}
 	{{- else }}-
 	{{- end }}{{/* $cmd.Bindings */}}
-	{{- print "|" $cmd.Name}}
+	{{- print "|" $cmdName}}
 	{{- print "|" }}{{if $cmd.JetbrainsCommand}}{{$cmd.JetbrainsCommand}}{{else}}-{{end}}
+	{{- print "|"}}{{if $cmd.VsCodeCommand}}{{$cmd.VsCodeCommand}}{{else}}-{{end}}
 	{{- print "|"}}{{if $cmd.SublimeTextCommand}}{{$cmd.SublimeTextCommand}}{{else}}-{{end}}
 	{{- print "|" }}
 	{{- $lastCategory = $thisCategory}}

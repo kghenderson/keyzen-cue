@@ -1,6 +1,6 @@
 package cue2
 
-Commands: {
+KZ: Commands: {
 	"CursorMoveToLineBackward": {
 		JetbrainsCommand: "Up"
 	}

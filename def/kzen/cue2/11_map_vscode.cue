@@ -2,7 +2,7 @@ package cue2
 
 
 
-Commands: {
+KZ: Commands: {
 
 	// cursor movements
 	"CursorMoveToLineForward": {

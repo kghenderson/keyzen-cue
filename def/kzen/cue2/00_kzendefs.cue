@@ -1,9 +1,10 @@
+package cue2
+
 // a commandn
 
 // CommandNames are the central/global names for all commands
 #CommandName: string
 
-CommandNames: [...#CommandName]
 
 //
 

@@ -5,33 +5,34 @@ import (
 )
 
 
-commandNamesLookup: {
-	for _, cmdName in CommandNames { "\(cmdName)": true }
+KZ: commandNamesLookup: {
+	for _, cmdName in KZ.CommandNames { "\(cmdName)": true }
 }
-commandNamesSorted:  list.SortStrings(CommandNames)
+KZ: commandNamesSorted:  list.SortStrings(KZ.CommandNames)
 
-checkCommandNamesUnique: true & list.UniqueItems(CommandNames)
+KZ: checkCommandNamesUnique: true & list.UniqueItems(KZ.CommandNames)
 
 // note: using forward then backward so movements can be tested from start
 
 // CommandNames is a sorted list of names, aligns with CommandDetails
-CommandNames: [
+KZ: CommandNames: [...#CommandName]
+KZ: CommandNames: [
 
 	// cursor movements
-	"CursorMoveToLineForward",
 	"CursorMoveToLineBackward",
-	"CursorMoveToCharForward",
+	"CursorMoveToLineForward",
 	"CursorMoveToCharBackward",
-	"CursorMoveToPageForward",
+	"CursorMoveToCharForward",
 	"CursorMoveToPageBackward",
-	"CursorMoveToLineEnd",
+	"CursorMoveToPageForward",
 	"CursorMoveToLineBegin",
-	"CursorMoveToTextEnd",
+	"CursorMoveToLineEnd",
 	"CursorMoveToTextBegin",
-	"CursorMoveToWordForward",
+	"CursorMoveToTextEnd",
 	"CursorMoveToWordBackward",
-	"CursorMoveToSubwordForward",
+	"CursorMoveToWordForward",
 	"CursorMoveToSubwordBackward",
+	"CursorMoveToSubwordForward",
 
 	// cursor selections
 	"CursorMoveToLineForwardSelect",

@@ -1,6 +1,6 @@
 package cue2
 
-Commands: {
+KZ: Commands: {
 	// cursor moves
 	"CursorMoveToLineBackward": {
 		Bindings: [

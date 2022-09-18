@@ -4,13 +4,22 @@
 hello:
 	echo "hello, $(whoami)"
 
+.PHONY: "all"
+all: exp doc
+
+
 .PHONY: "init"
 init:
 	mkdir -p ../_gen
 
-.PHONY: "export"
-export:
+.PHONY: "exp"
+exp:
 	cue export . -o ../_gen/kzen.yaml -f
+
+.PHONY: "doc"
+doc:
+	cue cmd doc
+
 
 .PHONY: "fmt"
 fmt:
