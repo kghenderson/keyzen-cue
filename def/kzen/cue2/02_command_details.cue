@@ -1,11 +1,20 @@
 package cue2
 
+
+checkCommandsInCommandNames: {
+	for cmdName, cmd in Commands {
+		true & commandNamesLookup[cmdName]
+	}
+}
+
 Commands: {
 	// cursor moves
 	"CursorMoveToLineBackward": {
 		Category: "Cursor"
 		Human:    "Up"
 	}
+
+
 	"CursorMoveToLineForward": {
 		Category: "Cursor"
 		Human:    "Down"
@@ -36,20 +45,20 @@ Commands: {
 		Human:    "Line End"
 	}
 
-	"CursorMoveTextBegin": {
+	"CursorMoveToTextBegin": {
 		Category: "Cursor"
 		Human:    "File Begin"
 	}
-	"CursorMoveTextEnd": {
+	"CursorMoveToTextEnd": {
 		Category: "Cursor"
 		Human:    "File End"
 	}
 	// cursor jumps
-	"CursorMoveWordBackward": {
+	"CursorMoveToWordBackward": {
 		Category: "Cursor"
 		Human:    "Word Left"
 	}
-	"CursorMoveWordForward": {
+	"CursorMoveToWordForward": {
 		Category: "Cursor"
 		Human:    "Word Right"
 	}
@@ -63,37 +72,37 @@ Commands: {
 	//}
 
 	// cursor selections
-	"CursorSelectLineBackward": {
+	"CursorMoveToLineBackwardSelect": {
 		Category: "Select"
 		Human:    "Up"
 	}
-	"CursorSelectLineForward": {
+	"CursorMoveToLineForwardSelect": {
 		Category: "Select"
 		Human:    "Down"
 	}
-	"CursorSelectCharBackward": {
+	"CursorMoveToCharBackwardSelect": {
 		Category: "Select"
 		Human:    "Left"
 	}
-	"CursorSelectCharForward": {
+	"CursorMoveToCharForwardSelect": {
 		Category: "Select"
 		Human:    "Right"
 	}
 
-	"CursorSelectLineBegin": {
+	"CursorMoveToLineBeginSelect": {
 		Category: "Select"
 		Human:    "Line Begin"
 	}
-	"CursorSelectLineEnd": {
+	"CursorMoveToLineEndSelect": {
 		Category: "Select"
 		Human:    "Line End"
 	}
 
-	"CursorSelectTextBegin": {
+	"CursorMoveToTextBeginSelect": {
 		Category: "Select"
 		Human:    "Text Begin"
 	}
-	"CursorSelectTextEnd": {
+	"CursorMoveToTextEndSelect": {
 		Category: "Select"
 		Human:    "Text End"
 	}

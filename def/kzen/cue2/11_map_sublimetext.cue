@@ -20,7 +20,7 @@ Commands: {
 			{"command": "move_to", "args": {"by": "characters", "forward": false, "extend": false}}
 			"""#
 	}
-	"CursorMoveCharToForward": {
+	"CursorMoveToCharForward": {
 		//language=json
 		SublimeTextCommand: #"""
 			{"command": "move_to", "args": {"by": "characters", "forward": true, "extend": false}}
@@ -79,51 +79,51 @@ Commands: {
 	}
 
 	// cursor selections
-	"CursorSelectToLineBackward": {
+	"CursorMoveToLineBackwardSelect": {
 		//language=json
 		SublimeTextCommand: #"""
 			{"command": "move_to", "args": {"by": "lines", "forward": false, "extend": true}}
 			"""#
 	}
-	"CursorSelectToLineForward": {
+	"CursorMoveToLineForwardSelect": {
 		//language=json
 		SublimeTextCommand: #"""
 			{"command": "move_to", "args": {"by": "lines", "forward": true, "extend": true}}
 			"""#
 	}
-	"CursorSelectToCharBackward": {
+	"CursorMoveToCharBackwardSelect": {
 		//language=json
 		SublimeTextCommand: #"""
 			{"command": "move_to", "args": {"by": "characters", "forward": false, "extend": true}}
 			"""#
 	}
-	"CursorSelectToCharForward": {
+	"CursorMoveToCharForwardSelect": {
 		//language=json
 		SublimeTextCommand: #"""
 			{"command": "move_to", "args": {"by": "characters", "forward": true, "extend": true}}
 			"""#
 	}
 
-	"CursorSelectToLineBegin": {
+	"CursorMoveToLineBeginSelect": {
 		//language=json
 		SublimeTextCommand: #"""
 			{"command": "move_to", "args": {"to": "bol", "extend": true}}
 			"""#
 	}
-	"CursorSelectToLineEnd": {
+	"CursorMoveToLineEndSelect": {
 		//language=json
 		SublimeTextCommand: #"""
 			{"command": "move_to", "args": {"to": "eol", "extend": true}}
 			"""#
 	}
 
-	"CursorSelectToTextBegin": {
+	"CursorMoveToTextBeginSelect": {
 		//language=json
 		SublimeTextCommand: #"""
 			{"command": "move_to", "args": {"to": "bof", "extend": true}}
 			"""#
 	}
-	"CursorSelectToTextEnd": {
+	"CursorMoveToTextEndSelect": {
 		//language=json
 		SublimeTextCommand: #"""
 			{"command": "move_to", "args": {"to": "eof", "extend": true}}

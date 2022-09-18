@@ -2,51 +2,51 @@ package cue2
 
 Commands: {
 	// cursor moves
-	"CursorMoveLineBackward": {
+	"CursorMoveToLineBackward": {
 		Bindings: [
 			"up",
 			"hyper+i",
 		]
 	}
-	"CursorMoveLineForward": {
+	"CursorMoveToLineForward": {
 		Bindings: [
 			"down",
 			"hyper+k",
 		]
 	}
-	"CursorMoveCharBackward": {
+	"CursorMoveToCharBackward": {
 		Bindings: [
 			"left",
 			"hyper+j",
 		]
 	}
-	"CursorMoveCharForward": {
+	"CursorMoveToCharForward": {
 		Bindings: [
 			"right",
 			"hyper+l",
 		]
 	}
-	"CursorMovePageBackward": {
+	"CursorMoveToPageBackward": {
 		Bindings: [
 			"pgup",
 			"hyper+y",
 		]
 	}
-	"CursorMovePageForward": {
+	"CursorMoveToPageForward": {
 		Bindings: [
 			"pgdn",
 			"hyper+h",
 		]
 	}
 
-	"CursorMoveLineBegin": {
+	"CursorMoveToLineBegin": {
 		Bindings: [
 			"home",
 			"hyper+u",
 			"pinky+thumb+left",
 		]
 	}
-	"CursorMoveLineEnd": {
+	"CursorMoveToLineEnd": {
 		Bindings: [
 			"home",
 			"hyper+o",
@@ -54,74 +54,74 @@ Commands: {
 		]
 	}
 
-	"CursorMoveTextBegin": {
+	"CursorMoveToTextBegin": {
 		Bindings: [
 			"home",
 			"hyper+t",
 		]
 	}
-	"CursorMoveTextEnd": {
+	"CursorMoveToTextEnd": {
 		Bindings: [
 			"home",
 			"hyper+b",
 		]
 	}
 	// cursor jumps
-	"CursorMoveWordBackward": {
+	"CursorMoveToWordBackward": {
 		Bindings: [
 		]
 	}
-	"CursorMoveWordForward": {
+	"CursorMoveToWordForward": {
 		Bindings: [
 		]
 	}
 
 	// cursor selections
-	"CursorSelectLineBackward": {
+	"CursorMoveToLineBackwardSelect": {
 		Bindings: [
 			"shift+up",
 			"hyper+shift+i",
 		]
 	}
-	"CursorSelectLineForward": {
+	"CursorMoveToLineForwardSelect": {
 		Bindings: [
 			"shift+down",
 			"hyper+shift+k",
 		]
 	}
-	"CursorSelectCharBackward": {
+	"CursorMoveToCharBackwardSelect": {
 		Bindings: [
 			"shift+left",
 			"hyper+shift+j",
 		]
 	}
-	"CursorSelectCharForward": {
+	"CursorMoveToCharForwardSelect": {
 		Bindings: [
 			"shift+right",
 			"hyper+shift+k",
 		]
 	}
 
-	"CursorSelectLineBegin": {
+	"CursorMoveToLineBeginSelect": {
 		Bindings: [
 			"shift+home",
 			"hyper+shift+u",
 		]
 	}
-	"CursorSelectLineEnd": {
+	"CursorMoveToLineEndSelect": {
 		Bindings: [
 			"shift+end",
 			"hyper+shift+o",
 		]
 	}
 
-	"CursorSelectTextBegin": {
+	"CursorMoveToTextBeginSelect": {
 		Bindings: [
 			"ctrl+shift+end",
 			"hyper+shift+b",
 		]
 	}
-	"CursorSelectTextEnd": {
+	"CursorMoveToTextEndSelect": {
 		Bindings: [
 			"ctrl+shift+end",
 			"hyper+shift+b",

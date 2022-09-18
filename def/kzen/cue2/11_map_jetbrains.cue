@@ -1,15 +1,23 @@
 package cue2
 
 Commands: {
-	// cursor moves
 	"CursorMoveToLineBackward": {
 		JetbrainsCommand: "Up"
+	}
+	"CursorMoveToLineBackwardSelect": {
+		JetbrainsCommand: "Up with Selection"
 	}
 	"CursorMoveToLineForward": {
 		JetbrainsCommand: "Down"
 	}
+	"CursorMoveToLineForwardSelect": {
+		JetbrainsCommand: "Down with Selection"
+	}
 	"CursorMoveToCharBackward": {
 		JetbrainsCommand: "Left"
+	}
+	"CursorMoveToCharBackwardSelect": {
+		JetbrainsCommand: "Left with Selection"
 	}
 	"CursorMoveToCharForward": {
 		JetbrainsCommand: "Right"
@@ -39,30 +47,22 @@ Commands: {
 		JetbrainsCommand: "Move Caret to Next Word"
 	}
 
-	// cursor selections
-	"CursorSelectToLineBackward": {
-		JetbrainsCommand: "Up with Selection"
-	}
-	"CursorSelectToLineForward": {
-		JetbrainsCommand: "Down with Selection"
-	}
-	"CursorSelectToCharBackward": {
-		JetbrainsCommand: "Left with Selection"
-	}
-	"CursorSelectToCharForward": {
+
+
+	"CursorMoveToCharForwardSelect": {
 		JetbrainsCommand: "Right with Selection"
 	}
-	"CursorSelectToLineBegin": {
+	"CursorMoveToLineBeginSelect": {
 		JetbrainsCommand: "Move Caret to Line Start with Selection"
 	}
-	"CursorSelectToLineEnd": {
+	"CursorMoveToLineEndSelect": {
 		JetbrainsCommand: "Move Caret to Line End with Selection"
 	}
 
-	"CursorSelectToTextBegin": {
+	"CursorMoveToTextBeginSelect": {
 		JetbrainsCommand: "Move Caret to Text Begin with Selection"
 	}
-	"CursorSelectToTextEnd": {
+	"CursorMoveToTextEndSelect": {
 		JetbrainsCommand: "Move Caret to Text End with Selection"
 	}
 

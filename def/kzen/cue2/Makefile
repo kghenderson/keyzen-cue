@@ -6,12 +6,16 @@ hello:
 
 .PHONY: "init"
 init:
-	mkdir -p ./_gen
+	mkdir -p ../_gen
 
 .PHONY: "export"
 export:
-	cue export . -o _gen/kzen.yaml -f
+	cue export . -o ../_gen/kzen.yaml -f
 
 .PHONY: "fmt"
 fmt:
 	cue fmt ./...
+
+.PHONY: "vet"
+vet:
+	cue vet
