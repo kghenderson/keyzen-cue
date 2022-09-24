@@ -1,11 +1,11 @@
-package jetbrains
+package visualstudiocode
 
 import (
 	keyzen "github.com/kghenderson/keyzen/cuedefs"
 )
 
 Editor: keyzen.#Editor & {
-	Name: "SublimeText"
+	Name: "VisualStudioCode"
 
 	EditorCommandNameMap: {
 		"CursorMoveToCharBackward":          "cursorLeft"

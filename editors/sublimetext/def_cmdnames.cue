@@ -1,4 +1,4 @@
-package jetbrains
+package sublimetext
 
 import (
 	keyzen "github.com/kghenderson/keyzen/cuedefs"
