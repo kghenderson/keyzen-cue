@@ -17,7 +17,6 @@ Cmds: commandNamesSorted: list.SortStrings(Cmds.CommandNames)
 
 Cmds: zzCheckCommandNamesUnique: true & list.UniqueItems(Cmds.CommandNames)
 
-
 // _checkAllCommandsNamesHaveCommands confirms that every command name has a corresponding struct
 Cmds: zzCheckAllCommandsNamesInCommands: {
 	for _, cmdName in Cmds.CommandNames {
@@ -28,6 +27,6 @@ Cmds: zzCheckAllCommandsNamesInCommands: {
 // _checkAllCommandsInCommandNames confirms that every command struct has a corresponding name in the cmddef list
 Cmds: zzCheckAllCommandsInCommandNames: {
 	for cmdName, cmd in Cmds.Commands {
-		 true & Cmds.commandNamesLookup[cmdName]
+		true & Cmds.commandNamesLookup[cmdName]
 	}
 }

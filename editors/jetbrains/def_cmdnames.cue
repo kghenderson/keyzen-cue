@@ -36,6 +36,10 @@ Editor: keyzen.#Editor & {
 		"CursorMoveToWordBackwardSelect":    "Move Caret to Previous Word with Selection"
 		"CursorMoveToWordForward":           "Move Caret to Next Word"
 		"CursorMoveToWordForwardSelect":     "Move Caret to Next Word with Selection"
+		"CursorMultiCloneAbove":             "Clone Caret Above"
+		"CursorMultiCloneBelow":             "Clone Caret Below"
+		"CursorMultiCloneOnLineEnds":        "Add Carets to Ends of Selected Lines"
+		"CursorSelectAll":                   "Select All"
 		"CursorSelectionContract":           "Shrink Selection"
 		"CursorSelectionExpand":             "Extend Selection"
 		"EditNodeDelete":                    "Delete Line"
@@ -47,3 +51,5 @@ Editor: keyzen.#Editor & {
 		"EditNodeRename":                    "Rename..."
 	}
 }
+
+// "":        #"{}"#

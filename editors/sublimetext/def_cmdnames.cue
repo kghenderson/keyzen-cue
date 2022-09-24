@@ -5,45 +5,52 @@ import (
 )
 
 Editor: keyzen.#Editor & {
-	Name: "Jetbrains"
+	Name: "SublimeText"
 
 	EditorCommandNameMap: {
-		"CursorMoveToCharBackward":          "Left"
-		"CursorMoveToCharBackwardSelect":    "Left with Selection"
-		"CursorMoveToCharForward":           "Right"
-		"CursorMoveToCharForwardSelect":     "Right with Selection"
-		"CursorMoveToLineBackward":          "Up"
-		"CursorMoveToLineBackwardSelect":    "Up with Selection"
-		"CursorMoveToLineBegin":             "Move Caret to Line Start"
-		"CursorMoveToLineBeginSelect":       "Move Caret to Line Start with Selection"
-		"CursorMoveToLineEnd":               "Move Caret to Line End"
-		"CursorMoveToLineEndSelect":         "Move Caret to Line End with Selection"
-		"CursorMoveToLineForward":           "Down"
-		"CursorMoveToLineForwardSelect":     "Down with Selection"
-		"CursorMoveToPageBackward":          "Page Up"
-		"CursorMoveToPageBackwardSelect":    "Page Up with Selection"
-		"CursorMoveToPageForward":           "Page Down"
-		"CursorMoveToPageForwardSelect":     "Page Down with Selection"
-		"CursorMoveToSubwordBackward":       #"Move Caret to Previous Word in Different "CamelHumps" Mode"#
-		"CursorMoveToSubwordBackwardSelect": #"Move Caret to Previous Word in Different "CamelHumps" Mode with Selection"#
-		"CursorMoveToSubwordForward":        #"Move Caret to Next Word in Different "CamelHumps" Mode"#
-		"CursorMoveToSubwordForwardSelect":  #"Move Caret to Next Word in Different "CamelHumps" Mode with Selection"#
-		"CursorMoveToTextBegin":             "Move Caret to Text Start"
-		"CursorMoveToTextBeginSelect":       "Move Caret to Text Begin with Selection"
-		"CursorMoveToTextEnd":               "Move Caret to Text End"
-		"CursorMoveToTextEndSelect":         "Move Caret to Text End with Selection"
-		"CursorMoveToWordBackward":          "Move Caret to Previous Word"
-		"CursorMoveToWordBackwardSelect":    "Move Caret to Previous Word with Selection"
-		"CursorMoveToWordForward":           "Move Caret to Next Word"
-		"CursorMoveToWordForwardSelect":     "Move Caret to Next Word with Selection"
-		"CursorSelectionContract":           "Shrink Selection"
-		"CursorSelectionExpand":             "Extend Selection"
-		"EditNodeDelete":                    "Delete Line"
-		"EditNodeDuplicate":                 "Duplicate Entire Lines"
-		"EditNodeMoveLineDown":              "Move Line Down"
-		"EditNodeMoveLineIn":                "Move Line Right"
-		"EditNodeMoveLineOut":               "Move Line Left"
-		"EditNodeMoveLineUp":                "Move Line Up"
-		"EditNodeRename":                    "Rename..."
+		"CursorMoveToCharBackward":          #"{"command": "move_to", "args": {"by": "characters", "forward": false, "extend": false}}"#
+		"CursorMoveToCharBackwardSelect":    #"{"command": "move_to", "args": {"by": "characters", "forward": false, "extend": true}}"#
+		"CursorMoveToCharForward":           #"{"command": "move_to", "args": {"by": "characters", "forward": true, "extend": false}}"#
+		"CursorMoveToCharForwardSelect":     #"{"command": "move_to", "args": {"by": "characters", "forward": true, "extend": true}}"#
+		"CursorMoveToLineBackward":          #"{"command": "move_to", "args": {"by": "lines", "forward": false, "extend": false}}"#
+		"CursorMoveToLineBackwardSelect":    #"{"command": "move_to", "args": {"by": "lines", "forward": false, "extend": true}}"#
+		"CursorMoveToLineBegin":             #"{"command": "move_to", "args": {"to": "bol", "extend": false}}"#
+		"CursorMoveToLineBeginSelect":       #"{"command": "move_to", "args": {"to": "bol", "extend": true}}"#
+		"CursorMoveToLineEnd":               #"{"command": "move_to", "args": {"to": "eol", "extend": false}}"#
+		"CursorMoveToLineEndSelect":         #"{"command": "move_to", "args": {"to": "eol", "extend": true}}"#
+		"CursorMoveToLineForward":           #"{"command": "move_to", "args": {"by": "lines", "forward": true, "extend": false}}"#
+		"CursorMoveToLineForwardSelect":     #"{"command": "move_to", "args": {"by": "lines", "forward": true, "extend": true}}"#
+		"CursorMoveToPageBackward":          #"{"command": "move_to", "args": {"by": "pages", "forward": false, "extend": false}}"#
+		"CursorMoveToPageBackwardSelect":    #"{"command": "move_to", "args": {"by": "pages", "forward": false, "extend": true}}"#
+		"CursorMoveToPageForward":           #"{"command": "move_to", "args": {"by": "pages", "forward": false, "extend": false}}"#
+		"CursorMoveToPageForwardSelect":     #"{"command": "move_to", "args": {"by": "pages", "forward": false, "extend": true}}"#
+		"CursorMoveToSubwordBackward":       #"{"command": "move_to", "args": {"by": "subwords", "forward": false, "extend": "false"}}"#
+		"CursorMoveToSubwordBackwardSelect": #"{"command": "move_to", "args": {"by": "subwords", "forward": false, "extend": true"}}"#
+		"CursorMoveToSubwordForward":        #"{"command": "move_to", "args": {"by": "subwords", "forward": true, "extend": "false"}}"#
+		"CursorMoveToSubwordForwardSelect":  #"{"command": "move_to", "args": {"by": "subwords", "forward": true, "extend": "true"}}"#
+		"CursorMoveToTextBegin":             #"{"command": "move_to", "args": {"to": "bof", "extend": false}}"#
+		"CursorMoveToTextBeginSelect":       #"{"command": "move_to", "args": {"to": "bof", "extend": true}}"#
+		"CursorMoveToTextEnd":               #"{"command": "move_to", "args": {"to": "eof", "extend": false}}"#
+		"CursorMoveToTextEndSelect":         #"{"command": "move_to", "args": {"to": "eof", "extend": true}}"#
+		"CursorMoveToWordBackward":          #"{"command": "move_to", "args": {"by": "words", "forward": false, "extend": "false"}}"#
+		"CursorMoveToWordBackwardSelect":    #"{"command": "move_to", "args": {"by": "words", "forward": false, "extend": true"}}"#
+		"CursorMoveToWordForward":           #"{"command": "move_to", "args": {"by": "words", "forward": true, "extend": "false"}}"#
+		"CursorMoveToWordForwardSelect":     #"{"command": "move_to", "args": {"by": "words", "forward": true, "extend": "true"}}"#
+		"CursorMultiCloneAbove":             #"{"command": "select_lines", "args": {"forward": false}}"#
+		"CursorMultiCloneBelow":             #"{"command": "select_lines", "args": {"forward": true}}"#
+		"CursorMultiCloneOnLineEnds":        #"{"command": "split_selection_into_lines"}"#
+		"CursorSelectAll":                   #"{"command": "select_all"}"#
+		"CursorSelectionContract":           #""#
+		"CursorSelectionExpand":             #""#
+		"EditNodeDelete":                    #"{"command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}}"#
+		"EditNodeDuplicate":                 #"{"command": "duplicate_line"}"#
+		"EditNodeMoveLineDown":              #"{"command": "swap_line_down"}"#
+		"EditNodeMoveLineIn":                #"{"command": "indent"}"#
+		"EditNodeMoveLineOut":               #"{"command": "unindent"}"#
+		"EditNodeMoveLineUp":                #"{"command": "swap_line_up"}"#
+		"EditNodeRename":                    #""#
 	}
 }
+// "":        #"{}"#
+
+// subwords

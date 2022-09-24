@@ -1,6 +1,5 @@
 package cuedefs
 
-
 Cmds: ContextNames: [
 	"Reading",
 	"Navigating",
@@ -28,5 +27,5 @@ Cmds: CategoryNames: [
 	"FileOutlineCommenting",
 	"FileTextEditing",
 	"FileEditMisc",
-	"Misc"
+	"Misc",
 ]

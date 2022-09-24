@@ -1,32 +1,31 @@
 package cuedefs
 
-
 // CommandNames is a sorted list of names, aligns with CommandDetails
 Cmds: CommandNames: [
 
 	// NAVIGATING & SELECTING
-	
+
 	// Cursor Movements
-	"CursorMoveToLineBackward",          // up
-	"CursorMoveToLineBackwardSelect",    // up+
-	"CursorMoveToLineForward",           // down
-	"CursorMoveToLineForwardSelect",     // down+
-	"CursorMoveToCharBackward",          // left
-	"CursorMoveToCharBackwardSelect",    // left+
-	"CursorMoveToCharForward",           // right
-	"CursorMoveToCharForwardSelect",     // right+
-	"CursorMoveToPageBackward",          // pgup
-	"CursorMoveToPageBackwardSelect",    // pgup+
-	"CursorMoveToPageForward",           // pgdn
-	"CursorMoveToPageForwardSelect",     // pgdn+
-	"CursorMoveToLineBegin",             // line home
-	"CursorMoveToLineBeginSelect",       // line home+
-	"CursorMoveToLineEnd",               // line end
-	"CursorMoveToLineEndSelect",         // line end+
-	"CursorMoveToTextBegin",             // doc home
-	"CursorMoveToTextBeginSelect",       // doc home+
-	"CursorMoveToTextEnd",               // doc end
-	"CursorMoveToTextEndSelect",         // doc end+
+	"CursorMoveToLineBackward",       // up
+	"CursorMoveToLineBackwardSelect", // up+
+	"CursorMoveToLineForward",        // down
+	"CursorMoveToLineForwardSelect",  // down+
+	"CursorMoveToCharBackward",       // left
+	"CursorMoveToCharBackwardSelect", // left+
+	"CursorMoveToCharForward",        // right
+	"CursorMoveToCharForwardSelect",  // right+
+	"CursorMoveToPageBackward",       // pgup
+	"CursorMoveToPageBackwardSelect", // pgup+
+	"CursorMoveToPageForward",        // pgdn
+	"CursorMoveToPageForwardSelect",  // pgdn+
+	"CursorMoveToLineBegin",          // line home
+	"CursorMoveToLineBeginSelect",    // line home+
+	"CursorMoveToLineEnd",            // line end
+	"CursorMoveToLineEndSelect",      // line end+
+	"CursorMoveToTextBegin",          // doc home
+	"CursorMoveToTextBeginSelect",    // doc home+
+	"CursorMoveToTextEnd",            // doc end
+	"CursorMoveToTextEndSelect",      // doc end+
 
 	// Cursor Word Jumps
 	"CursorMoveToWordBackward",          // word left
@@ -39,14 +38,14 @@ Cmds: CommandNames: [
 	"CursorMoveToSubwordForwardSelect",  // subword right+
 
 	// Selection Expand & Contraction
+	"CursorSelectAll",         // select all+
 	"CursorSelectionExpand",   // expand+
 	"CursorSelectionContract", // contract+
 
 	// Multi-Cursors
-	// "CursorCloneCaretAbove",
-	// "CursorCloneCaretBelow",
-	// "CursorCloneCaretsAtEndOfSelectedLines"
-
+	"CursorMultiCloneAbove",      // caret above
+	"CursorMultiCloneBelow",      // caret below
+	"CursorMultiCloneOnLineEnds", // carets on lines
 
 	// EDITING
 
@@ -56,13 +55,14 @@ Cmds: CommandNames: [
 	"EditNodeMoveLineIn",   // line right (indent)
 	"EditNodeRename",       // rename
 	"EditNodeDelete",       // rename
-	"EditNodeDuplicate",       // duplicate
+	"EditNodeDuplicate",    // duplicate
 
 	// "EditTextCaseToUpper",
 	// "EditTextCaseToLower",
 	// "EditSort",
 	// "EditAlign",
 	// "Rename",
+
 
 	// "Undo",
 	// "Redo",
@@ -74,11 +74,13 @@ Cmds: CommandNames: [
 	// "Zoom Reset",
 	// "Scroll Down",
 	// "Scroll Up",
-
+	// "Select All"
 	// goto/search/replace
+
 	// "Next Occurrence of Word at Cursor",
 	// "Previous Occurrence of Word at Cursor",
 	// "Select All Occurrences",
+
 	// "Goto in File",
 	// "Goto in All Files",
 	// "Find in File",

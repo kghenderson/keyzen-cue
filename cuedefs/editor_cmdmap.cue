@@ -1,6 +1,5 @@
 package cuedefs
 
-
 #EditorCommandDef: {
 	EditorCommandName: string
 }
@@ -8,9 +7,9 @@ package cuedefs
 #EditorCommandMap: [#CommandName]: #EditorCommandDef
 #EditorCommandMap: {
 
-	CursorMoveToLineBackward:  #EditorCommandDef
-	CursorMoveToLineBackwardSelect:  #EditorCommandDef
-	CursorMoveToLineForward:  #EditorCommandDef
+	CursorMoveToLineBackward:       #EditorCommandDef
+	CursorMoveToLineBackwardSelect: #EditorCommandDef
+	CursorMoveToLineForward:        #EditorCommandDef
 
 	//CursorMoveToLineForwardSelect: #CommandDef
 	//CursorMoveToCharBackward: #CommandDef
@@ -47,5 +46,4 @@ package cuedefs
 	//EditNodeMoveLineOut: #CommandDef
 	//EditNodeDelete: #CommandDef
 	//EditNodeRename: #CommandDef
-
 }

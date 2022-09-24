@@ -1,184 +1,207 @@
 package cuedefs
 
-
-Cmds: Commands:  {
+Cmds: Commands: {
 
 	// CURSOR
-	CursorMoveToLineBackward: {
+	"CursorMoveToLineBackward": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Up"
 	}
-	CursorMoveToLineBackwardSelect: {
+	"CursorMoveToLineBackwardSelect": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Up+"
 	}
-	CursorMoveToLineForward: {
+	"CursorMoveToLineForward": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Down"
 	}
-	CursorMoveToLineForwardSelect: {
+	"CursorMoveToLineForwardSelect": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Down+"
 	}
-	CursorMoveToCharBackward: {
+	"CursorMoveToCharBackward": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Left"
 	}
-	CursorMoveToCharBackwardSelect: {
+	"CursorMoveToCharBackwardSelect": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Left+"
 	}
-	CursorMoveToCharForward: {
+	"CursorMoveToCharForward": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Right"
 	}
-	CursorMoveToCharForwardSelect: {
+	"CursorMoveToCharForwardSelect": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Right+"
 	}
-	CursorMoveToPageBackward: {
+	"CursorMoveToPageBackward": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Page Up"
 	}
-	CursorMoveToPageBackwardSelect: {
+	"CursorMoveToPageBackwardSelect": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Page Up+"
 	}
-	CursorMoveToPageForward: {
+	"CursorMoveToPageForward": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Page Down"
 	}
-	CursorMoveToPageForwardSelect: {
+	"CursorMoveToPageForwardSelect": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Page Down"
 	}
-	CursorMoveToLineBegin: {
+	"CursorMoveToLineBegin": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Line Begin"
 	}
-	CursorMoveToLineBeginSelect: {
+	"CursorMoveToLineBeginSelect": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Line Begin+"
 	}
-	CursorMoveToLineEnd: {
+	"CursorMoveToLineEnd": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Line End"
 	}
-	CursorMoveToLineEndSelect: {
+	"CursorMoveToLineEndSelect": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Line End+"
 	}
-	CursorMoveToTextBegin: {
+	"CursorMoveToTextBegin": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "File Begin"
 	}
-	CursorMoveToTextBeginSelect: {
+	"CursorMoveToTextBeginSelect": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Text Begin+"
 	}
-	CursorMoveToTextEnd: {
+	"CursorMoveToTextEnd": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "File End"
 	}
-	CursorMoveToTextEndSelect: {
+	"CursorMoveToTextEndSelect": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Text End+"
 	}
-	CursorMoveToWordForward: {
+	"CursorMoveToWordForward": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Word Right"
 	}
-	CursorMoveToWordForwardSelect: {
+	"CursorMoveToWordForwardSelect": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Word Right"
 	}
-	CursorMoveToWordBackward: {
+	"CursorMoveToWordBackward": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Word Left"
 	}
-	CursorMoveToWordBackwardSelect: {
+	"CursorMoveToWordBackwardSelect": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Word Left+"
 	}
-	CursorMoveToSubwordForward: {
+	"CursorMoveToSubwordForward": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Subword Right"
 	}
-	CursorMoveToSubwordForwardSelect: {
+	"CursorMoveToSubwordForwardSelect": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Subword Right+"
 	}
-	CursorMoveToSubwordBackward: {
+	"CursorMoveToSubwordBackward": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Subword Left"
 	}
-	CursorMoveToSubwordBackwardSelect: {
+	"CursorMoveToSubwordBackwardSelect": {
 		Category:    "Cursor"
 		Subcategory: ""
 		Human:       "Subword Left+"
 	}
 
-	CursorSelectionContract: {
+	"CursorSelectAll": {
 		Category:    "Cursor"
 		Subcategory: ""
-		Human:       "Expand Selection"
+		Human:       "Select All"
 	}
-	CursorSelectionExpand: {
+	"CursorSelectionContract": {
 		Category:    "Cursor"
 		Subcategory: ""
-		Human:       "Contract Selection"
+		Human:       "Selection Contract"
+	}
+	"CursorSelectionExpand": {
+		Category:    "Cursor"
+		Subcategory: ""
+		Human:       "Selection Expand"
+	}
+	"CursorMultiCloneAbove": {
+		Category:    "Cursor"
+		Subcategory: "Multi"
+		Human:       "Caret Above"
+	}
+	"CursorMultiCloneBelow": {
+		Category:    "Cursor"
+		Subcategory: "Multi"
+		Human:       "Caret Below"
+	}
+	"CursorMultiCloneOnLineEnds": {
+		Category:    "Cursor"
+		Subcategory: "Multi"
+		Human:       "Caret Below"
 	}
 
 	// EDIT
-	EditNodeMoveLineUp: {
+	"EditNodeMoveLineUp": {
 		Category: "Edit"
 		Human:    "Move Up"
 	}
-	EditNodeMoveLineDown: {
+	"EditNodeMoveLineDown": {
 		Category: "Edit"
 		Human:    "Move Down"
 	}
-	EditNodeMoveLineIn: {
+	"EditNodeMoveLineIn": {
 		Category: "Edit"
 		Human:    "Move Left"
 	}
-	EditNodeMoveLineOut: {
+	"EditNodeMoveLineOut": {
 		Category: "Edit"
 		Human:    "Move Right"
 	}
 
-	EditNodeDelete: {
+	"EditNodeDelete": {
 		Category: "Edit"
 		Human:    "Delete"
 	}
-	EditNodeRename: {
+	"EditNodeDuplicate": {
+		Category: "Edit"
+		Human:    "Delete"
+	}
+	"EditNodeRename": {
 		Category: "Edit"
 		Human:    "Rename"
 	}
