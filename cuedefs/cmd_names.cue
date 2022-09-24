@@ -62,7 +62,8 @@ Cmds: CommandNames: [
 	"EditNodeSplit",              // split
 	"EditNodeDelete",             // rename
 
-	// "EditNodeSort",             // sort
+	// "EditNodesSort",             // sort
+	// "EditNodesUnique",             // unique/de-duplicate
 
 	// "EditTextCaseToUpper",
 	// "EditTextCaseToLower",

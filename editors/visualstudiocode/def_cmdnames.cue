@@ -1,0 +1,60 @@
+package jetbrains
+
+import (
+	keyzen "github.com/kghenderson/keyzen/cuedefs"
+)
+
+Editor: keyzen.#Editor & {
+	Name: "SublimeText"
+
+	EditorCommandNameMap: {
+		"CursorMoveToCharBackward":          "cursorLeft"
+		"CursorMoveToCharBackwardSelect":    "cursorLeftSelect"
+		"CursorMoveToCharForward":           "cursorRight"
+		"CursorMoveToCharForwardSelect":     "cursorRightSelect"
+		"CursorMoveToLineBackward":          "cursorUp"
+		"CursorMoveToLineBackwardSelect":    "cursorUpSelect"
+		"CursorMoveToLineBegin":             "cursorLineStart"
+		"CursorMoveToLineBeginSelect":       "cursorLineStartSelect"
+		"CursorMoveToLineEnd":               "cursorLineEnd"
+		"CursorMoveToLineEndSelect":         "cursorLineEndSelect"
+		"CursorMoveToLineForward":           "cursorDown"
+		"CursorMoveToLineForwardSelect":     "cursorDownSelect"
+		"CursorMoveToPageBackward":          "cursorPageUp"
+		"CursorMoveToPageBackwardSelect":    "cursorPageUpSelect"
+		"CursorMoveToPageForward":           "cursorPageDown"
+		"CursorMoveToPageForwardSelect":     "cursorPageDownSelect"
+		"CursorMoveToSubwordBackward":       "cursorWordPartLeft"
+		"CursorMoveToSubwordBackwardSelect": "cursorWordPartLeftSelect"
+		"CursorMoveToSubwordForward":        "cursorWordPartRight"
+		"CursorMoveToSubwordForwardSelect":  "cursorWordPartRightSelect"
+		"CursorMoveToTextBegin":             "cursorTop"
+		"CursorMoveToTextBeginSelect":       "cursorTopSelect"
+		"CursorMoveToTextEnd":               "cursorBottom"
+		"CursorMoveToTextEndSelect":         "cursorBottomSelect"
+		"CursorMoveToWordBackward":          "cursorWordLeft"
+		"CursorMoveToWordBackwardSelect":    "cursorWordLeftSelect"
+		"CursorMoveToWordForward":           "cursorWordRight"
+		"CursorMoveToWordForwardSelect":     "cursorWordRightSelect"
+		"CursorMultiCloneAbove":             "editor.action.insertCursorAbove"
+		"CursorMultiCloneBelow":             "editor.action.insertCursorBelow"
+		"CursorMultiCloneOnLineEnds":        "editor.action.insertCursorAtEndOfEachLineSelected"
+		"CursorSelectAll":                   "editor.action.selectAll"
+		"CursorSelectionContract":           "editor.action.smartSelect.shrink"
+		"CursorSelectionExpand":             "editor.action.smartSelect.expand"
+		"EditNodeDelete":                    "editor.action.deleteLines"
+		"EditNodeInsertAboveParent":         "editor.action.insertLineBefore"
+		"EditNodeInsertAboveSibling":        "editor.action.insertLineBefore"
+		"EditNodeInsertBelowChild":          "editor.action.insertLineAfter"
+		"EditNodeInsertBelowSibling":        "editor.action.insertLineAfter"
+		"EditNodeInsertDuplicate":           "editor.action.copyLinesDownAction"
+		"EditNodeJoin":                      "editor.action.joinLines"
+		"EditNodeMoveDown":                  "editor.action.moveLinesDownAction"
+		"EditNodeMoveIn":                    "editor.action.indentLines"
+		"EditNodeMoveOut":                   "editor.action.outdentLines"
+		"EditNodeMoveUp":                    "editor.action.moveLinesUpAction"
+		"EditNodeRename":                    "renameFile" //tbd
+		"EditNodeSplit":                     ""
+	}
+}
+// "":        ""
