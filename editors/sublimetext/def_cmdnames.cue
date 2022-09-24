@@ -40,15 +40,21 @@ Editor: keyzen.#Editor & {
 		"CursorMultiCloneBelow":             #"{"command": "select_lines", "args": {"forward": true}}"#
 		"CursorMultiCloneOnLineEnds":        #"{"command": "split_selection_into_lines"}"#
 		"CursorSelectAll":                   #"{"command": "select_all"}"#
-		"CursorSelectionContract":           #""#
-		"CursorSelectionExpand":             #""#
+		"CursorSelectionContract":           #"{}"#
+		"CursorSelectionExpand":             #"{}"#
 		"EditNodeDelete":                    #"{"command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}}"#
-		"EditNodeDuplicate":                 #"{"command": "duplicate_line"}"#
-		"EditNodeMoveLineDown":              #"{"command": "swap_line_down"}"#
-		"EditNodeMoveLineIn":                #"{"command": "indent"}"#
-		"EditNodeMoveLineOut":               #"{"command": "unindent"}"#
-		"EditNodeMoveLineUp":                #"{"command": "swap_line_up"}"#
-		"EditNodeRename":                    #""#
+		"EditNodeInsertAboveParent":         #"{"command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}}"#
+		"EditNodeInsertAboveSibling":        #"{"command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}}"#
+		"EditNodeInsertBelowChild":          #"{"command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}"#
+		"EditNodeInsertBelowSibling":        #"{"command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}"#
+		"EditNodeInsertDuplicate":           #"{"command": "duplicate_line"}"#
+		"EditNodeJoin":                      #"{"command": "join_lines"}"#
+		"EditNodeMoveDown":                  #"{"command": "swap_line_down"}"#
+		"EditNodeMoveIn":                    #"{"command": "indent"}"#
+		"EditNodeMoveOut":                   #"{"command": "unindent"}"#
+		"EditNodeMoveUp":                    #"{"command": "swap_line_up"}"#
+		"EditNodeRename":                    #"{}"#
+		"EditNodeSplit":                     #"{"command": "insert", "args": {"characters": "\n"}}"#
 	}
 }
 // "":        #"{}"#

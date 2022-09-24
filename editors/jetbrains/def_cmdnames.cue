@@ -43,12 +43,18 @@ Editor: keyzen.#Editor & {
 		"CursorSelectionContract":           "Shrink Selection"
 		"CursorSelectionExpand":             "Extend Selection"
 		"EditNodeDelete":                    "Delete Line"
-		"EditNodeDuplicate":                 "Duplicate Entire Lines"
-		"EditNodeMoveLineDown":              "Move Line Down"
-		"EditNodeMoveLineIn":                "Move Line Right"
-		"EditNodeMoveLineOut":               "Move Line Left"
-		"EditNodeMoveLineUp":                "Move Line Up"
+		"EditNodeInsertAboveParent":         "Start New Line Before Current"
+		"EditNodeInsertAboveSibling":        "Start New Line Before Current"
+		"EditNodeInsertBelowChild":          "Start New Line"
+		"EditNodeInsertBelowSibling":        "Start New Line"
+		"EditNodeInsertDuplicate":           "Duplicate Entire Lines"
+		"EditNodeJoin":                      "Join Line"
+		"EditNodeMoveDown":                  "Move Line Down"
+		"EditNodeMoveIn":                    "Move Line Right"
+		"EditNodeMoveOut":                   "Move Line Left"
+		"EditNodeMoveUp":                    "Move Line Up"
 		"EditNodeRename":                    "Rename..."
+		"EditNodeSplit":                     "Split Line"
 	}
 }
 

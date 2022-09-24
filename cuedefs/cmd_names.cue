@@ -48,21 +48,33 @@ Cmds: CommandNames: [
 	"CursorMultiCloneOnLineEnds", // carets on lines
 
 	// EDITING
+	"EditNodeInsertAboveParent",  // insert parent above
+	"EditNodeInsertAboveSibling", // insert above
+	"EditNodeInsertBelowSibling", // insert below
+	"EditNodeInsertBelowChild",   // insert child  below
+	"EditNodeInsertDuplicate",    // duplicate
+	"EditNodeMoveUp",             // move up
+	"EditNodeMoveDown",           // move down
+	"EditNodeMoveOut",            // move left (unindent)
+	"EditNodeMoveIn",             // move right (indent)
+	"EditNodeRename",             // rename
+	"EditNodeJoin",               // join
+	"EditNodeSplit",              // split
+	"EditNodeDelete",             // rename
 
-	"EditNodeMoveLineUp",   // line up
-	"EditNodeMoveLineDown", // line down
-	"EditNodeMoveLineOut",  // line left (unindent)
-	"EditNodeMoveLineIn",   // line right (indent)
-	"EditNodeRename",       // rename
-	"EditNodeDelete",       // rename
-	"EditNodeDuplicate",    // duplicate
+	// "EditNodeSort",             // sort
 
 	// "EditTextCaseToUpper",
 	// "EditTextCaseToLower",
 	// "EditSort",
 	// "EditAlign",
 	// "Rename",
+	// "EditTextReformat"
+	// EditTextDelete (ctrl+.)
 
+	// FileSave
+	// FileSaveAs
+	// FileOpen
 
 	// "Undo",
 	// "Redo",
@@ -76,6 +88,10 @@ Cmds: CommandNames: [
 	// "Scroll Up",
 	// "Select All"
 	// goto/search/replace
+
+	// macro
+	// repeat
+	// clipboard
 
 	// "Next Occurrence of Word at Cursor",
 	// "Previous Occurrence of Word at Cursor",
@@ -94,14 +110,11 @@ Cmds: CommandNames: [
 	// "Collapse",
 	// "Expand",
 
-	// "",
-	// "",
-	// "",
-	// "",
-
 	// other
 	// "Execute",
 	// "",
+
+	// templates
 
 	// window/pane mgt
 	// "Split Right",

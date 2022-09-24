@@ -176,34 +176,61 @@ Cmds: Commands: {
 	}
 
 	// EDIT
-	"EditNodeMoveLineUp": {
+	"EditNodeInsertAboveParent": {
+		Category:    "Edit"
+		Subcategory: ""
+		Human:       "Insert Parent"
+	}
+	"EditNodeInsertAboveSibling": {
+		Category:    "Edit"
+		Subcategory: ""
+		Human:       "Insert Sibling Above"
+	}
+	"EditNodeInsertBelowSibling": {
+		Category:    "Edit"
+		Subcategory: ""
+		Human:       "Insert Sibling Below"
+	}
+	"EditNodeInsertBelowChild": {
+		Category:    "Edit"
+		Subcategory: ""
+		Human:       "Insert Child"
+	}
+	"EditNodeInsertDuplicate": {
+		Category: "Edit"
+		Human:    "Duplicate"
+	}
+	"EditNodeMoveUp": {
 		Category: "Edit"
 		Human:    "Move Up"
 	}
-	"EditNodeMoveLineDown": {
+	"EditNodeMoveDown": {
 		Category: "Edit"
 		Human:    "Move Down"
 	}
-	"EditNodeMoveLineIn": {
+	"EditNodeMoveIn": {
 		Category: "Edit"
 		Human:    "Move Left"
 	}
-	"EditNodeMoveLineOut": {
+	"EditNodeMoveOut": {
 		Category: "Edit"
 		Human:    "Move Right"
-	}
-
-	"EditNodeDelete": {
-		Category: "Edit"
-		Human:    "Delete"
-	}
-	"EditNodeDuplicate": {
-		Category: "Edit"
-		Human:    "Delete"
 	}
 	"EditNodeRename": {
 		Category: "Edit"
 		Human:    "Rename"
+	}
+	"EditNodeJoin": {
+		Category: "Edit"
+		Human:    "Join"
+	}
+	"EditNodeSplit": {
+		Category: "Edit"
+		Human:    "Split"
+	}
+	"EditNodeDelete": {
+		Category: "Edit"
+		Human:    "Delete"
 	}
 
 	// "": {
