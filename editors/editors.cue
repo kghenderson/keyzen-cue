@@ -5,6 +5,5 @@ import (
 )
 
 Editors: {
-
 	"\(jetbrains.Editor.Name)": jetbrains.Editor
 }

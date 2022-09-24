@@ -1,4 +1,4 @@
-package cmddef
+package cuedefs
 
 
 Cmds: Commands:  {

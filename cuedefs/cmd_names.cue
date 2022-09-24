@@ -1,4 +1,4 @@
-package cmddef
+package cuedefs
 
 
 // CommandNames is a sorted list of names, aligns with CommandDetails
@@ -56,6 +56,7 @@ Cmds: CommandNames: [
 	"EditNodeMoveLineIn",   // line right (indent)
 	"EditNodeRename",       // rename
 	"EditNodeDelete",       // rename
+	"EditNodeDuplicate",       // duplicate
 
 	// "EditTextCaseToUpper",
 	// "EditTextCaseToLower",

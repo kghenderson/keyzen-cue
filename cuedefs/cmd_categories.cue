@@ -1,4 +1,4 @@
-package cmddef
+package cuedefs
 
 
 Cmds: ContextNames: [
@@ -8,6 +8,8 @@ Cmds: ContextNames: [
 	"Refactoring",
 	"Multi-Cursors",
 	"SearchReplace",
+	"Debugging",
+	"Bookmarking",
 ]
 
 Cmds: ScopeNames: [

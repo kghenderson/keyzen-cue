@@ -1,21 +1,16 @@
 package cuedefs
 
-#Editor: {
 
-	Name: string
-
-	CommandMap: #CommandMap 
-
-	//...
+#EditorCommandDef: {
+	EditorCommandName: string
 }
-	//Name: cmdName
 
-#CommandMap: [#CommandName]: #CommandDef
-#CommandMap: {
+#EditorCommandMap: [#CommandName]: #EditorCommandDef
+#EditorCommandMap: {
 
-	CursorMoveToLineBackward:  #CommandDef
-	CursorMoveToLineBackwardSelect:  #CommandDef
-	CursorMoveToLineForward:  #CommandDef
+	CursorMoveToLineBackward:  #EditorCommandDef
+	CursorMoveToLineBackwardSelect:  #EditorCommandDef
+	CursorMoveToLineForward:  #EditorCommandDef
 
 	//CursorMoveToLineForwardSelect: #CommandDef
 	//CursorMoveToCharBackward: #CommandDef
@@ -54,16 +49,3 @@ package cuedefs
 	//EditNodeRename: #CommandDef
 
 }
-
-#CommandDef: {
-	EditorCommandName: string
-}
-
-//#Command: {
-//	Name:        string
-//	Category:    string
-//	Subcategory: string
-//	Human:       string
-//	EditorCommand: string
-//	// ...
-//}
