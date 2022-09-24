@@ -1,24 +1,12 @@
-package cuedefs
+package cmddef
 
-import (
-	"list"
-)
-
-
-KZ: commandNamesLookup: {
-	for _, cmdName in KZ.CommandNames {"\(cmdName)": true}
-}
-KZ: commandNamesSorted: list.SortStrings(KZ.CommandNames)
-
-KZ: checkCommandNamesUnique: true & list.UniqueItems(KZ.CommandNames)
-
-// note: using forward then backward so movements can be tested from start
 
 // CommandNames is a sorted list of names, aligns with CommandDetails
-KZ: CommandNames: [...#CommandName]
-KZ: CommandNames: [
+Cmds: CommandNames: [
 
-	// cursor movements
+	// NAVIGATING & SELECTING
+	
+	// Cursor Movements
 	"CursorMoveToLineBackward",          // up
 	"CursorMoveToLineBackwardSelect",    // up+
 	"CursorMoveToLineForward",           // down
@@ -39,6 +27,8 @@ KZ: CommandNames: [
 	"CursorMoveToTextBeginSelect",       // doc home+
 	"CursorMoveToTextEnd",               // doc end
 	"CursorMoveToTextEndSelect",         // doc end+
+
+	// Cursor Word Jumps
 	"CursorMoveToWordBackward",          // word left
 	"CursorMoveToWordBackwardSelect",    // word left+
 	"CursorMoveToWordForward",           // word right
@@ -48,12 +38,18 @@ KZ: CommandNames: [
 	"CursorMoveToSubwordForward",        // subword right
 	"CursorMoveToSubwordForwardSelect",  // subword right+
 
-	// Multi-Cursors
-
+	// Selection Expand & Contraction
 	"CursorSelectionExpand",   // expand+
 	"CursorSelectionContract", // contract+
 
-	//
+	// Multi-Cursors
+	// "CursorCloneCaretAbove",
+	// "CursorCloneCaretBelow",
+	// "CursorCloneCaretsAtEndOfSelectedLines"
+
+
+	// EDITING
+
 	"EditNodeMoveLineUp",   // line up
 	"EditNodeMoveLineDown", // line down
 	"EditNodeMoveLineOut",  // line left (unindent)

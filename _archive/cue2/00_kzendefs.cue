@@ -2,7 +2,7 @@ package cue2
 
 // a commandn
 
-// CommandNames are the central/global names for all commands
+// CommandNames are the central/global names for all cmddef
 #CommandName: string
 
 //

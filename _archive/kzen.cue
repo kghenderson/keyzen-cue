@@ -1,7 +1,7 @@
 // CUE Spec for Keymap
 package kzen
 
-// Category is used for grouping and sorting sections of commands
+// Category is used for grouping and sorting sections of cmddef
 
 //#AppCommands: {
 // #NavCommands

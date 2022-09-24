@@ -1,26 +1,7 @@
-package cuedefs
-
-_checkCommandsInCommandNames: {
-	for cmdName, cmd in KZ.Commands {
-		true & KZ.commandNamesLookup[cmdName]
-	}
-}
-_checkAllCommandsNamesHaveCommands: {
-	for _, cmdName in KZ.CommandNames {
-		"\(cmdName)": true & KZ.Commands[cmdName] != _|_
-	}
-}
-
-#Command: {
-	Name:        string
-	Category:    string
-	Subcategory: string
-	Human:       string
-	...
-}
+package cmddef
 
 
-#Commands: #CommandMap & {
+Cmds: Commands:  {
 
 	// CURSOR
 	CursorMoveToLineBackward: {

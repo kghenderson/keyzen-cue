@@ -1,4 +1,4 @@
-// kzen mapping for jetbrains
+// keyzen mapping for jetbrains
 package kzen
 
 Jetbrains: Commands: #AppCommands & {

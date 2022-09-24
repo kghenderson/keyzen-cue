@@ -1,0 +1,5 @@
+package cmddef
+
+Cmds: {
+	... 
+}

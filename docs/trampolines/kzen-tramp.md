@@ -93,6 +93,8 @@ Line: Ctrl+Alt
 | | Bookmarks | | | | | <kbd></kbd>                                  |
 | | | | | | | <kbd></kbd>                                  |
 | | Hoist | <kbd></kbd>                  | | | | <kbd></kbd>                                  |
+                
+Quote/Unquote: Ctrl+Quote
 
 | | Volume Up | <kbd></kbd>                  | | | | <kbd></kbd>                                  |
 | | Volume Down | <kbd></kbd>                  | | | | <kbd></kbd>                                  |
