@@ -1,10 +1,7 @@
-package zenstrokes
+package strokes
 
-import (
-	keyzen "github.com/kghenderson/keyzen/cuedefs"
-)
-
-Strokes: keyzen.#StrokesDef & {
+Strokes: #Strokes & {
+	Name: "ZenStrokes1"
 
 	StrokesMap: {
 		"CursorMoveToCharBackward": [["left"], ["hyper+j"]]

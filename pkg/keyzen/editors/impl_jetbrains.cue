@@ -1,6 +1,5 @@
 package editors
 
-
 Editors: "\(thisEditor.Name)": thisEditor
 
 let thisEditor = #Editor & {

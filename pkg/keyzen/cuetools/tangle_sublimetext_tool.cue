@@ -38,7 +38,7 @@ command: tangle_sublimetext: {
 
 // language=gotemplate
 sublimeKeymapTemplate: ###"""
-	{{ $name := "test" }}
+	{{- $name := "test" }}
 	hello, {{$name}}
 
 	"""###

@@ -1,10 +1,8 @@
-package sublimetext
+package editors
 
-import (
-	keyzen "github.com/kghenderson/keyzen/cuedefs"
-)
+Editors: "\(thisEditor.Name)": thisEditor
 
-Editor: keyzen.#Editor & {
+let thisEditor = #Editor & {
 	Name: "SublimeText"
 
 	EditorCommandNameMap: {

@@ -1,6 +1,10 @@
-package cuedefs
+package strokes
 
-#StrokesDef: {
+import (
+	"github.com/kghenderson/keyzen/commands"
+)
+
+#Strokes: {
 	Name:       string
 	StrokesMap: #StrokesMap
 
@@ -19,7 +23,7 @@ package cuedefs
 #StrokesContextMap: [context=#StrokeContext]: #StrokesList
 
 #StrokesMap: {
-	for _, cmdName in Commands.CommandNames {
+	for _, cmdName in commands.Commands.CommandNames {
 		"\(cmdName)": [...#StrokesList]
 	}
 }
