@@ -54,18 +54,23 @@ sublimeKeymapTemplate: ###"""
 	{{- $cmdNames := .commands.CommandNames }}
 	{{- $cmdDetails := .commands.CommandDetailsMap }}
 	{{- $edCmdDetails := .editor.EditorCommandNameMap }}
+	{{- $strokeDetails := .strokes.StrokesMap }}
 	// {{$strokesName}} for {{.editorName}}
 	{{- range $cmdIdx, $cmdName := $cmdNames }}
-	{{- $cmd := index $cmdDetails $cmdName  }}
+	{{- $cmd := index $cmdDetails $cmdName }}
+	{{- $strokes := index $strokeDetails $cmdName }}
 	{{- $subl := index $edCmdDetails $cmdName }}
 	{{- if $subl }}
 	{{- $sublCmd := $subl.command }}
-	{{- $sublArgs := $subl.argsText }}
-	{ "keys": ["some+keys"], "command": "{{$sublCmd}}"
-	{{- if $subl.args}}, "args": {{$subl.argsText}}{{end}}
+	{{- $sublArgs := $subl.args }}
+	{{- $sublArgsText := $subl.argsText }}
+	{{- range $comboIdx, $combo := $strokes }}
+	{{- range $pressIdx, $presses := $combo }}
+	{ "keys": ["{{$presses}}"], "command": "{{$sublCmd}}"
+	{{- if $sublArgs}}, "args": {{$sublArgsText}}{{end}}
 	{{- " }  // "}}{{$cmdName}}
-	{{- /* $cmd */}}
-	{{- /*  $subl */}}
+	{{- end }}{{/* range $presses  */}}
+	{{- end }}{{/* range $strokes  */}}
 	{{- end }}{{/* if $subl  */}}
-	{{- end }}{{/* range .commands */}}
+	{{- end }}{{/* range $cmdNames */}}
 	"""###
