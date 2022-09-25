@@ -76,6 +76,7 @@ Cmds: CommandNames: [
 	// FileSave
 	// FileSaveAs
 	// FileOpen
+	// FileOpenExternally
 
 	// "Undo",
 	// "Redo",

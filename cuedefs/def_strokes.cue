@@ -3,6 +3,15 @@ package cuedefs
 #StrokesDef: {
 	Name:       string
 	StrokesMap: #StrokesMap
+
+	strokesRev: {
+		for _, StrokesList in StrokesMap {
+			for _, X in StrokesList {
+				true
+			}
+		}
+	}
+	...
 }
 
 #StrokeContext: string
@@ -11,6 +20,6 @@ package cuedefs
 
 #StrokesMap: {
 	for _, cmdName in Cmds.CommandNames {
-		"\(cmdName)": #StrokesContextMap
+		"\(cmdName)": [...#StrokesList]
 	}
 }
