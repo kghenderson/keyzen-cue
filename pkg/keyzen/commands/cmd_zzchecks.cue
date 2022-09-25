@@ -1,4 +1,4 @@
-package cuedefs
+package commands
 
 import (
 	"list"

@@ -1,10 +1,10 @@
-package cuedefs
+package editors
 
 #EditorCommandDef: {
 	EditorCommandName: string
 }
 
-#EditorCommandMap: [#CommandName]: #EditorCommandDef
+#EditorCommandMap: [string]: #EditorCommandDef
 #EditorCommandMap: {
 
 	CursorMoveToLineBackward:       #EditorCommandDef

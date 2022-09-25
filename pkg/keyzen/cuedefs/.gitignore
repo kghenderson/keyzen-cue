@@ -1,5 +1,0 @@
-
-# ignore json and yaml files in the cuedefs directory,
-# these are used for testing
-*.json
-*.yaml

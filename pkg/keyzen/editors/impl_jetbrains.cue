@@ -1,10 +1,9 @@
-package jetbrains
+package editors
 
-import (
-	keyzen "github.com/kghenderson/keyzen/editors"
-)
 
-Editor: keyzen.#Editor & {
+Editors: "\(thisEditor.Name)": thisEditor
+
+let thisEditor = #Editor & {
 	Name: "Jetbrains"
 
 	EditorCommandNameMap: {

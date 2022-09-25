@@ -1,4 +1,4 @@
-package cuedefs
+package commands
 
 // CommandNames is a sorted list of names, aligns with CommandDetails
 Commands: CommandNames: [
