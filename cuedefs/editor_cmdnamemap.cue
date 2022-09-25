@@ -5,7 +5,7 @@ package cuedefs
 // the mapping must account for every keyzen command
 
 #EditorCommandNameMap: {
-	for _, cmdName in Cmds.CommandNames {
+	for _, cmdName in Commands.CommandNames {
 		"\(cmdName)": string
 	}
 }

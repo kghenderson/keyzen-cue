@@ -19,7 +19,7 @@ package cuedefs
 #StrokesContextMap: [context=#StrokeContext]: #StrokesList
 
 #StrokesMap: {
-	for _, cmdName in Cmds.CommandNames {
+	for _, cmdName in Commands.CommandNames {
 		"\(cmdName)": [...#StrokesList]
 	}
 }

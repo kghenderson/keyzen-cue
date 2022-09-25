@@ -1,7 +1,7 @@
 package cuedefs
 
 // CommandNames is a sorted list of names, aligns with CommandDetails
-Cmds: CommandNames: [
+Commands: CommandNames: [
 
 	// NAVIGATING & SELECTING
 
@@ -90,6 +90,7 @@ Cmds: CommandNames: [
 	// "Scroll Up",
 	// "Select All"
 	// goto/search/replace
+	// Refresh/Reload
 
 	// macro
 	// repeat

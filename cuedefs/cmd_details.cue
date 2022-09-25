@@ -1,6 +1,6 @@
 package cuedefs
 
-Cmds: Commands: {
+Commands: CommandDetailsMap: {
 
 	// CURSOR
 	"CursorMoveToLineBackward": {

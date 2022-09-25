@@ -1,5 +1,9 @@
 package cuedefs
 
-Cmds: {
-	...
+Commands: {
+	CategoryNames: [...string]
+	CommandNames: [...string]
+	ContextNames: [...string]
+	CommandDetails: [cmdName=string]: {...}
+	// ...
 }

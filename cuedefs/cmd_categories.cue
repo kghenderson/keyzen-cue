@@ -1,6 +1,6 @@
 package cuedefs
 
-Cmds: ContextNames: [
+Commands: ContextNames: [
 	"Reading",
 	"Navigating",
 	"Editing",
@@ -11,15 +11,18 @@ Cmds: ContextNames: [
 	"Bookmarking",
 ]
 
-Cmds: ScopeNames: [
+Commands: ScopeNames: [
 	"File",
-	"Panes",
-	"Windows",
+	"Editor",
+	"Text",
+	"Tree",
+	"Pane",
+	"Window",
 	"Terminal",
 	"SQL",
 ]
 
-Cmds: CategoryNames: [
+Commands: CategoryNames: [
 	"FileCursorsNav",
 	"FileCursorsMulti",
 	"FileOutlineEditing",

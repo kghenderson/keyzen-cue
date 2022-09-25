@@ -7,26 +7,27 @@ import (
 // check that command names are valid
 
 #CommandName: string
-Cmds: CommandNames: [...#CommandName]
+Commands: CommandNames: [...#CommandName]
 
 // lookup uses struct for faster indexing
-Cmds: commandNamesLookup: {
-	for _, cmdName in Cmds.CommandNames {"\(cmdName)": true}
+Commands: commandNamesLookup: {
+	for _, cmdName in Commands.CommandNames {"\(cmdName)": true}
 }
-Cmds: commandNamesSorted: list.SortStrings(Cmds.CommandNames)
 
-Cmds: zzCheckCommandNamesUnique: true & list.UniqueItems(Cmds.CommandNames)
+Commands: commandNamesSorted: list.SortStrings(Commands.CommandNames)
+
+//Commands: zzCheckCommandNamesUnique: true & list.UniqueItems(Commands.CommandNames)
 
 // _checkAllCommandsNamesHaveCommands confirms that every command name has a corresponding struct
-Cmds: zzCheckAllCommandsNamesInCommands: {
-	for _, cmdName in Cmds.CommandNames {
-		"\(cmdName)": true & Cmds.Commands[cmdName] != _|_
-	}
-}
+//Commands: zzCheckAllCommandsNamesInCommands: {
+// for _, cmdName in Commands.CommandNames {
+//  "\(cmdName)": true & Commands.CommandDetailsMap[cmdName] != _|_
+// }
+//}
 
 // _checkAllCommandsInCommandNames confirms that every command struct has a corresponding name in the cmddef list
-Cmds: zzCheckAllCommandsInCommandNames: {
-	for cmdName, cmd in Cmds.Commands {
-		true & Cmds.commandNamesLookup[cmdName]
-	}
-}
+//Commands: zzCheckAllCommandsInCommandNames: {
+// for cmdName, cmd in Commands.CommandDetailsMap {
+//  true & Commands.commandNamesLookup[cmdName]
+// }
+//}

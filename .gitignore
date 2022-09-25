@@ -9,6 +9,7 @@
 
 # underscore json/yaml (for cue testing)
 _*.json
+_*.txt
 _*.yaml
 
 

@@ -5,7 +5,8 @@ hello:
 	echo "hello, $(whoami)"
 
 .PHONY: "all"
-all: fmt exp doc
+all: fmt exp
+#doc
 
 
 .PHONY: "init"
@@ -14,11 +15,11 @@ init:
 
 .PHONY: "exp"
 exp:
-	cue export . -o ./_gen/keyzen.yaml -f
+	cue export . -o ./_gen/_keyzen.yaml -f
 
-.PHONY: "doc"
-doc:
-	cue cmd doc
+#.PHONY: "doc"
+#doc:
+#	cue cmd doc
 
 
 .PHONY: "fmt"
