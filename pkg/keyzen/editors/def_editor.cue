@@ -1,8 +1,8 @@
 package editors
 
-import (
-	"github.com/kghenderson/keyzen/commands"
-)
+// import (
+//  "github.com/kghenderson/keyzen/commands"
+// )
 
 #Editor: {
 
@@ -14,12 +14,11 @@ import (
 	//...
 }
 
-#EditorCommandNameMap: [string]: string
-
 // the mapping must account for every keyzen command
 
 #EditorCommandNameMap: {
-	for _, cmdName in commands.Commands.CommandNames {
-		"\(cmdName)": string
-	}
+	// for _, cmdName in commands.Commands.CommandNames {
+	//  "\(cmdName)"?: {...}
+	// }
+	...
 }

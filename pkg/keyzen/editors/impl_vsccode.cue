@@ -6,53 +6,53 @@ let thisEditor = #Editor & {
 	Name: "VisualStudioCode"
 
 	EditorCommandNameMap: {
-		"CursorMoveToCharBackward":          "cursorLeft"
-		"CursorMoveToCharBackwardSelect":    "cursorLeftSelect"
-		"CursorMoveToCharForward":           "cursorRight"
-		"CursorMoveToCharForwardSelect":     "cursorRightSelect"
-		"CursorMoveToLineBackward":          "cursorUp"
-		"CursorMoveToLineBackwardSelect":    "cursorUpSelect"
-		"CursorMoveToLineBegin":             "cursorLineStart"
-		"CursorMoveToLineBeginSelect":       "cursorLineStartSelect"
-		"CursorMoveToLineEnd":               "cursorLineEnd"
-		"CursorMoveToLineEndSelect":         "cursorLineEndSelect"
-		"CursorMoveToLineForward":           "cursorDown"
-		"CursorMoveToLineForwardSelect":     "cursorDownSelect"
-		"CursorMoveToPageBackward":          "cursorPageUp"
-		"CursorMoveToPageBackwardSelect":    "cursorPageUpSelect"
-		"CursorMoveToPageForward":           "cursorPageDown"
-		"CursorMoveToPageForwardSelect":     "cursorPageDownSelect"
-		"CursorMoveToSubwordBackward":       "cursorWordPartLeft"
-		"CursorMoveToSubwordBackwardSelect": "cursorWordPartLeftSelect"
-		"CursorMoveToSubwordForward":        "cursorWordPartRight"
-		"CursorMoveToSubwordForwardSelect":  "cursorWordPartRightSelect"
-		"CursorMoveToTextBegin":             "cursorTop"
-		"CursorMoveToTextBeginSelect":       "cursorTopSelect"
-		"CursorMoveToTextEnd":               "cursorBottom"
-		"CursorMoveToTextEndSelect":         "cursorBottomSelect"
-		"CursorMoveToWordBackward":          "cursorWordLeft"
-		"CursorMoveToWordBackwardSelect":    "cursorWordLeftSelect"
-		"CursorMoveToWordForward":           "cursorWordRight"
-		"CursorMoveToWordForwardSelect":     "cursorWordRightSelect"
-		"CursorMultiCloneAbove":             "editor.action.insertCursorAbove"
-		"CursorMultiCloneBelow":             "editor.action.insertCursorBelow"
-		"CursorMultiCloneOnLineEnds":        "editor.action.insertCursorAtEndOfEachLineSelected"
-		"CursorSelectAll":                   "editor.action.selectAll"
-		"CursorSelectionContract":           "editor.action.smartSelect.shrink"
-		"CursorSelectionExpand":             "editor.action.smartSelect.expand"
-		"EditNodeDelete":                    "editor.action.deleteLines"
-		"EditNodeInsertAboveParent":         "editor.action.insertLineBefore"
-		"EditNodeInsertAboveSibling":        "editor.action.insertLineBefore"
-		"EditNodeInsertBelowChild":          "editor.action.insertLineAfter"
-		"EditNodeInsertBelowSibling":        "editor.action.insertLineAfter"
-		"EditNodeInsertDuplicate":           "editor.action.copyLinesDownAction"
-		"EditNodeJoin":                      "editor.action.joinLines"
-		"EditNodeMoveDown":                  "editor.action.moveLinesDownAction"
-		"EditNodeMoveIn":                    "editor.action.indentLines"
-		"EditNodeMoveOut":                   "editor.action.outdentLines"
-		"EditNodeMoveUp":                    "editor.action.moveLinesUpAction"
-		"EditNodeRename":                    "renameFile" //tbd
-		"EditNodeSplit":                     ""
+		"CursorMoveToCharBackward": {"Label": "cursorLeft"}
+		"CursorMoveToCharBackwardSelect": {"Label": "cursorLeftSelect"}
+		"CursorMoveToCharForward": {"Label": "cursorRight"}
+		"CursorMoveToCharForwardSelect": {"Label": "cursorRightSelect"}
+		"CursorMoveToLineBackward": {"Label": "cursorUp"}
+		"CursorMoveToLineBackwardSelect": {"Label": "cursorUpSelect"}
+		"CursorMoveToLineBegin": {"Label": "cursorLineStart"}
+		"CursorMoveToLineBeginSelect": {"Label": "cursorLineStartSelect"}
+		"CursorMoveToLineEnd": {"Label": "cursorLineEnd"}
+		"CursorMoveToLineEndSelect": {"Label": "cursorLineEndSelect"}
+		"CursorMoveToLineForward": {"Label": "cursorDown"}
+		"CursorMoveToLineForwardSelect": {"Label": "cursorDownSelect"}
+		"CursorMoveToPageBackward": {"Label": "cursorPageUp"}
+		"CursorMoveToPageBackwardSelect": {"Label": "cursorPageUpSelect"}
+		"CursorMoveToPageForward": {"Label": "cursorPageDown"}
+		"CursorMoveToPageForwardSelect": {"Label": "cursorPageDownSelect"}
+		"CursorMoveToSubwordBackward": {"Label": "cursorWordPartLeft"}
+		"CursorMoveToSubwordBackwardSelect": {"Label": "cursorWordPartLeftSelect"}
+		"CursorMoveToSubwordForward": {"Label": "cursorWordPartRight"}
+		"CursorMoveToSubwordForwardSelect": {"Label": "cursorWordPartRightSelect"}
+		"CursorMoveToTextBegin": {"Label": "cursorTop"}
+		"CursorMoveToTextBeginSelect": {"Label": "cursorTopSelect"}
+		"CursorMoveToTextEnd": {"Label": "cursorBottom"}
+		"CursorMoveToTextEndSelect": {"Label": "cursorBottomSelect"}
+		"CursorMoveToWordBackward": {"Label": "cursorWordLeft"}
+		"CursorMoveToWordBackwardSelect": {"Label": "cursorWordLeftSelect"}
+		"CursorMoveToWordForward": {"Label": "cursorWordRight"}
+		"CursorMoveToWordForwardSelect": {"Label": "cursorWordRightSelect"}
+		"CursorMultiCloneAbove": {"Label": "editor.action.insertCursorAbove"}
+		"CursorMultiCloneBelow": {"Label": "editor.action.insertCursorBelow"}
+		"CursorMultiCloneOnLineEnds": {"Label": "editor.action.insertCursorAtEndOfEachLineSelected"}
+		"CursorSelectAll": {"Label": "editor.action.selectAll"}
+		"CursorSelectionContract": {"Label": "editor.action.smartSelect.shrink"}
+		"CursorSelectionExpand": {"Label": "editor.action.smartSelect.expand"}
+		"EditNodeDelete": {"Label": "editor.action.deleteLines"}
+		"EditNodeInsertAboveParent": {"Label": "editor.action.insertLineBefore"}
+		"EditNodeInsertAboveSibling": {"Label": "editor.action.insertLineBefore"}
+		"EditNodeInsertBelowChild": {"Label": "editor.action.insertLineAfter"}
+		"EditNodeInsertBelowSibling": {"Label": "editor.action.insertLineAfter"}
+		"EditNodeInsertDuplicate": {"Label": "editor.action.copyLinesDownAction"}
+		"EditNodeJoin": {"Label": "editor.action.joinLines"}
+		"EditNodeMoveDown": {"Label": "editor.action.moveLinesDownAction"}
+		"EditNodeMoveIn": {"Label": "editor.action.indentLines"}
+		"EditNodeMoveOut": {"Label": "editor.action.outdentLines"}
+		"EditNodeMoveUp": {"Label": "editor.action.moveLinesUpAction"}
+		"EditNodeRename": {"Label": "renameFile"} //tbd
+		"EditNodeSplit": {"Label": ""}
 	}
 }
 // "":        ""

@@ -1,6 +1,8 @@
 package strokes
 
-Strokes: #Strokes & {
+Strokes: "\(thisStrokes.Name)": thisStrokes
+
+let thisStrokes = #Strokes & {
 	Name: "ZenStrokes1"
 
 	StrokesMap: {

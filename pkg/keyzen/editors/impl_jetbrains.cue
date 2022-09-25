@@ -6,53 +6,53 @@ let thisEditor = #Editor & {
 	Name: "Jetbrains"
 
 	EditorCommandNameMap: {
-		"CursorMoveToCharBackward":          "Left"
-		"CursorMoveToCharBackwardSelect":    "Left with Selection"
-		"CursorMoveToCharForward":           "Right"
-		"CursorMoveToCharForwardSelect":     "Right with Selection"
-		"CursorMoveToLineBackward":          "Up"
-		"CursorMoveToLineBackwardSelect":    "Up with Selection"
-		"CursorMoveToLineBegin":             "Move Caret to Line Start"
-		"CursorMoveToLineBeginSelect":       "Move Caret to Line Start with Selection"
-		"CursorMoveToLineEnd":               "Move Caret to Line End"
-		"CursorMoveToLineEndSelect":         "Move Caret to Line End with Selection"
-		"CursorMoveToLineForward":           "Down"
-		"CursorMoveToLineForwardSelect":     "Down with Selection"
-		"CursorMoveToPageBackward":          "Page Up"
-		"CursorMoveToPageBackwardSelect":    "Page Up with Selection"
-		"CursorMoveToPageForward":           "Page Down"
-		"CursorMoveToPageForwardSelect":     "Page Down with Selection"
-		"CursorMoveToSubwordBackward":       #"Move Caret to Previous Word in Different "CamelHumps" Mode"#
-		"CursorMoveToSubwordBackwardSelect": #"Move Caret to Previous Word in Different "CamelHumps" Mode with Selection"#
-		"CursorMoveToSubwordForward":        #"Move Caret to Next Word in Different "CamelHumps" Mode"#
-		"CursorMoveToSubwordForwardSelect":  #"Move Caret to Next Word in Different "CamelHumps" Mode with Selection"#
-		"CursorMoveToTextBegin":             "Move Caret to Text Start"
-		"CursorMoveToTextBeginSelect":       "Move Caret to Text Begin with Selection"
-		"CursorMoveToTextEnd":               "Move Caret to Text End"
-		"CursorMoveToTextEndSelect":         "Move Caret to Text End with Selection"
-		"CursorMoveToWordBackward":          "Move Caret to Previous Word"
-		"CursorMoveToWordBackwardSelect":    "Move Caret to Previous Word with Selection"
-		"CursorMoveToWordForward":           "Move Caret to Next Word"
-		"CursorMoveToWordForwardSelect":     "Move Caret to Next Word with Selection"
-		"CursorMultiCloneAbove":             "Clone Caret Above"
-		"CursorMultiCloneBelow":             "Clone Caret Below"
-		"CursorMultiCloneOnLineEnds":        "Add Carets to Ends of Selected Lines"
-		"CursorSelectAll":                   "Select All"
-		"CursorSelectionContract":           "Shrink Selection"
-		"CursorSelectionExpand":             "Extend Selection"
-		"EditNodeDelete":                    "Delete Line"
-		"EditNodeInsertAboveParent":         "Start New Line Before Current"
-		"EditNodeInsertAboveSibling":        "Start New Line Before Current"
-		"EditNodeInsertBelowChild":          "Start New Line"
-		"EditNodeInsertBelowSibling":        "Start New Line"
-		"EditNodeInsertDuplicate":           "Duplicate Entire Lines"
-		"EditNodeJoin":                      "Join Line"
-		"EditNodeMoveDown":                  "Move Line Down"
-		"EditNodeMoveIn":                    "Move Line Right"
-		"EditNodeMoveOut":                   "Move Line Left"
-		"EditNodeMoveUp":                    "Move Line Up"
-		"EditNodeRename":                    "Rename..."
-		"EditNodeSplit":                     "Split Line"
+		"CursorMoveToCharBackward": {"Label": "Left"}
+		"CursorMoveToCharBackwardSelect": {"Label": "Left with Selection"}
+		"CursorMoveToCharForward": {"Label": "Right"}
+		"CursorMoveToCharForwardSelect": {"Label": "Right with Selection"}
+		"CursorMoveToLineBackward": {"Label": "Up"}
+		"CursorMoveToLineBackwardSelect": {"Label": "Up with Selection"}
+		"CursorMoveToLineBegin": {"Label": "Move Caret to Line Start"}
+		"CursorMoveToLineBeginSelect": {"Label": "Move Caret to Line Start with Selection"}
+		"CursorMoveToLineEnd": {"Label": "Move Caret to Line End"}
+		"CursorMoveToLineEndSelect": {"Label": "Move Caret to Line End with Selection"}
+		"CursorMoveToLineForward": {"Label": "Down"}
+		"CursorMoveToLineForwardSelect": {"Label": "Down with Selection"}
+		"CursorMoveToPageBackward": {"Label": "Page Up"}
+		"CursorMoveToPageBackwardSelect": {"Label": "Page Up with Selection"}
+		"CursorMoveToPageForward": {"Label": "Page Down"}
+		"CursorMoveToPageForwardSelect": {"Label": "Page Down with Selection"}
+		"CursorMoveToSubwordBackward": {"Label": #"Move Caret to Previous Word in Different "CamelHumps" Mode"#}
+		"CursorMoveToSubwordBackwardSelect": {"Label": #"Move Caret to Previous Word in Different "CamelHumps" Mode with Selection"#}
+		"CursorMoveToSubwordForward": {"Label": #"Move Caret to Next Word in Different "CamelHumps" Mode"#}
+		"CursorMoveToSubwordForwardSelect": {"Label": #"Move Caret to Next Word in Different "CamelHumps" Mode with Selection"#}
+		"CursorMoveToTextBegin": {"Label": "Move Caret to Text Start"}
+		"CursorMoveToTextBeginSelect": {"Label": "Move Caret to Text Begin with Selection"}
+		"CursorMoveToTextEnd": {"Label": "Move Caret to Text End"}
+		"CursorMoveToTextEndSelect": {"Label": "Move Caret to Text End with Selection"}
+		"CursorMoveToWordBackward": {"Label": "Move Caret to Previous Word"}
+		"CursorMoveToWordBackwardSelect": {"Label": "Move Caret to Previous Word with Selection"}
+		"CursorMoveToWordForward": {"Label": "Move Caret to Next Word"}
+		"CursorMoveToWordForwardSelect": {"Label": "Move Caret to Next Word with Selection"}
+		"CursorMultiCloneAbove": {"Label": "Clone Caret Above"}
+		"CursorMultiCloneBelow": {"Label": "Clone Caret Below"}
+		"CursorMultiCloneOnLineEnds": {"Label": "Add Carets to Ends of Selected Lines"}
+		"CursorSelectAll": {"Label": "Select All"}
+		"CursorSelectionContract": {"Label": "Shrink Selection"}
+		"CursorSelectionExpand": {"Label": "Extend Selection"}
+		"EditNodeDelete": {"Label": "Delete Line"}
+		"EditNodeInsertAboveParent": {"Label": "Start New Line Before Current"}
+		"EditNodeInsertAboveSibling": {"Label": "Start New Line Before Current"}
+		"EditNodeInsertBelowChild": {"Label": "Start New Line"}
+		"EditNodeInsertBelowSibling": {"Label": "Start New Line"}
+		"EditNodeInsertDuplicate": {"Label": "Duplicate Entire Lines"}
+		"EditNodeJoin": {"Label": "Join Line"}
+		"EditNodeMoveDown": {"Label": "Move Line Down"}
+		"EditNodeMoveIn": {"Label": "Move Line Right"}
+		"EditNodeMoveOut": {"Label": "Move Line Left"}
+		"EditNodeMoveUp": {"Label": "Move Line Up"}
+		"EditNodeRename": {"Label": "Rename..."}
+		"EditNodeSplit": {"Label": "Split Line"}
 	}
 }
 

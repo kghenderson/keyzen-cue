@@ -1,4 +1,5 @@
 package strokes
 
-Strokes: #Strokes & {
+Strokes: {
+
 }
