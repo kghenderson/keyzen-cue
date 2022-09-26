@@ -27,3 +27,10 @@ import (
 		"\(cmdName)": [...#StrokesList]
 	}
 }
+
+#Key:
+ "ctrl" |
+ "hyper" |
+ "shift" |
+ "pinky" |
+ ""
