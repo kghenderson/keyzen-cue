@@ -1,51 +1,58 @@
 package keyzen
 
 import (
-	// "encoding/yaml"
+	"encoding/yaml"
 	"text/template"
 	"tool/cli"
-	// "tool/file"
+	"tool/file"
 
 	"github.com/kghenderson/keyzen"
 )
 
 command: tangle_sublimetext: {
 	args: {
-		editorName:  "SublimeText"
-		strokesName: "ZenStrokes1"
-		fileName:    "_sublime_strokes.txt"
+		editorName:   "SublimeText"
+		strokesName:  "ZenStrokes1"
+		platformName: "PC"
+		fileName:     "_sublime_strokes.txt"
 	}
 
 	do: {
-		selectedSource: {
-			editorName:  args.editorName
-			strokesName: args.strokesName
-			commands:    keyzen.KeyZen.Commands
-			editor:      keyzen.KeyZen.Editors["\(editorName)"]
-			strokes:     keyzen.KeyZen.Strokes["\(strokesName)"]
+		buildSource: {
+			source: {
+				editorName:   args.editorName
+				strokesName:  args.strokesName
+				platformName: args.platformName
+				commands:     keyzen.KeyZen.Commands
+				keys:         keyzen.KeyZen.Keys
+				editor:       keyzen.KeyZen.Editors["\(editorName)"]
+				strokes:      keyzen.KeyZen.Strokes["\(strokesName)"]
+			}
 		}
-		//  echoSelectedSource: cli.Print & {text: yaml.Marshal(selectedSource)}
+		//  debugSourceCli: cli.Print & {text: yaml.Marshal(buildSource.source)}
+		debugSourceFile: file.Create & {filename: "_src.yaml", contents: yaml.Marshal(buildSource.source)}
 
-		templateText: {
-			text: template.Execute(sublimeKeymapTemplate, selectedSource)
+		genText: {
+			$after: buildSource
+			text:   template.Execute(sublimeKeymapTemplate, buildSource.source)
 		}
-		echoTemplateText: cli.Print & {text: templateText.text}
+		// debugGenText: cli.Print & {text: genText.text}
 
-		// createFile: file.Create & {
-		//  $after:   getText
-		//  filename: args.fileName
-		//  contents: getText.text
-		// }
+		createFile: file.Create & {
+			$after:   genText
+			filename: args.fileName
+			contents: genText.text
+		}
 
 		doneMsg: "done tangling: " + args.editorName + ", " + args.strokesName
 	}
 
-	// done: {
-	//  $after: do
-	//  print:  cli.Print & {
-	//   text: do.doneMsg
-	//  }
-	// }
+	done: {
+		$after: do
+		print:  cli.Print & {
+			text: do.doneMsg
+		}
+	}
 }
 
 // language=gotemplate
