@@ -1,6 +1,8 @@
 package strokes
 
 import (
+	"strings"
+
 	"github.com/kghenderson/keyzen/commands"
 )
 
@@ -9,12 +11,40 @@ import (
 	StrokesMap: #StrokesMap
 
 	strokesRev: {
-		for _, StrokesList in StrokesMap {
-			for _, X in StrokesList {
-				true
+		for cmdKey, strokesListList in StrokesMap {
+			for _, strokesList in strokesListList {
+				for _, strokeText in strokesList {
+					"\(strokeText)": true
+				}
 			}
 		}
 	}
+
+	strokesRev2: {
+		for cmdKey, strokesListList in StrokesMap {
+			for _, strokesList in strokesListList {
+				for _, strokesText in strokesList {
+					//                   "\(cmdKey)": true
+					"\(strokesText)": "\(cmdKey)" // : true
+
+					//                   "\(strokeText)": [...cmdKey]
+				}
+			}
+		}
+	}
+
+	strokesRev3: {
+		for cmdKey, strokesListList in StrokesMap {
+			for _, strokesList in strokesListList {
+				for _, strokesText in strokesList {
+					//                   "\(cmdKey)": true
+					let hKeys = strings.SplitN(strokesText, "+", -1)
+					"\(strokesText)": hKeys
+				}
+			}
+		}
+	}
+
 	...
 }
 
@@ -27,10 +57,3 @@ import (
 		"\(cmdName)": [...#StrokesList]
 	}
 }
-
-#Key:
- "ctrl" |
- "hyper" |
- "shift" |
- "pinky" |
- ""
