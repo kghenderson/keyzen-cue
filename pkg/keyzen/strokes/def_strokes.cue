@@ -1,59 +1,42 @@
 package strokes
 
 import (
-	"strings"
+	// "strings"
 
 	"github.com/kghenderson/keyzen/commands"
 )
 
 #Strokes: {
-	Name:       string
-	StrokesMap: #StrokesMap
+	Name:             string
+	StrokeCmdDefsMap: #StrokeCmdDefsMap
+	StrokesMap:       #StrokesMap
+}
 
-	strokesRev: {
-		for cmdKey, strokesListList in StrokesMap {
-			for _, strokesList in strokesListList {
-				for _, strokeText in strokesList {
-					"\(strokeText)": true
-				}
-			}
-		}
-	}
+// Stroke Definitions - Universal, Human-form, e.g. hyper+i
+#StrokeCmdDefsMap: [cmdName=commands.#CommandName]: #StrokeCmdDefs
+#StrokeCmdDefs: [...#StrokeCmdDef]
+#StrokeCmdDef: [...string]
 
-	strokesRev2: {
-		for cmdKey, strokesListList in StrokesMap {
-			for _, strokesList in strokesListList {
-				for _, strokesText in strokesList {
-					//                   "\(cmdKey)": true
-					"\(strokesText)": "\(cmdKey)" // : true
+#StrokesMap: [cmdName=commands.#CommandName]: #StrokeDetails
 
-					//                   "\(strokeText)": [...cmdKey]
-				}
-			}
-		}
-	}
-
-	strokesRev3: {
-		for cmdKey, strokesListList in StrokesMap {
-			for _, strokesList in strokesListList {
-				for _, strokesText in strokesList {
-					//                   "\(cmdKey)": true
-					let hKeys = strings.SplitN(strokesText, "+", -1)
-					"\(strokesText)": hKeys
-				}
-			}
-		}
-	}
-
+#StrokeDetails: {
+	// cmdDefs?:
 	...
 }
 
-#StrokeContext: string
-#StrokesList: [...string]
-#StrokesContextMap: [context=#StrokeContext]: #StrokesList
+//for cmdName, cmdDefs in #Strokes.StrokeCmdDefsMap {
+// #Strokes: StrokesMap: "\(cmdName)": {
+//  "x": true
+// }
+//}
 
-#StrokesMap: {
-	for _, cmdName in commands.Commands.CommandNames {
-		"\(cmdName)": [...#StrokesList]
-	}
-}
+// #StrokeContext: string
+// #StrokesContextMap: [context=#StrokeContext]: #StrokesList
+// #StrokesList: [...string]
+
+// #Strokes:
+// {for cmdName, cmdDefs in #Strokes.StrokeCmdDefsMap {
+//  StrokeMap: "\(cmdName)": {
+//   "x": true
+//  }
+// }

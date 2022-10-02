@@ -5,7 +5,7 @@ Strokes: "\(thisStrokes.Name)": thisStrokes
 let thisStrokes = #Strokes & {
 	Name: "ZenStrokes1"
 
-	StrokesMap: {
+	StrokeCmdDefsMap: {
 		"CursorMoveToCharBackward": [["left"], ["hyper+j"]]
 		"CursorMoveToCharBackwardSelect": [["shift+left"], ["hyper+shift+j"]]
 		"CursorMoveToCharForward": [["right"]]
