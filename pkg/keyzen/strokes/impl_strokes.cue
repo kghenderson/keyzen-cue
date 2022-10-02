@@ -12,28 +12,25 @@ import (
 	StrokeCmdDefsMap: #StrokeCmdDefsMap
 	StrokesMap: {
 		for cmdName, cmdDefLists in StrokeCmdDefsMap {
-			"\(cmdName)": {
-				for cmdDefIndex, cmdDefList in cmdDefLists {
+			"\(cmdName)": [
+				for _, cmdDefList in cmdDefLists {
 					for _, cmdDefText in cmdDefList {
-						"\(cmdDefIndex)": {
-							DefText: "\(cmdDefText)"
-							let defKeyList = strings.SplitN(cmdDefText, "+", -1)
-							for _, dkn in defKeyList {
-								let keyDetails = keys.Keys.KeyMap["\(dkn)"]
-								Bindings: PC:      keyDetails.OnPC
-								Bindings: Mac:     keyDetails.OnMac
-								Bindings: MacSwap: keyDetails.OnFMac
+						let defKeyList = strings.SplitN(cmdDefText, "+", -1)
+						DefText: "\(cmdDefText)"
+						for _, dkn in defKeyList {
+							let keyDetailBindings = keys.Keys.KeyMap["\(dkn)"].Bindings
+							Bindings: {
+								PC:   keyDetailBindings.PC
+								Mac:  keyDetailBindings.Mac
+								Mac2: keyDetailBindings.Mac2
 							}
 						}
 					}
-				}
-			}
+				},
+			]
 		}
 	}
 }
-// let hKeys = strings.SplitN(strokesText, "+", -1)
-// hmm, since we want to zoom out to platform by cmddef,
-// need to loop at
 
 //     let cDefs = Strokes.StrokeCmdDefsMap["\(cmdName)"]
 //     if cmdDefs != _|_ {

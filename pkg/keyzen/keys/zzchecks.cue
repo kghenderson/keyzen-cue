@@ -1,10 +1,15 @@
 package keys
 
-// keynames lookup
+// zzCheckAllKeyNamesInKeysMap
+Keys: zzCheckAllKeyNamesInKeysMap: {
+	for _, keyName in Keys.KeyNames {
+		"\(keyName)": true & Keys.KeyMap["\(keyName)"] != _|_
+	}
+}
 
-// KeyNamesLookup takes the keys list
-// Keys: keyNamesLookup: {
-//  for keyIndex, keyName in Keys.KeyNames {
-//   "\(keyName)": keyIndex
-//  }
-// }
+// zzCheckAllMapKeysInKeyNames
+Keys: zzCheckAllMapKeysInKeyNames: {
+	for keyName, keyDefs in Keys.KeyMap {
+		"\(keyName)": true & Keys.keyIndexLookup["\(keyName)"] != _|_
+	}
+}

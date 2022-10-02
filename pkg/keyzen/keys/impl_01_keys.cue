@@ -18,27 +18,27 @@ Keys: modifierKeys: {
 Keys: relativeKeys: {
 	"hyper": {
 		Mac: ["cmd", "ctrl", "opt"]
-		FMac: ["cmd", "ctrl", "opt"]
+		Mac2: ["cmd", "ctrl", "opt"]
 		PC: ["super", "ctrl", "alt"]
 	}
 	"primary": {
 		Mac: ["cmd"]
-		FMac: ["cmd"]
+		Mac2: ["cmd"]
 		PC: ["ctrl"]
 	}
 	"secondary": {
 		Mac: ["alt"]
-		FMac: ["alt"]
+		Mac2: ["alt"]
 		PC: ["alt"]
 	}
 	"pinky": {
 		Mac: ["ctrl"]
-		FMac: ["cmd"]
+		Mac2: ["cmd"]
 		PC: ["alt"]
 	}
 	"thumb": {
 		Mac: ["cmd"]
-		FMac: ["alt"]
+		Mac2: ["alt"]
 		PC: ["alt"]
 	}
 }

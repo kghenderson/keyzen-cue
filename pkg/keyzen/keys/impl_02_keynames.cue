@@ -1,5 +1,11 @@
 package keys
 
+Keys: keyIndexLookup: {
+	for keyIndex, keyName in Keys.KeyNames {
+		"\(keyName)": keyIndex
+	}
+}
+
 Keys: KeyNames: [
 	"hyper",
 	"primary",
@@ -8,6 +14,7 @@ Keys: KeyNames: [
 	"thumb",
 
 	"super",
+	"cmd",
 	"alt",
 	"ctrl",
 	"opt",

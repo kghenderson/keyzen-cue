@@ -1,21 +1,21 @@
 package keys
 
-for keyIndex, keyName in Keys.KeyNames {
-	Keys: KeyMap: "\(keyName)": {
-		Index:      keyIndex
-		IsModifier: Keys.modifierKeys["\(keyName)"] != _|_
-		IsRelative: Keys.relativeKeys["\(keyName)"] != _|_
+for defKeyIndex, defKeyName in Keys.KeyNames {
+	Keys: KeyMap: "\(defKeyName)": {
+		Index:      defKeyIndex
+		IsModifier: Keys.modifierKeys["\(defKeyName)"] != _|_
+		IsRelative: Keys.relativeKeys["\(defKeyName)"] != _|_
 
 		if IsRelative {
-			OnPC: {for _, rk in Keys.relativeKeys["\(keyName)"].PC {"\(rk)": true}}
-			OnMac: {for _, rk in Keys.relativeKeys["\(keyName)"].Mac {"\(rk)": true}}
-			OnFMac: {for _, rk in Keys.relativeKeys["\(keyName)"].FMac {"\(rk)": true}}
+			Bindings: PC: {for _, rk in Keys.relativeKeys["\(defKeyName)"].PC {"\(rk)": Keys.keyIndexLookup["\(rk)"]}}
+			Bindings: Mac: {for _, rk in Keys.relativeKeys["\(defKeyName)"].Mac {"\(rk)": Keys.keyIndexLookup["\(rk)"]}}
+			Bindings: Mac2: {for _, rk in Keys.relativeKeys["\(defKeyName)"].Mac2 {"\(rk)": Keys.keyIndexLookup["\(rk)"]}}
 		}
 
 		if !IsRelative {
-			OnPC: {"\(keyName)": true}
-			OnMac: {"\(keyName)": true}
-			OnFMac: {"\(keyName)": true}
+			Bindings: PC: {"\(defKeyName)": defKeyIndex}
+			Bindings: Mac: {"\(defKeyName)": defKeyIndex}
+			Bindings: Mac2: {"\(defKeyName)": defKeyIndex}
 		}
 	}
 }

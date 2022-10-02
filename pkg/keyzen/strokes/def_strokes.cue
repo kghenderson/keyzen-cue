@@ -9,20 +9,22 @@ import (
 #Strokes: {
 	Name:             string
 	StrokeCmdDefsMap: #StrokeCmdDefsMap
-	StrokesMap:       #StrokesMap
+	// StrokesMap:       #StrokesMap
+	...
 }
 
 // Stroke Definitions - Universal, Human-form, e.g. hyper+i
 #StrokeCmdDefsMap: [cmdName=commands.#CommandName]: #StrokeCmdDefs
 #StrokeCmdDefs: [...#StrokeCmdDef]
+
 #StrokeCmdDef: [...string]
 
-#StrokesMap: [cmdName=commands.#CommandName]: #StrokeDetails
+//#StrokesMap: [cmdName=commands.#CommandName]: #StrokeDetails
 
-#StrokeDetails: {
-	// cmdDefs?:
-	...
-}
+//#StrokeDetails: {
+// cmdDefs?:
+// ...
+//}
 
 //for cmdName, cmdDefs in #Strokes.StrokeCmdDefsMap {
 // #Strokes: StrokesMap: "\(cmdName)": {

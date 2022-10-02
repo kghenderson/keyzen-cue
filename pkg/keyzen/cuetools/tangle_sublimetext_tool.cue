@@ -2,6 +2,7 @@ package keyzen
 
 import (
 	"encoding/yaml"
+	"list"
 	"text/template"
 	"tool/cli"
 	"tool/file"
@@ -23,10 +24,37 @@ command: tangle_sublimetext: {
 				editorName:   args.editorName
 				strokesName:  args.strokesName
 				platformName: args.platformName
-				commands:     keyzen.KeyZen.Commands
-				keys:         keyzen.KeyZen.Keys
+				commandNames: keyzen.KeyZen.Commands.CommandNames
 				editor:       keyzen.KeyZen.Editors["\(editorName)"]
-				strokes:      keyzen.KeyZen.Strokes["\(strokesName)"]
+				// strokes:       keyzen.KeyZen.Strokes["\(strokesName)"]
+				strokeCmdsMap: keyzen.KeyZen.Strokes["\(strokesName)"].StrokesMap
+				//    bindings: keyzen.KeyZen.Strokes["\(strokesName)"].StrokesMap.Bindings[platformName]
+				platformKeys: {
+					for cmdKey, strokeDefs in strokeCmdsMap {
+						"\(cmdKey)": [
+							for _, strokeDef in strokeDefs {
+								let bindingMap = strokeDef.Bindings["\(platformName)"]
+
+								//        let bindingList = [ for k, v in bindingMap {{"\(k)": v}}]
+								let bindingIds = [ for k, v in bindingMap {name: k, idx: v}]
+
+								//        let bindingIdsSorted = list.SortStrings(bindingIds)
+								let bindingIdsSorted = list.Sort(bindingIds, {x: {}, y: {}, less: x.idx < y.idx})
+								//        let x = list.Take(bindingList, 1)
+
+								map: bindingMap
+								//             list:   bindingList
+								idlist: bindingIds
+								//             first:  x
+								idListSorted: bindingIdsSorted
+								//           let sortedList = list.Sort(bindingList, {less: true})
+								//           slist: sortedList
+
+								//        mapSorted: bindingMapSorted
+							},
+						]
+					}
+				}
 			}
 		}
 		//  debugSourceCli: cli.Print & {text: yaml.Marshal(buildSource.source)}
