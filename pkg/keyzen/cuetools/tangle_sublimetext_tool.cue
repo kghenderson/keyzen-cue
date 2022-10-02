@@ -3,6 +3,7 @@ package keyzen
 import (
 	"encoding/yaml"
 	"list"
+	"strings"
 	"text/template"
 	"tool/cli"
 	"tool/file"
@@ -21,40 +22,48 @@ command: tangle_sublimetext: {
 	do: {
 		buildSource: {
 			source: {
-				editorName:   args.editorName
-				strokesName:  args.strokesName
-				platformName: args.platformName
-				commandNames: keyzen.KeyZen.Commands.CommandNames
-				editor:       keyzen.KeyZen.Editors["\(editorName)"]
-				// strokes:       keyzen.KeyZen.Strokes["\(strokesName)"]
-				strokeCmdsMap: keyzen.KeyZen.Strokes["\(strokesName)"].StrokesMap
-				//    bindings: keyzen.KeyZen.Strokes["\(strokesName)"].StrokesMap.Bindings[platformName]
-				platformKeys: {
-					for cmdKey, strokeDefs in strokeCmdsMap {
-						"\(cmdKey)": [
-							for _, strokeDef in strokeDefs {
-								let bindingMap = strokeDef.Bindings["\(platformName)"]
+				EditorName:   args.editorName
+				StrokesName:  args.strokesName
+				PlatformName: args.platformName
+				let editorCmds = keyzen.KeyZen.Editors["\(EditorName)"].EditorCommandNameMap
 
-								//        let bindingList = [ for k, v in bindingMap {{"\(k)": v}}]
-								let bindingIds = [ for k, v in bindingMap {name: k, idx: v}]
+				//    debugEditorCmds: editorCmds
+				//    debugCommandNames: keyzen.KeyZen.Commands.CommandNames
+				// debugStrokes:       keyzen.KeyZen.Strokes["\(strokesName)"]
+				// debugStrokeCmdsMap: keyzen.KeyZen.Strokes["\(strokesName)"].StrokesMap
+				// debugBindings: keyzen.KeyZen.Strokes["\(strokesName)"].StrokesMap.Bindings[platformName]
+				CommandBindings: [
+					for cmdIdx, cmdKey in keyzen.KeyZen.Commands.CommandNames {
+						let strokeDefs = keyzen.KeyZen.Strokes["\(StrokesName)"].StrokesMap["\(cmdKey)"]
 
-								//        let bindingIdsSorted = list.SortStrings(bindingIds)
-								let bindingIdsSorted = list.Sort(bindingIds, {x: {}, y: {}, less: x.idx < y.idx})
-								//        let x = list.Take(bindingList, 1)
+						// not every editor implements every command
+						let edCmd = editorCmds["\(cmdKey)"]
+						if edCmd != _|_ && strokeDefs != _|_ {
+							CmdName: "\(cmdKey)"
 
-								map: bindingMap
-								//             list:   bindingList
-								idlist: bindingIds
-								//             first:  x
-								idListSorted: bindingIdsSorted
-								//           let sortedList = list.Sort(bindingList, {less: true})
-								//           slist: sortedList
+							let edCmdText = "\"command\": \"" + edCmd.command + "\""
 
-								//        mapSorted: bindingMapSorted
-							},
-						]
-					}
-				}
+							let edCmdArgs = edCmd.args
+
+							//        debugEditorCmdArgs: edCmdArgs
+							EditorCmdText: string
+							if edCmdArgs == _|_ {EditorCmdText: edCmdText}
+							if edCmdArgs != _|_ {EditorCmdText: edCmdText + ", \"args\": " + edCmd.argsText}
+
+							Bindings: [
+								for _, strokeDef in strokeDefs {
+									let bindingMap = strokeDef.Bindings["\(PlatformName)"]
+									let bindingIds = [ for k, v in bindingMap {name: k, idx: v}]
+									let bindingIdsSorted = list.Sort(bindingIds, {x: {}, y: {}, less: x.idx < y.idx})
+									let bindingKeys = [ for _, kv in bindingIdsSorted {kv.name}]
+									let bindingText = strings.Join(bindingKeys, "+")
+									"\(strokeDef.DefText)": bindingText
+								},
+							]
+
+						}
+					},
+				]
 			}
 		}
 		//  debugSourceCli: cli.Print & {text: yaml.Marshal(buildSource.source)}
@@ -82,30 +91,45 @@ command: tangle_sublimetext: {
 		}
 	}
 }
+//
 
 // language=gotemplate
 sublimeKeymapTemplate: ###"""
-	{{- $strokesName := .strokesName }}
-	{{- $cmdNames := .commands.CommandNames }}
-	{{- $cmdDetails := .commands.CommandDetailsMap }}
-	{{- $edCmdDetails := .editor.EditorCommandNameMap }}
-	{{- $strokeDetails := .strokes.StrokesMap }}
-	// {{$strokesName}} for {{.editorName}}
-	{{- range $cmdIdx, $cmdName := $cmdNames }}
-	{{- $cmd := index $cmdDetails $cmdName }}
-	{{- $strokes := index $strokeDetails $cmdName }}
-	{{- $subl := index $edCmdDetails $cmdName }}
-	{{- if $subl }}
-	{{- $sublCmd := $subl.command }}
-	{{- $sublArgs := $subl.args }}
-	{{- $sublArgsText := $subl.argsText }}
-	{{- range $comboIdx, $combo := $strokes }}
-	{{- range $pressIdx, $presses := $combo }}
-	{ "keys": ["{{$presses}}"], "command": "{{$sublCmd}}"
-	{{- if $sublArgs}}, "args": {{$sublArgsText}}{{end}}
-	{{- " }  // "}}{{$cmdName}}
-	{{- end }}{{/* range $presses  */}}
-	{{- end }}{{/* range $strokes  */}}
-	{{- end }}{{/* if $subl  */}}
-	{{- end }}{{/* range $cmdNames */}}
+	// {{.StrokesName}} for {{.EditorName}} on {{.PlatformName}}
+	{{- range $cmdIdx, $cmd := .CommandBindings }}
+	{{- $cmdName := $cmd.CmdName }}
+	{{- $editorCmdText := $cmd.EditorCmdText }}
+	{{- range $strokeDefName, $strokeBinds := $cmd.Bindings }}
+	{{- $bindName := "<temp>"}}
+	{ "keys": ["{{$bindName}}"] }: {{$editorCmdText}} // {{$cmdName}}: {{$strokeDefName}}
+	
+	{{$cmd}}
+	{{- end }}{{/* range CommandBindings */}}
+	{{- end }}{{/* range CommandBindings */}}
 	"""###
+
+//// language=gotemplate
+//sublimeKeymapTemplate: ###"""
+//     {{- $strokesName := .strokesName }}
+//     {{- $cmdNames := .CommandNames }}
+//     {{-/* $cmdDetails := .commands.CommandDetailsMap */}}
+//     {{- $editorCmds := .editor.EditorCommandNameMap }}
+//     {{- $strokeCmds := Strokes }}
+//     // {{$strokesName}} for {{.editorName}}
+//     {{- $editorCmd := index $editorCmds $cmdName }}
+//     {{- $strokeCmd := index $strokeCmds $cmdName }}
+//{{/* {{- $subl := index $edCmdDetails $cmdName }}*/}}
+//{{/* {{- if $subl }}*/}}
+//     {{- $sublCmd := $subl.command }}
+//     {{- $sublArgs := $subl.args }}
+//     {{- $sublArgsText := $subl.argsText }}
+//     {{- range $comboIdx, $combo := $strokes }}
+//     {{- range $pressIdx, $presses := $combo }}
+//     { "keys": ["{{$presses}}"], "command": "{{$sublCmd}}"
+//     {{- if $sublArgs}}, "args": {{$sublArgsText}}{{end}}
+//     {{- " }  // "}}{{$cmdName}}
+//     {{- end }}{{/* range $presses  */}}
+//     {{- end }}{{/* range $strokes  */}}
+//{{/* {{- end }}*/}}{{/* if $subl  */}}
+//     {{- end }}{{/* range $cmdNames */}}
+//     """###

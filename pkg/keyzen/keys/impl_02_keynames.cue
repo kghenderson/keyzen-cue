@@ -15,8 +15,8 @@ Keys: KeyNames: [
 
 	"super",
 	"cmd",
-	"alt",
 	"ctrl",
+	"alt",
 	"opt",
 	"shift",
 
