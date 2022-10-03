@@ -26,47 +26,52 @@ command: tangle_sublimetext: {
 				StrokesName:  args.strokesName
 				PlatformName: args.platformName
 				let editorCmds = keyzen.KeyZen.Editors["\(EditorName)"].EditorCommandNameMap
+				let cmdNames = keyzen.KeyZen.Commands.CommandNames
 
 				//    debugEditorCmds: editorCmds
 				//    debugCommandNames: keyzen.KeyZen.Commands.CommandNames
 				// debugStrokes:       keyzen.KeyZen.Strokes["\(strokesName)"]
 				// debugStrokeCmdsMap: keyzen.KeyZen.Strokes["\(strokesName)"].StrokesMap
 				// debugBindings: keyzen.KeyZen.Strokes["\(strokesName)"].StrokesMap.Bindings[platformName]
+				// not every editor implements every command
+				CommandBindingsCount: len(CommandBindings)
+				if CommandBindingsCount == 0 {{CommandBindingsMax: 0}}
+				if CommandBindingsCount > 0 {{CommandBindingsMax: CommandBindingsCount - 1}}
 				CommandBindings: [
-					for cmdIdx, cmdKey in keyzen.KeyZen.Commands.CommandNames {
-						let strokeDefs = keyzen.KeyZen.Strokes["\(StrokesName)"].StrokesMap["\(cmdKey)"]
+					for cmdIdx, cmdName in cmdNames
+					if keyzen.KeyZen.Strokes["\(StrokesName)"].StrokesMap["\(cmdName)"] != _|_ &&
+						editorCmds["\(cmdName)"] != _|_ {
+						let strokeDefs = keyzen.KeyZen.Strokes["\(StrokesName)"].StrokesMap["\(cmdName)"]
+						let editorCmd = editorCmds["\(cmdName)"]
+						let editorCmdArgs = editorCmd.args
+						let editorCmdTextCommand = "\"command\": \"" + editorCmd.command + "\""
 
-						// not every editor implements every command
-						let edCmd = editorCmds["\(cmdKey)"]
-						if edCmd != _|_ && strokeDefs != _|_ {
-							CmdName: "\(cmdKey)"
+						CmdName: "\(cmdName)"
 
-							let edCmdText = "\"command\": \"" + edCmd.command + "\""
+						EditorCmdText: string
+						if editorCmdArgs == _|_ {EditorCmdText: editorCmdTextCommand}
+						if editorCmdArgs != _|_ {EditorCmdText: editorCmdTextCommand + ", \"args\": " + editorCmd.argsText}
 
-							let edCmdArgs = edCmd.args
+						BindingsCount: len(Bindings)
+						if BindingsCount == 0 {{BindingsMax: 0}}
+						if BindingsCount > 0 {{BindingsMax: BindingsCount - 1}}
+						Bindings: [
+							for _, strokeDef in strokeDefs {
+								let bindingMap = strokeDef.Bindings["\(PlatformName)"]
+								let bindingIds = [ for k, v in bindingMap {name: k, idx: v}]
+								let bindingIdsSorted = list.Sort(bindingIds, {x: {}, y: {}, less: x.idx < y.idx})
+								let bindingKeys = [ for _, kv in bindingIdsSorted {kv.name}]
+								let bindingText = strings.Join(bindingKeys, "+")
+								"DefText":  "\(strokeDef.DefText)"
+								"BindText": bindingText
+							},
+						]
 
-							//        debugEditorCmdArgs: edCmdArgs
-							EditorCmdText: string
-							if edCmdArgs == _|_ {EditorCmdText: edCmdText}
-							if edCmdArgs != _|_ {EditorCmdText: edCmdText + ", \"args\": " + edCmd.argsText}
-
-							Bindings: [
-								for _, strokeDef in strokeDefs {
-									let bindingMap = strokeDef.Bindings["\(PlatformName)"]
-									let bindingIds = [ for k, v in bindingMap {name: k, idx: v}]
-									let bindingIdsSorted = list.Sort(bindingIds, {x: {}, y: {}, less: x.idx < y.idx})
-									let bindingKeys = [ for _, kv in bindingIdsSorted {kv.name}]
-									let bindingText = strings.Join(bindingKeys, "+")
-									"\(strokeDef.DefText)": bindingText
-								},
-							]
-
-						}
 					},
 				]
 			}
 		}
-		//  debugSourceCli: cli.Print & {text: yaml.Marshal(buildSource.source)}
+		// debugSourceCli: cli.Print & {text: yaml.Marshal(buildSource.source)}
 		debugSourceFile: file.Create & {filename: "_src.yaml", contents: yaml.Marshal(buildSource.source)}
 
 		genText: {
@@ -81,7 +86,7 @@ command: tangle_sublimetext: {
 			contents: genText.text
 		}
 
-		doneMsg: "done tangling: " + args.editorName + ", " + args.strokesName
+		doneMsg: "done tangling: " + args.strokesName + " for " + args.editorName + " on " + args.platformName
 	}
 
 	done: {
@@ -95,17 +100,20 @@ command: tangle_sublimetext: {
 
 // language=gotemplate
 sublimeKeymapTemplate: ###"""
-	// {{.StrokesName}} for {{.EditorName}} on {{.PlatformName}}
+	    // {{.StrokesName}} for {{.EditorName}} on {{.PlatformName}}
+	{{- $cmdMax := .CommandBindingsMax }}
 	{{- range $cmdIdx, $cmd := .CommandBindings }}
 	{{- $cmdName := $cmd.CmdName }}
 	{{- $editorCmdText := $cmd.EditorCmdText }}
-	{{- range $strokeDefName, $strokeBinds := $cmd.Bindings }}
-	{{- $bindName := "<temp>"}}
-	{ "keys": ["{{$bindName}}"] }: {{$editorCmdText}} // {{$cmdName}}: {{$strokeDefName}}
+	{{- $bindsMax := $cmd.BindingsMax }}
+	{{- range $bindIdx, $bind := $cmd.Bindings }}
+	{{- $defText := $bind.DefText}}
+	{{- $bindText := $bind.BindText}}
+	    { "keys": ["{{$bindText}}"], {{$editorCmdText}} }
+	    {{- if not (and (eq $cmdIdx $cmdMax) (eq $bindIdx $bindsMax))}}, {{end}} // {{$cmdName}}: "{{$defText}}"
+	{{- end }}{{/* range Bindings */}}
+	{{- end }}{{/* range CommandBindings */}}
 	
-	{{$cmd}}
-	{{- end }}{{/* range CommandBindings */}}
-	{{- end }}{{/* range CommandBindings */}}
 	"""###
 
 //// language=gotemplate

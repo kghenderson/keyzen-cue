@@ -22,24 +22,24 @@ Keys: relativeKeys: {
 		PC: ["super", "ctrl", "alt"]
 	}
 	"primary": {
+		PC: ["ctrl"]
 		Mac: ["cmd"]
 		Mac2: ["cmd"]
-		PC: ["ctrl"]
 	}
 	"secondary": {
-		Mac: ["alt"]
-		Mac2: ["alt"]
 		PC: ["alt"]
+		Mac: ["ctrl"]
+		Mac2: ["ctrl"]
 	}
 	"pinky": {
+		PC: ["ctrl"]
 		Mac: ["ctrl"]
 		Mac2: ["cmd"]
-		PC: ["alt"]
 	}
 	"thumb": {
-		Mac: ["cmd"]
-		Mac2: ["alt"]
 		PC: ["alt"]
+		Mac: ["cmd"]
+		Mac2: ["ctrl"]
 	}
 }
 
