@@ -6,20 +6,20 @@ Commands: CommandNames: [
 	// NAVIGATING & SELECTING
 
 	// Cursor Movements
-	"CursorMoveToLineForward",        		// down
-	"CursorMoveToLineBackward",       		// up
-	"CursorMoveToCharForward",        		// right
-	"CursorMoveToCharBackward",       		// left
-	"CursorMoveToSubwordForward",        	// subword right
-	"CursorMoveToSubwordBackward",       	// subword left
-	"CursorMoveToWordForward",           	// word right
-	"CursorMoveToWordBackward",          	// word left
-	"CursorMoveToLineEnd",            		// line end
-	"CursorMoveToLineBegin",          		// line home
-	"CursorMoveToPageForward",        		// page down
-	"CursorMoveToPageBackward",       		// page up
-	"CursorMoveToTextEnd",            		// text end
-	"CursorMoveToTextBegin",          		// text begin
+	"CursorMoveToLineForward",     // down
+	"CursorMoveToLineBackward",    // up
+	"CursorMoveToCharForward",     // right
+	"CursorMoveToCharBackward",    // left
+	"CursorMoveToSubwordForward",  // subword right
+	"CursorMoveToSubwordBackward", // subword left
+	"CursorMoveToWordForward",     // word right
+	"CursorMoveToWordBackward",    // word left
+	"CursorMoveToLineEnd",         // line end
+	"CursorMoveToLineBegin",       // line home
+	"CursorMoveToPageForward",     // page down
+	"CursorMoveToPageBackward",    // page up
+	"CursorMoveToTextEnd",         // text end
+	"CursorMoveToTextBegin",       // text begin
 
 	// Multi-Cursors
 	"CursorMultiCloneAbove",      // caret above
@@ -27,45 +27,46 @@ Commands: CommandNames: [
 	"CursorMultiCloneOnLineEnds", // carets on lines
 
 	// Cursor Selections
-	"CursorMoveToLineForwardSelect",  		// select down
-	"CursorMoveToLineBackwardSelect", 		// select up
-	"CursorMoveToCharForwardSelect",  		// select right
-	"CursorMoveToCharBackwardSelect", 		// select left
-	"CursorMoveToSubwordForwardSelect",  	// select subword right
-	"CursorMoveToSubwordBackwardSelect", 	// select subword left
-	"CursorMoveToWordForwardSelect",     	// select word right
-	"CursorMoveToWordBackwardSelect",    	// select word left
-	"CursorMoveToLineEndSelect",      		// select line end
-	"CursorMoveToLineBeginSelect",    		// select line home
-	"CursorMoveToPageForwardSelect",  		// select page down
-	"CursorMoveToPageBackwardSelect", 		// select page up
-	"CursorMoveToTextEndSelect",      		// select text end
-	"CursorMoveToTextBeginSelect",    		// select text begin
+	"CursorMoveToLineForwardSelect",     // select down
+	"CursorMoveToLineBackwardSelect",    // select up
+	"CursorMoveToCharForwardSelect",     // select right
+	"CursorMoveToCharBackwardSelect",    // select left
+	"CursorMoveToSubwordForwardSelect",  // select subword right
+	"CursorMoveToSubwordBackwardSelect", // select subword left
+	"CursorMoveToWordForwardSelect",     // select word right
+	"CursorMoveToWordBackwardSelect",    // select word left
+	"CursorMoveToLineEndSelect",         // select line end
+	"CursorMoveToLineBeginSelect",       // select line home
+	"CursorMoveToPageForwardSelect",     // select page down
+	"CursorMoveToPageBackwardSelect",    // select page up
+	"CursorMoveToTextEndSelect",         // select text end
+	"CursorMoveToTextBeginSelect",       // select text begin
 
-	"CursorSelectAll",         						// select entire text
-	"CursorSelectScopeExpand",   						// selection scope expand
-	"CursorSelectScopeContract", 						// selection scope contract
-	// "CursorSelectWordOccurrencesAll", 					// select all occurrences of word
-	// "CursorSelectWordOccurrencesNext", 					// select next occurrence of word
-	// "CursorSelectWordOccurrencesPrevious", 			// select previous occurrence of word
+	"CursorSelectAll",           // select entire text
+	"CursorSelectScopeExpand",   // selection scope expand
+	"CursorSelectScopeContract", // selection scope contract
+
+	// "CursorSelectWordOccurrencesAll",           // select all occurrences of word
+	// "CursorSelectWordOccurrencesNext",          // select next occurrence of word
+	// "CursorSelectWordOccurrencesPrevious",    // select previous occurrence of word
 
 	// EDITING
-	"EditNodeInsertAboveParent",  				// insert parent above
-	"EditNodeInsertAboveSibling", 				// insert above
-	"EditNodeInsertBelowSibling", 				// insert below
-	"EditNodeInsertBelowChild",   				// insert child  below
-	"EditNodeInsertDuplicate",    				// duplicate
-	"EditNodeMoveUp",             				// move up
-	"EditNodeMoveDown",           				// move down
-	"EditNodeMoveOut",            				// move left (unindent)
-	"EditNodeMoveIn",             				// move right (indent)
-	"EditNodeRename",             				// rename
-	"EditNodeJoin",               				// join
-	"EditNodeSplit",              				// split
-	"EditNodeDelete",             				// rename
+	"EditNodeInsertAboveParent",  // insert parent above
+	"EditNodeInsertAboveSibling", // insert above
+	"EditNodeInsertBelowSibling", // insert below
+	"EditNodeInsertBelowChild",   // insert child  below
+	"EditNodeInsertDuplicate",    // duplicate
+	"EditNodeMoveUp",             // move up
+	"EditNodeMoveDown",           // move down
+	"EditNodeMoveOut",            // move left (unindent)
+	"EditNodeMoveIn",             // move right (indent)
+	"EditNodeRename",             // rename
+	"EditNodeJoin",               // join
+	"EditNodeSplit",              // split
+	"EditNodeDelete",             // rename
 
-	// "EditNodesSort",             			// sort
-	// "EditNodesUnique",           			// unique/de-duplicate
+	// "EditNodesSort",                // sort
+	// "EditNodesUnique",              // unique/de-duplicate
 
 	// "EditTextCaseToUpper",
 	// "EditTextCaseToLower",

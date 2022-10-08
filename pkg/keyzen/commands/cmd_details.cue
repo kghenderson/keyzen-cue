@@ -145,7 +145,6 @@ Commands: CommandDetailsMap: {
 		Subcategory: ""
 	}
 
-
 	"CursorSelectAll": {
 		Human:       "Select All"
 		Category:    "Cursor"

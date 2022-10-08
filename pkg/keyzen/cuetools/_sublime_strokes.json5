@@ -3,60 +3,60 @@
     // ZenStrokes1 for SublimeText on Linux
 
     // Cursor Down  [CursorMoveToLineForward]
-    { "keys": ["down"], "command": "move", "args": {"by":"lines","forward":true} },  // "down"
-    { "keys": ["super+ctrl+alt+k"], "command": "move", "args": {"by":"lines","forward":true} },  // "hyper+k"
+    { "keys": ["down"], "command": "move", "args": {"by":"lines","forward":true,"extend":false} },  // "down"
+    { "keys": ["super+ctrl+alt+k"], "command": "move", "args": {"by":"lines","forward":true,"extend":false} },  // "hyper+k"
 
     // Cursor Up  [CursorMoveToLineBackward]
-    { "keys": ["up"], "command": "move", "args": {"by":"lines","forward":false} },  // "up"
-    { "keys": ["super+ctrl+alt+i"], "command": "move", "args": {"by":"lines","forward":false} },  // "hyper+i"
+    { "keys": ["up"], "command": "move", "args": {"by":"lines","forward":false,"extend":false} },  // "up"
+    { "keys": ["super+ctrl+alt+i"], "command": "move", "args": {"by":"lines","forward":false,"extend":false} },  // "hyper+i"
 
     // Cursor to Right  [CursorMoveToCharForward]
-    { "keys": ["right"], "command": "move", "args": {"by":"characters","forward":true} },  // "right"
-    { "keys": ["super+ctrl+alt+l"], "command": "move", "args": {"by":"characters","forward":true} },  // "hyper+l"
+    { "keys": ["right"], "command": "move", "args": {"by":"characters","forward":true,"extend":false} },  // "right"
+    { "keys": ["super+ctrl+alt+l"], "command": "move", "args": {"by":"characters","forward":true,"extend":false} },  // "hyper+l"
 
     // Cursor Left  [CursorMoveToCharBackward]
-    { "keys": ["left"], "command": "move", "args": {"by":"characters","forward":false} },  // "left"
-    { "keys": ["super+ctrl+alt+j"], "command": "move", "args": {"by":"characters","forward":false} },  // "hyper+j"
+    { "keys": ["left"], "command": "move", "args": {"by":"characters","forward":false,"extend":false} },  // "left"
+    { "keys": ["super+ctrl+alt+j"], "command": "move", "args": {"by":"characters","forward":false,"extend":false} },  // "hyper+j"
 
     // Cursor to Subword Right  [CursorMoveToSubwordForward]
-    { "keys": ["super+alt+right"], "command": "move", "args": {"by":"subwords","forward":true} },  // "thumb+right"
+    { "keys": ["super+alt+right"], "command": "move", "args": {"by":"subwords","forward":true,"extend":false} },  // "thumb+right"
 
     // Cursor to Subword Left  [CursorMoveToSubwordBackward]
-    { "keys": ["super+alt+left"], "command": "move", "args": {"by":"subwords","forward":false} },  // "thumb+left"
+    { "keys": ["super+alt+left"], "command": "move", "args": {"by":"subwords","forward":false,"extend":false} },  // "thumb+left"
 
     // Cursor to Word Right  [CursorMoveToWordForward]
-    { "keys": ["ctrl+right"], "command": "move", "args": {"by":"words","forward":true} },  // "pinky+right"
-    { "keys": ["super+ctrl+alt+o"], "command": "move", "args": {"by":"words","forward":true} },  // "hyper+o"
+    { "keys": ["ctrl+right"], "command": "move", "args": {"by":"words","forward":true,"extend":false} },  // "pinky+right"
+    { "keys": ["super+ctrl+alt+o"], "command": "move", "args": {"by":"words","forward":true,"extend":false} },  // "hyper+o"
 
     // Cursor to Word Left  [CursorMoveToWordBackward]
-    { "keys": ["ctrl+left"], "command": "move", "args": {"by":"words","forward":false} },  // "pinky+left"
-    { "keys": ["super+ctrl+alt+u"], "command": "move", "args": {"by":"words","forward":false} },  // "hyper+u"
+    { "keys": ["ctrl+left"], "command": "move", "args": {"by":"words","forward":false,"extend":false} },  // "pinky+left"
+    { "keys": ["super+ctrl+alt+u"], "command": "move", "args": {"by":"words","forward":false,"extend":false} },  // "hyper+u"
 
     // Cursor to Line End  [CursorMoveToLineEnd]
-    { "keys": ["end"], "command": "move_to", "args": {"to":"eol"} },  // "end"
-    { "keys": ["super+ctrl+alt+]"], "command": "move_to", "args": {"to":"eol"} },  // "hyper+]"
-    { "keys": ["super+ctrl+alt+right"], "command": "move_to", "args": {"to":"eol"} },  // "pinky+thumb+right"
+    { "keys": ["end"], "command": "move_to", "args": {"to":"eol","extend":false} },  // "end"
+    { "keys": ["super+ctrl+alt+]"], "command": "move_to", "args": {"to":"eol","extend":false} },  // "hyper+]"
+    { "keys": ["super+ctrl+alt+right"], "command": "move_to", "args": {"to":"eol","extend":false} },  // "pinky+thumb+right"
 
     // Cursor to Line Begin  [CursorMoveToLineBegin]
-    { "keys": ["home"], "command": "move_to", "args": {"to":"bol"} },  // "home"
-    { "keys": ["super+ctrl+alt+["], "command": "move_to", "args": {"to":"bol"} },  // "hyper+["
-    { "keys": ["super+ctrl+alt+left"], "command": "move_to", "args": {"to":"bol"} },  // "pinky+thumb+left"
+    { "keys": ["home"], "command": "move_to", "args": {"to":"bol","extend":false} },  // "home"
+    { "keys": ["super+ctrl+alt+["], "command": "move_to", "args": {"to":"bol","extend":false} },  // "hyper+["
+    { "keys": ["super+ctrl+alt+left"], "command": "move_to", "args": {"to":"bol","extend":false} },  // "pinky+thumb+left"
 
     // Cursor to Page Down  [CursorMoveToPageForward]
-    { "keys": ["pagedown"], "command": "move", "args": {"by":"pages","forward":true} },  // "pagedown"
-    { "keys": ["super+ctrl+alt+h"], "command": "move", "args": {"by":"pages","forward":true} },  // "hyper+h"
+    { "keys": ["pagedown"], "command": "move", "args": {"by":"pages","forward":true,"extend":false} },  // "pagedown"
+    { "keys": ["super+ctrl+alt+h"], "command": "move", "args": {"by":"pages","forward":true,"extend":false} },  // "hyper+h"
 
     // Cursor to Page Up  [CursorMoveToPageBackward]
-    { "keys": ["pageup"], "command": "move", "args": {"by":"pages","forward":false} },  // "pageup"
-    { "keys": ["super+ctrl+alt+y"], "command": "move", "args": {"by":"pages","forward":false} },  // "hyper+y"
+    { "keys": ["pageup"], "command": "move", "args": {"by":"pages","forward":false,"extend":false} },  // "pageup"
+    { "keys": ["super+ctrl+alt+y"], "command": "move", "args": {"by":"pages","forward":false,"extend":false} },  // "hyper+y"
 
     // Cursor to File End  [CursorMoveToTextEnd]
-    { "keys": ["ctrl+end"], "command": "move_to", "args": {"to":"eof"} },  // "pinky+end"
-    { "keys": ["super+ctrl+alt+b"], "command": "move_to", "args": {"to":"eof"} },  // "hyper+b"
+    { "keys": ["ctrl+end"], "command": "move_to", "args": {"to":"eof","extend":false} },  // "pinky+end"
+    { "keys": ["super+ctrl+alt+b"], "command": "move_to", "args": {"to":"eof","extend":false} },  // "hyper+b"
 
     // Cursor to File Begin  [CursorMoveToTextBegin]
-    { "keys": ["ctrl+home"], "command": "move_to", "args": {"to":"bof"} },  // "pinky+home"
-    { "keys": ["super+ctrl+alt+t"], "command": "move_to", "args": {"to":"bof"} },  // "hyper+t"
+    { "keys": ["ctrl+home"], "command": "move_to", "args": {"to":"bof","extend":false} },  // "pinky+home"
+    { "keys": ["super+ctrl+alt+t"], "command": "move_to", "args": {"to":"bof","extend":false} },  // "hyper+t"
 
     // Caret Above  [CursorMultiCloneAbove]
     { "keys": ["super+alt+shift+up"], "command": "select_lines", "args": {"forward":false} },  // "thumb+shift+up"
@@ -127,10 +127,10 @@
     { "keys": ["ctrl+shift+u"], "command": "run_macro_file", "args": {"file":"res://Packages/Default/Add Line Before.sublime-macro"} },  // "pinky+shift+u"
 
     // Insert Sibling Node Below  [EditNodeInsertBelowSibling]
-    { "keys": ["ctrl+shift+m"], "command": "run_macro_file", "args": {"file":"res://Packages/Default/Add Line.sublime-macro"} },  // "pinky+shift+m"
+    { "keys": ["ctrl+shift+n"], "command": "run_macro_file", "args": {"file":"res://Packages/Default/Add Line.sublime-macro"} },  // "pinky+shift+n"
 
     // Insert Child Node Below  [EditNodeInsertBelowChild]
-    { "keys": ["ctrl+shift+n"], "command": "run_macro_file", "args": {"file":"res://Packages/Default/Add Line.sublime-macro"} },  // "pinky+shift+n"
+    { "keys": ["ctrl+shift+m"], "command": "run_macro_file", "args": {"file":"res://Packages/Default/Add Line.sublime-macro"} },  // "pinky+shift+m"
 
     // Duplicate Node  [EditNodeInsertDuplicate]
     { "keys": ["ctrl+d"], "command": "duplicate_line" },  // "pinky+d"

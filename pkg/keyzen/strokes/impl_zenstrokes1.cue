@@ -43,19 +43,22 @@ let thisStrokes = #Strokes & {
 		//  "CursorSelectAll": [[""]
 		//  "CursorSelectionContract": [["pinky+shift+"]
 		//  "CursorSelectionExpand": [["pinky+shift+"]
-		"EditNodeDelete": [["pinky+shift+x"]] // ["pinky+shift+."],
-		"EditNodeInsertAboveParent": [["pinky+shift+y"]]
-		"EditNodeInsertAboveSibling": [["pinky+shift+u"]]
-		"EditNodeInsertBelowChild": [["pinky+shift+n"]]
-		"EditNodeInsertBelowSibling": [["pinky+shift+m"]]
-		"EditNodeInsertDuplicate": [["pinky+d"]]
-		"EditNodeJoin": [["pinky+shift+o"]]
 		"EditNodeMoveDown": [["pinky+shift+k"]]
+		"EditNodeMoveUp": [["pinky+shift+i"]]
 		"EditNodeMoveIn": [["pinky+shift+l"]]
 		"EditNodeMoveOut": [["pinky+shift+j"]]
-		"EditNodeMoveUp": [["pinky+shift+i"]]
+
+		"EditNodeInsertAboveSibling": [["pinky+shift+u"]]
+		"EditNodeInsertBelowSibling": [["pinky+shift+n"]]
+		"EditNodeInsertAboveParent": [["pinky+shift+y"]]
+		"EditNodeInsertBelowChild": [["pinky+shift+m"]]
+		"EditNodeInsertDuplicate": [["pinky+d"]]
+
 		"EditNodeRename": [["pinky+t"]]
+		"EditNodeDelete": [["pinky+shift+x"]] 
+		"EditNodeJoin": [["pinky+shift+o"]]
 		"EditNodeSplit": [["pinky+enter"]]
+
 	}
 
 }
