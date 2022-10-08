@@ -6,7 +6,6 @@ import (
 
 Editors: "\(thisEditor.Name)": thisEditor
 
-
 let thisEditor = #Editor & {
 	Name: "SublimeText"
 

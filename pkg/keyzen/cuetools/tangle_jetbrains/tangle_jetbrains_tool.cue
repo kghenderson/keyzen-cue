@@ -4,19 +4,19 @@ import (
 	"encoding/yaml"
 	"list"
 	"strings"
-	"text/template"
+	// "text/template"
 	"tool/cli"
 	"tool/file"
 
 	"github.com/kghenderson/keyzen"
 )
 
-command: tangle_sublimetext: {
+command: tangle_jetbrains: {
 	args: {
-		editorName:   "SublimeText"
+		editorName:   "Jetbrains"
 		strokesName:  "ZenStrokes1"
 		platformName: "Linux"
-		fileName:     "_sublime_strokes.json5"
+		fileName:     "_" + strings.ToLower(editorName) + "_strokes.json5"
 	}
 
 	do: {
@@ -43,21 +43,23 @@ command: tangle_sublimetext: {
 					for cmdIdx, cmdName in cmdNames
 					if keyzen.KeyZen.Strokes[StrokesName].StrokesMap[cmdName] != _|_ &&
 						editorCmds[cmdName] != _|_ {
-
 						let cmdDetails = keyzen.KeyZen.Commands.CommandDetailsMap[cmdName]
+
 						let strokeDefs = keyzen.KeyZen.Strokes[StrokesName].StrokesMap[cmdName]
 						let editorCmd = editorCmds[cmdName]
 
 						//      let editorCmdArgs = editorCmd.args
-						let editorCmdText = editorCmd.argsText
-						let editorCmdTextCommand = "\"command\": \"" + editorCmd.command + "\""
+						//      let editorCmdText = editorCmd.argsText
+						//      let editorCmdTextCommand = "\"command\": \"" + editorCmd.command + "\""
+						let editorLabelText = editorCmd.Label
 
 						CmdName:      cmdName
 						CmdHumanName: cmdDetails["Human"]
 
-						EditorCmdText: string
-						if editorCmdText == _|_ {EditorCmdText: editorCmdTextCommand}
-						if editorCmdText != _|_ {EditorCmdText: editorCmdTextCommand + ", \"args\": " + editorCmd.argsText}
+						//      EditorCmdText: string
+						//      if editorCmdText == _|_ {EditorCmdText: editorCmdTextCommand}
+						//      if editorCmdText != _|_ {EditorCmdText: editorCmdTextCommand + ", \"args\": " + editorCmd.argsText}
+						EditorLabelText: editorLabelText
 
 						BindingsCount: len(Bindings)
 						if BindingsCount == 0 {{BindingsMax: 0}}
@@ -73,7 +75,6 @@ command: tangle_sublimetext: {
 								"BindText": bindingText
 							},
 						]
-
 					},
 				]
 			}
@@ -81,17 +82,17 @@ command: tangle_sublimetext: {
 		// debugSourceCli: cli.Print & {text: yaml.Marshal(buildSource.source)}
 		debugSourceFile: file.Create & {filename: "_src.yaml", contents: yaml.Marshal(buildSource.source)}
 
-		genText: {
-			$after: buildSource
-			text:   template.Execute(sublimeKeymapTemplate, buildSource.source)
-		}
+		//  genText: {
+		//   $after: buildSource
+		//   text:   template.Execute(keymapTemplate, buildSource.source)
+		//  }
 		// debugGenText: cli.Print & {text: genText.text}
 
-		createFile: file.Create & {
-			$after:   genText
-			filename: args.fileName
-			contents: genText.text
-		}
+		// createFile: file.Create & {
+		//  $after:   genText
+		//  filename: args.fileName
+		//  contents: genText.text
+		// }
 
 		doneMsg: "done tangling: " + args.strokesName + " for " + args.editorName + " on " + args.platformName
 	}
@@ -106,32 +107,35 @@ command: tangle_sublimetext: {
 //
 
 // language=gotemplate
-sublimeKeymapTemplate: ###"""
-
-	[
-	    // {{.StrokesName}} for {{.EditorName}} on {{.PlatformName}}
-	{{- $cmdMax := .CommandBindingsMax }}
-	{{- $lastCmdName := "" }}
-	{{- range $cmdIdx, $cmd := .CommandBindings }}
-	{{- $cmdName := $cmd.CmdName }}
-	{{- $cmdHumanName := $cmd.CmdHumanName }}
-	{{- $editorCmdText := $cmd.EditorCmdText }}
-	{{- $bindsMax := $cmd.BindingsMax }}
-	{{- if ne $cmdName $lastCmdName }}
-
-	    // {{$cmdHumanName}}  [{{$cmdName}}]
-	{{- end}}
-	{{- range $bindIdx, $bind := $cmd.Bindings }}
-	{{- $defText := $bind.DefText}}
-	{{- $bindText := $bind.BindText}}
-	    { "keys": ["{{$bindText}}"], {{$editorCmdText}} }
-	    {{- if not (and (eq $cmdIdx $cmdMax) (eq $bindIdx $bindsMax))}}, {{end}} // "{{$defText}}"
-	{{- end }}{{/* range Bindings */}}
-	{{- $lastCmdName = $cmdName }}
-	{{- end }}{{/* range CommandBindings */}}
-	]
-	
+keymapTemplate: ###"""
+	// {{.StrokesName}} for {{.EditorName}} on {{.PlatformName}}
 	"""###
+
+//
+// [
+//     // {{.StrokesName}} for {{.EditorName}} on {{.PlatformName}}
+// {{- $cmdMax := .CommandBindingsMax }}
+// {{- $lastCmdName := "" }}
+// {{- range $cmdIdx, $cmd := .CommandBindings }}
+// {{- $cmdName := $cmd.CmdName }}
+// {{- $cmdHumanName := $cmd.CmdHumanName }}
+// {{- $editorCmdText := $cmd.EditorCmdText }}
+// {{- $bindsMax := $cmd.BindingsMax }}
+// {{- if ne $cmdName $lastCmdName }}
+//
+//     // {{$cmdHumanName}}  [{{$cmdName}}]
+// {{- end}}
+// {{- range $bindIdx, $bind := $cmd.Bindings }}
+// {{- $defText := $bind.DefText}}
+// {{- $bindText := $bind.BindText}}
+//     { "keys": ["{{$bindText}}"], {{$editorCmdText}} }
+//     {{- if not (and (eq $cmdIdx $cmdMax) (eq $bindIdx $bindsMax))}}, {{end}} // "{{$defText}}"
+// {{- end }}{{/* range Bindings */}}
+// {{- $lastCmdName = $cmdName }}
+// {{- end }}{{/* range CommandBindings */}}
+// ]
+//
+// """###
 
 //// language=gotemplate
 //sublimeKeymapTemplate: ###"""
