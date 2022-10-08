@@ -7,15 +7,17 @@ for defKeyIndex, defKeyName in Keys.KeyNames {
 		IsRelative: Keys.relativeKeys["\(defKeyName)"] != _|_
 
 		if IsRelative {
-			Bindings: PC: {for _, rk in Keys.relativeKeys["\(defKeyName)"].PC {"\(rk)": Keys.keyIndexLookup["\(rk)"]}}
+			Bindings: Linux: {for _, rk in Keys.relativeKeys["\(defKeyName)"].Linux {"\(rk)": Keys.keyIndexLookup["\(rk)"]}}
 			Bindings: Mac: {for _, rk in Keys.relativeKeys["\(defKeyName)"].Mac {"\(rk)": Keys.keyIndexLookup["\(rk)"]}}
 			Bindings: Mac2: {for _, rk in Keys.relativeKeys["\(defKeyName)"].Mac2 {"\(rk)": Keys.keyIndexLookup["\(rk)"]}}
+			Bindings: Windows: {for _, rk in Keys.relativeKeys["\(defKeyName)"].Windows {"\(rk)": Keys.keyIndexLookup["\(rk)"]}}
 		}
 
 		if !IsRelative {
-			Bindings: PC: {"\(defKeyName)": defKeyIndex}
+			Bindings: Linux: {"\(defKeyName)": defKeyIndex}
 			Bindings: Mac: {"\(defKeyName)": defKeyIndex}
 			Bindings: Mac2: {"\(defKeyName)": defKeyIndex}
+			Bindings: Windows: {"\(defKeyName)": defKeyIndex}
 		}
 	}
 }

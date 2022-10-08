@@ -21,9 +21,10 @@ package keys
 	Index: #KeyIndex
 	Name:  #KeyName
 	Bindings: {
-		PC: [keyName=#KeyName]:   #KeyIndex
-		Mac: [keyName=#KeyName]:  #KeyIndex
-		Mac2: [keyName=#KeyName]: #KeyIndex
+		Linux: [keyName=#KeyName]:   #KeyIndex
+		Mac: [keyName=#KeyName]:     #KeyIndex
+		Mac2: [keyName=#KeyName]:    #KeyIndex
+		Windows: [keyName=#KeyName]: #KeyIndex
 	}
 	IsModifier: bool
 	IsRelative: bool

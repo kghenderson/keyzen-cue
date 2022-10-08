@@ -16,9 +16,14 @@ package editors
 
 // the mapping must account for every keyzen command
 
-#EditorCommandNameMap: {
-	// for _, cmdName in commands.Commands.CommandNames {
-	//  "\(cmdName)"?: {...}
-	// }
+#EditorCommandNameMap: [cmdName=string]: #EditorCommandDef
+//{
+// for _, cmdName in commands.Commands.CommandNames {
+//  "\(cmdName)"?: {...}
+// }
+//}
+
+#EditorCommandDef: {
+	// each editor may define its own
 	...
 }

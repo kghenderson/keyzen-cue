@@ -6,64 +6,66 @@ Commands: CommandNames: [
 	// NAVIGATING & SELECTING
 
 	// Cursor Movements
-	"CursorMoveToLineBackward",       // up
-	"CursorMoveToLineBackwardSelect", // up+
-	"CursorMoveToLineForward",        // down
-	"CursorMoveToLineForwardSelect",  // down+
-	"CursorMoveToCharBackward",       // left
-	"CursorMoveToCharBackwardSelect", // left+
-	"CursorMoveToCharForward",        // right
-	"CursorMoveToCharForwardSelect",  // right+
-	"CursorMoveToPageBackward",       // pgup
-	"CursorMoveToPageBackwardSelect", // pgup+
-	"CursorMoveToPageForward",        // pgdn
-	"CursorMoveToPageForwardSelect",  // pgdn+
-	"CursorMoveToLineBegin",          // line home
-	"CursorMoveToLineBeginSelect",    // line home+
-	"CursorMoveToLineEnd",            // line end
-	"CursorMoveToLineEndSelect",      // line end+
-	"CursorMoveToTextBegin",          // doc home
-	"CursorMoveToTextBeginSelect",    // doc home+
-	"CursorMoveToTextEnd",            // doc end
-	"CursorMoveToTextEndSelect",      // doc end+
-
-	// Cursor Word Jumps
-	"CursorMoveToWordBackward",          // word left
-	"CursorMoveToWordBackwardSelect",    // word left+
-	"CursorMoveToWordForward",           // word right
-	"CursorMoveToWordForwardSelect",     // word right+
-	"CursorMoveToSubwordBackward",       // subword left
-	"CursorMoveToSubwordBackwardSelect", // subword left+
-	"CursorMoveToSubwordForward",        // subword right
-	"CursorMoveToSubwordForwardSelect",  // subword right+
-
-	// Selection Expand & Contraction
-	"CursorSelectAll",         // select all+
-	"CursorSelectionExpand",   // expand+
-	"CursorSelectionContract", // contract+
+	"CursorMoveToLineForward",        		// down
+	"CursorMoveToLineBackward",       		// up
+	"CursorMoveToCharForward",        		// right
+	"CursorMoveToCharBackward",       		// left
+	"CursorMoveToSubwordForward",        	// subword right
+	"CursorMoveToSubwordBackward",       	// subword left
+	"CursorMoveToWordForward",           	// word right
+	"CursorMoveToWordBackward",          	// word left
+	"CursorMoveToLineEnd",            		// line end
+	"CursorMoveToLineBegin",          		// line home
+	"CursorMoveToPageForward",        		// page down
+	"CursorMoveToPageBackward",       		// page up
+	"CursorMoveToTextEnd",            		// text end
+	"CursorMoveToTextBegin",          		// text begin
 
 	// Multi-Cursors
 	"CursorMultiCloneAbove",      // caret above
 	"CursorMultiCloneBelow",      // caret below
 	"CursorMultiCloneOnLineEnds", // carets on lines
 
-	// EDITING
-	"EditNodeInsertAboveParent",  // insert parent above
-	"EditNodeInsertAboveSibling", // insert above
-	"EditNodeInsertBelowSibling", // insert below
-	"EditNodeInsertBelowChild",   // insert child  below
-	"EditNodeInsertDuplicate",    // duplicate
-	"EditNodeMoveUp",             // move up
-	"EditNodeMoveDown",           // move down
-	"EditNodeMoveOut",            // move left (unindent)
-	"EditNodeMoveIn",             // move right (indent)
-	"EditNodeRename",             // rename
-	"EditNodeJoin",               // join
-	"EditNodeSplit",              // split
-	"EditNodeDelete",             // rename
+	// Cursor Selections
+	"CursorMoveToLineForwardSelect",  		// select down
+	"CursorMoveToLineBackwardSelect", 		// select up
+	"CursorMoveToCharForwardSelect",  		// select right
+	"CursorMoveToCharBackwardSelect", 		// select left
+	"CursorMoveToSubwordForwardSelect",  	// select subword right
+	"CursorMoveToSubwordBackwardSelect", 	// select subword left
+	"CursorMoveToWordForwardSelect",     	// select word right
+	"CursorMoveToWordBackwardSelect",    	// select word left
+	"CursorMoveToLineEndSelect",      		// select line end
+	"CursorMoveToLineBeginSelect",    		// select line home
+	"CursorMoveToPageForwardSelect",  		// select page down
+	"CursorMoveToPageBackwardSelect", 		// select page up
+	"CursorMoveToTextEndSelect",      		// select text end
+	"CursorMoveToTextBeginSelect",    		// select text begin
 
-	// "EditNodesSort",             // sort
-	// "EditNodesUnique",             // unique/de-duplicate
+	"CursorSelectAll",         						// select entire text
+	"CursorSelectScopeExpand",   						// selection scope expand
+	"CursorSelectScopeContract", 						// selection scope contract
+	// "CursorSelectWordOccurrencesAll", 					// select all occurrences of word
+	// "CursorSelectWordOccurrencesNext", 					// select next occurrence of word
+	// "CursorSelectWordOccurrencesPrevious", 			// select previous occurrence of word
+
+	// EDITING
+	"EditNodeInsertAboveParent",  				// insert parent above
+	"EditNodeInsertAboveSibling", 				// insert above
+	"EditNodeInsertBelowSibling", 				// insert below
+	"EditNodeInsertBelowChild",   				// insert child  below
+	"EditNodeInsertDuplicate",    				// duplicate
+	"EditNodeMoveUp",             				// move up
+	"EditNodeMoveDown",           				// move down
+	"EditNodeMoveOut",            				// move left (unindent)
+	"EditNodeMoveIn",             				// move right (indent)
+	"EditNodeRename",             				// rename
+	"EditNodeJoin",               				// join
+	"EditNodeSplit",              				// split
+	"EditNodeDelete",             				// rename
+
+	// "EditNodesSort",             			// sort
+	// "EditNodesUnique",           			// unique/de-duplicate
 
 	// "EditTextCaseToUpper",
 	// "EditTextCaseToLower",

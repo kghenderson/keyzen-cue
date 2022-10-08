@@ -15,8 +15,8 @@ command: tangle_sublimetext: {
 	args: {
 		editorName:   "SublimeText"
 		strokesName:  "ZenStrokes1"
-		platformName: "PC"
-		fileName:     "_sublime_strokes.txt"
+		platformName: "Linux"
+		fileName:     "_sublime_strokes.json5"
 	}
 
 	do: {
@@ -35,22 +35,29 @@ command: tangle_sublimetext: {
 				// debugBindings: keyzen.KeyZen.Strokes["\(strokesName)"].StrokesMap.Bindings[platformName]
 				// not every editor implements every command
 				CommandBindingsCount: len(CommandBindings)
+
 				if CommandBindingsCount == 0 {{CommandBindingsMax: 0}}
 				if CommandBindingsCount > 0 {{CommandBindingsMax: CommandBindingsCount - 1}}
+
 				CommandBindings: [
 					for cmdIdx, cmdName in cmdNames
-					if keyzen.KeyZen.Strokes["\(StrokesName)"].StrokesMap["\(cmdName)"] != _|_ &&
-						editorCmds["\(cmdName)"] != _|_ {
-						let strokeDefs = keyzen.KeyZen.Strokes["\(StrokesName)"].StrokesMap["\(cmdName)"]
-						let editorCmd = editorCmds["\(cmdName)"]
-						let editorCmdArgs = editorCmd.args
+					if keyzen.KeyZen.Strokes[StrokesName].StrokesMap[cmdName] != _|_ &&
+						editorCmds[cmdName] != _|_ {
+
+						let cmdDetails = keyzen.KeyZen.Commands.CommandDetailsMap[cmdName]
+						let strokeDefs = keyzen.KeyZen.Strokes[StrokesName].StrokesMap[cmdName]
+						let editorCmd = editorCmds[cmdName]
+
+						//      let editorCmdArgs = editorCmd.args
+						let editorCmdText = editorCmd.argsText
 						let editorCmdTextCommand = "\"command\": \"" + editorCmd.command + "\""
 
-						CmdName: "\(cmdName)"
+						CmdName:      cmdName
+						CmdHumanName: cmdDetails["Human"]
 
 						EditorCmdText: string
-						if editorCmdArgs == _|_ {EditorCmdText: editorCmdTextCommand}
-						if editorCmdArgs != _|_ {EditorCmdText: editorCmdTextCommand + ", \"args\": " + editorCmd.argsText}
+						if editorCmdText == _|_ {EditorCmdText: editorCmdTextCommand}
+						if editorCmdText != _|_ {EditorCmdText: editorCmdTextCommand + ", \"args\": " + editorCmd.argsText}
 
 						BindingsCount: len(Bindings)
 						if BindingsCount == 0 {{BindingsMax: 0}}
@@ -100,19 +107,29 @@ command: tangle_sublimetext: {
 
 // language=gotemplate
 sublimeKeymapTemplate: ###"""
+
+	[
 	    // {{.StrokesName}} for {{.EditorName}} on {{.PlatformName}}
 	{{- $cmdMax := .CommandBindingsMax }}
+	{{- $lastCmdName := "" }}
 	{{- range $cmdIdx, $cmd := .CommandBindings }}
 	{{- $cmdName := $cmd.CmdName }}
+	{{- $cmdHumanName := $cmd.CmdHumanName }}
 	{{- $editorCmdText := $cmd.EditorCmdText }}
 	{{- $bindsMax := $cmd.BindingsMax }}
+	{{- if ne $cmdName $lastCmdName }}
+
+	    // {{$cmdHumanName}}  [{{$cmdName}}]
+	{{- end}}
 	{{- range $bindIdx, $bind := $cmd.Bindings }}
 	{{- $defText := $bind.DefText}}
 	{{- $bindText := $bind.BindText}}
 	    { "keys": ["{{$bindText}}"], {{$editorCmdText}} }
-	    {{- if not (and (eq $cmdIdx $cmdMax) (eq $bindIdx $bindsMax))}}, {{end}} // {{$cmdName}}: "{{$defText}}"
+	    {{- if not (and (eq $cmdIdx $cmdMax) (eq $bindIdx $bindsMax))}}, {{end}} // "{{$defText}}"
 	{{- end }}{{/* range Bindings */}}
+	{{- $lastCmdName = $cmdName }}
 	{{- end }}{{/* range CommandBindings */}}
+	]
 	
 	"""###
 

@@ -20,9 +20,10 @@ import (
 						for _, dkn in defKeyList {
 							let keyDetailBindings = keys.Keys.KeyMap["\(dkn)"].Bindings
 							Bindings: {
-								PC:   keyDetailBindings.PC
-								Mac:  keyDetailBindings.Mac
-								Mac2: keyDetailBindings.Mac2
+								Linux:   keyDetailBindings.Linux
+								Mac:     keyDetailBindings.Mac
+								Mac2:    keyDetailBindings.Mac2
+								Windows: keyDetailBindings.Windows
 							}
 						}
 					}

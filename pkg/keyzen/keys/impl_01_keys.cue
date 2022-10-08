@@ -17,29 +17,40 @@ Keys: modifierKeys: {
 
 Keys: relativeKeys: {
 	"hyper": {
+		Linux: ["super", "ctrl", "alt"]
 		Mac: ["cmd", "ctrl", "opt"]
 		Mac2: ["cmd", "ctrl", "opt"]
-		PC: ["super", "ctrl", "alt"]
+		Windows: ["super", "ctrl", "alt"]
+	}
+	"super": {
+		Linux: ["super"]
+		Mac: ["super"]
+		Mac2: ["super"]
+		Windows: ["super"]
 	}
 	"primary": {
-		PC: ["ctrl"]
+		Linux: ["ctrl"]
 		Mac: ["cmd"]
 		Mac2: ["cmd"]
+		Windows: ["ctrl"]
 	}
 	"secondary": {
-		PC: ["alt"]
+		Linux: ["super", "alt"]
 		Mac: ["ctrl"]
 		Mac2: ["ctrl"]
+		Windows: ["alt"]
 	}
 	"pinky": {
-		PC: ["ctrl"]
+		Linux: ["ctrl"]
 		Mac: ["ctrl"]
-		Mac2: ["cmd"]
+		Mac2: ["super"]
+		Windows: ["ctrl"]
 	}
 	"thumb": {
-		PC: ["alt"]
+		Linux: ["super", "alt"]
 		Mac: ["cmd"]
 		Mac2: ["ctrl"]
+		Windows: ["alt"]
 	}
 }
 

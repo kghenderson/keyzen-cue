@@ -1,10 +1,12 @@
 
 - install zsh
-- 
 - remove system shortcuts
 
 - set keyboard input method system from ibus to xim in language support
-  - (see ctrl+shift+u)
+- run `ibus-setup` in terminal and disable/change the shortcuts 
+- https://wiki.archlinux.org/title/IBus
+  - (see ctrl+shift+u)                                       
+           
 
 -  use `xev` to see keystrokes in the terminal
                                                        
