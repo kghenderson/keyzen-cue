@@ -34,12 +34,12 @@
 
     // Cursor to Line End  [CursorMoveToLineEnd]
     { "keys": ["end"], "command": "move_to", "args": {"to":"eol","extend":false} },  // "end"
-    { "keys": ["super+ctrl+alt+]"], "command": "move_to", "args": {"to":"eol","extend":false} },  // "hyper+]"
+    { "keys": ["super+ctrl+alt+;"], "command": "move_to", "args": {"to":"eol","extend":false} },  // "hyper+;"
     { "keys": ["super+ctrl+alt+right"], "command": "move_to", "args": {"to":"eol","extend":false} },  // "pinky+thumb+right"
 
     // Cursor to Line Begin  [CursorMoveToLineBegin]
     { "keys": ["home"], "command": "move_to", "args": {"to":"bol","extend":false} },  // "home"
-    { "keys": ["super+ctrl+alt+["], "command": "move_to", "args": {"to":"bol","extend":false} },  // "hyper+["
+    { "keys": ["super+ctrl+alt+h"], "command": "move_to", "args": {"to":"bol","extend":false} },  // "hyper+h"
     { "keys": ["super+ctrl+alt+left"], "command": "move_to", "args": {"to":"bol","extend":false} },  // "pinky+thumb+left"
 
     // Cursor to Page Down  [CursorMoveToPageForward]
@@ -154,5 +154,8 @@
     { "keys": ["ctrl+enter"], "command": "insert", "args": {"characters":"\n"} },  // "pinky+enter"
 
     // Delete Node  [EditNodeDelete]
-    { "keys": ["ctrl+shift+x"], "command": "run_macro_file", "args": {"file":"res://Packages/Default/Delete Line.sublime-macro"} } // "pinky+shift+x"
+    { "keys": ["ctrl+shift+x"], "command": "run_macro_file", "args": {"file":"res://Packages/Default/Delete Line.sublime-macro"} },  // "pinky+shift+x"
+
+    // Open Editor Settings  [GotoEditorSettings]
+    { "keys": ["ctrl+,"], "command": "edit_settings", "args": {"base_file":"${packages}/Default/Preferences.sublime-settings","default":"// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"} } // "pinky+,"
 ]

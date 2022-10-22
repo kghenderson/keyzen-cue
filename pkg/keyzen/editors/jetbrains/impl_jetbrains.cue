@@ -58,4 +58,6 @@ EditorCommandNameMap: {
 	EditNodeJoin: {Label: "Join Line", ActionId: "EditorJoinLines"}
 	EditNodeSplit: {Label: "Split Line", ActionId: "EditorSplitLine"}
 
+	GotoEditorSettings: {Label: "Settings...", ActionId: "ShowSettings"}
+
 }

@@ -235,6 +235,11 @@ Commands: CommandDetailsMap: {
 		Category: "Edit"
 	}
 
+	"GotoEditorSettings": {
+		Human:    "Open Editor Settings"
+		Category: "Goto"
+	}
+
 	// "": {
 	// Category: "Cursor"
 	// Human:    ""

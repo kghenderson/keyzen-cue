@@ -88,7 +88,7 @@ command: tangle_jetbrains: {
 			}
 		}
 		// debugSourceCli: cli.Print & {text: yaml.Marshal(buildSource.source)}
-		debugSourceFile: file.Create & {filename: "_jetbrains_src.yaml", contents: yaml.Marshal(buildSource.source)}
+		debugSourceFile: file.Create & {filename: "_tangle_jetbrains_src.yaml", contents: yaml.Marshal(buildSource.source)}
 
 		loadTemplate: {
 			readFile:     file.Read & {filename: templateName, contents: string}

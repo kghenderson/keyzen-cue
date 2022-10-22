@@ -55,9 +55,11 @@ let thisStrokes = #Strokes & {
 		"EditNodeInsertDuplicate": [["pinky+d"]]
 
 		"EditNodeRename": [["pinky+t"]]
-		"EditNodeDelete": [["pinky+shift+x"]] 
+		"EditNodeDelete": [["pinky+shift+x"]]
 		"EditNodeJoin": [["pinky+shift+o"]]
 		"EditNodeSplit": [["pinky+enter"]]
+
+		"GotoEditorSettings": [["pinky+,"]]
 
 	}
 

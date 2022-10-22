@@ -16,7 +16,7 @@ command: tangle_sublimetext: {
 		editorName:   "SublimeText"
 		strokesName:  "ZenStrokes1"
 		platformName: "Linux"
-		fileName:     "_"+ strings.ToLower(editorName) +"_strokes.json5"
+		fileName:     "_" + strings.ToLower(editorName) + "_strokes.json5"
 	}
 
 	do: {
@@ -79,7 +79,7 @@ command: tangle_sublimetext: {
 			}
 		}
 		// debugSourceCli: cli.Print & {text: yaml.Marshal(buildSource.source)}
-		debugSourceFile: file.Create & {filename: "_src.yaml", contents: yaml.Marshal(buildSource.source)}
+		debugSourceFile: file.Create & {filename: "_tangle_sublime_src.yaml", contents: yaml.Marshal(buildSource.source)}
 
 		genText: {
 			$after: buildSource

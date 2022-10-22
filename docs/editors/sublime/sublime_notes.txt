@@ -1,0 +1,19 @@
+
+
+sublime text docs:
+https://www.sublimetext.com/docs/
+
+
+sublime text keybindings:
+https://www.sublimetext.com/docs/key_bindings.html
+
+
+https://stackoverflow.com/questions/52881933/sublime-text-shortcut-to-open-keybindings-and-settings
+- open the Sublime console with Ctrl+` or the menu item View > Show Console  
+- enter the command sublime.log_commands(True) to turn on command logging.
+
+
+
+
+sublime text commands references (old but still helpful):
+https://www.sublimetext.com/docs/1/commands

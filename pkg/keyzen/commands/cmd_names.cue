@@ -103,6 +103,8 @@ Commands: CommandNames: [
 	// "Previous Occurrence of Word at Cursor",
 	// "Select All Occurrences",
 
+	"GotoEditorSettings", // Open Editor Settings
+
 	// "Goto in File",
 	// "Goto in All Files",
 	// "Find in File",
