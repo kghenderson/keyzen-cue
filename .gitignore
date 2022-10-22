@@ -7,10 +7,12 @@
 # BlueJ files
 *.ctxt
 
-# underscore json/yaml (for cue testing)
+# underscore files (for testing)
 _*.json
+_*.tmpl
 _*.txt
 _*.yaml
+_*.xml
 
 
 # Mobile Tools for Java (J2ME)

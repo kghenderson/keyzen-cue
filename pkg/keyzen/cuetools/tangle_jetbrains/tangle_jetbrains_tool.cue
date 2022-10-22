@@ -4,20 +4,25 @@ import (
 	"encoding/yaml"
 	"list"
 	"strings"
-	// "text/template"
+	"text/template"
 	"tool/cli"
 	"tool/file"
 
 	"github.com/kghenderson/keyzen"
 )
 
+JetbrainsKeymapTemplateName: "jetbrains_keymap.xml.tmpl"
+
 command: tangle_jetbrains: {
+	templateName: JetbrainsKeymapTemplateName
+
 	args: {
 		editorName:   "Jetbrains"
 		strokesName:  "ZenStrokes1"
 		platformName: "Linux"
-		fileName:     "_" + strings.ToLower(editorName) + "_strokes.json5"
+		fileName:     "_" + strings.ToLower(editorName) + "_strokes.xml"
 	}
+	argsDebug: cli.Print & {text: yaml.Marshal(args)}
 
 	do: {
 		buildSource: {
@@ -25,6 +30,7 @@ command: tangle_jetbrains: {
 				EditorName:   args.editorName
 				StrokesName:  args.strokesName
 				PlatformName: args.platformName
+				KeymapName:   "Keyzen (" + PlatformName + ")"
 				let editorCmds = keyzen.KeyZen.Editors["\(EditorName)"].EditorCommandNameMap
 				let cmdNames = keyzen.KeyZen.Commands.CommandNames
 
@@ -52,6 +58,7 @@ command: tangle_jetbrains: {
 						//      let editorCmdText = editorCmd.argsText
 						//      let editorCmdTextCommand = "\"command\": \"" + editorCmd.command + "\""
 						let editorLabelText = editorCmd.Label
+						let editorActionId = editorCmd.ActionId
 
 						CmdName:      cmdName
 						CmdHumanName: cmdDetails["Human"]
@@ -60,6 +67,7 @@ command: tangle_jetbrains: {
 						//      if editorCmdText == _|_ {EditorCmdText: editorCmdTextCommand}
 						//      if editorCmdText != _|_ {EditorCmdText: editorCmdTextCommand + ", \"args\": " + editorCmd.argsText}
 						EditorLabelText: editorLabelText
+						EditorActionId:  editorActionId
 
 						BindingsCount: len(Bindings)
 						if BindingsCount == 0 {{BindingsMax: 0}}
@@ -70,7 +78,7 @@ command: tangle_jetbrains: {
 								let bindingIds = [ for k, v in bindingMap {name: k, idx: v}]
 								let bindingIdsSorted = list.Sort(bindingIds, {x: {}, y: {}, less: x.idx < y.idx})
 								let bindingKeys = [ for _, kv in bindingIdsSorted {kv.name}]
-								let bindingText = strings.Join(bindingKeys, "+")
+								let bindingText = strings.Join(bindingKeys, " ")
 								"DefText":  "\(strokeDef.DefText)"
 								"BindText": bindingText
 							},
@@ -80,19 +88,22 @@ command: tangle_jetbrains: {
 			}
 		}
 		// debugSourceCli: cli.Print & {text: yaml.Marshal(buildSource.source)}
-		debugSourceFile: file.Create & {filename: "_src.yaml", contents: yaml.Marshal(buildSource.source)}
+		debugSourceFile: file.Create & {filename: "_jetbrains_src.yaml", contents: yaml.Marshal(buildSource.source)}
 
-		//  genText: {
-		//   $after: buildSource
-		//   text:   template.Execute(keymapTemplate, buildSource.source)
-		//  }
-		// debugGenText: cli.Print & {text: genText.text}
+		loadTemplate: {
+			readFile:     file.Read & {filename: templateName, contents: string}
+			templateText: readFile.contents
+			// templateTextDebug: cli.Print & {text: "templateText: " + templateText}
+		}
 
-		// createFile: file.Create & {
-		//  $after:   genText
-		//  filename: args.fileName
-		//  contents: genText.text
-		// }
+		genText: {
+			resultText: template.Execute(loadTemplate.templateText, buildSource.source)
+			// resultTextDebug: cli.Print & {text: resultText}
+		}
+
+		writeFile: {
+			doWrite: file.Create & {filename: args.fileName, contents: genText.resultText}
+		}
 
 		doneMsg: "done tangling: " + args.strokesName + " for " + args.editorName + " on " + args.platformName
 	}

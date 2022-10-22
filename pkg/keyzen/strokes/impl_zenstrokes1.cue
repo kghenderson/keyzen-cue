@@ -14,8 +14,8 @@ let thisStrokes = #Strokes & {
 		"CursorMoveToSubwordBackward": [["thumb+left"]] // subword left
 		"CursorMoveToWordForward": [["pinky+right"], ["hyper+o"]] // word right
 		"CursorMoveToWordBackward": [["pinky+left"], ["hyper+u"]] // word left
-		"CursorMoveToLineEnd": [["end"], ["hyper+]"], ["pinky+thumb+right"]] // line end
-		"CursorMoveToLineBegin": [["home"], ["hyper+["], ["pinky+thumb+left"]] // line begin
+		"CursorMoveToLineEnd": [["end"], ["hyper+;"], ["pinky+thumb+right"]] // line end
+		"CursorMoveToLineBegin": [["home"], ["hyper+h"], ["pinky+thumb+left"]] // line begin
 		"CursorMoveToPageForward": [["pagedown"], ["hyper+h"]] // page down
 		"CursorMoveToPageBackward": [["pageup"], ["hyper+y"]] // page up
 		"CursorMoveToTextEnd": [["pinky+end"], ["hyper+b"]] // file bottom

@@ -1,0 +1,11 @@
+<keymap version="1" name="{{.KeymapName}}" parent="$default">
+{{- range $cmdIdx, $cmd := .CommandBindings }}
+{{- $cmdName := $cmd.CmdName }}
+  <!-- {{$cmd.CmdHumanName}} -->
+  <action id="{{$cmd.EditorActionId}}">
+      {{- range $cmdIdx, $cmd := .Bindings }}
+      <keyboard-shortcut first-keystroke="{{$cmd.BindText}}" /><!-- "{{$cmd.DefText}}" -->
+      {{- end}}
+  </action>
+{{- end}}
+</keymap>
