@@ -1,2 +1,3 @@
-# intellij-keymap-kzen
-kzen keymap for jetbrains
+# keyzen-cue
+
+keyzen project to define and generate consistent key bindings for various editors.
