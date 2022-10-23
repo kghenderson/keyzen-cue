@@ -8,6 +8,7 @@
 *.ctxt
 
 # underscore files (for testing)
+_*.cue
 _*.json
 _*.tmpl
 _*.txt

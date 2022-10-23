@@ -66,7 +66,6 @@ let thisEditor = #Editor & {
 
 		GotoEditorSettings: {command: "edit_settings", args: {base_file: "${packages}/Default/Preferences.sublime-settings", default: "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"}}
 		// GotoEditorSettingsForKeymap: {command: "edit_settings", args: {base_file: "${packages}/Default/Default ($platform).sublime-keymap", default: "[\n\t$0\n]\n"}}
-
 	}
 }
 

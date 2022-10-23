@@ -1,7 +1,8 @@
+eval_filename = "_eval_$(notdir $(CURDIR)).cue"
 export_filename = "_$(notdir $(CURDIR)).yaml"
 
 .PHONY: "all"
-all: fmt vet cmd
+all: fmt vet eval # exp
 
 .PHONY: "clean"
 clean:
@@ -10,6 +11,10 @@ clean:
 .PHONY: "cmd"
 cmd:
 	cue cmd tangle_sublimetext
+
+.PHONY: "eval"
+eval:
+	cue eval -a . -o $(eval_filename) -f
 
 .PHONY: "fmt"
 fmt:

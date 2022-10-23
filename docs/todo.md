@@ -9,6 +9,7 @@
     - pagedown -> page_down
     - ] -> close_bracket
 
+- switch case: cmd+b
 
        
 ## Keyboard Shortcuts:

@@ -1,63 +1,63 @@
 package keys
 
-Keys: #Keys & {
+// Keys: #Keys & {
+// }
+
+modifierKeys: {
+	"Super":     true
+	"Alt":       true
+	"Ctrl":      true
+	"Shift":     true
+	"Hyper":     true
+	"Primary":   true
+	"Secondary": true
+	"Pinky":     true
+	"Thumb":     true
 }
 
-Keys: modifierKeys: {
-	"super":     true
-	"alt":       true
-	"ctrl":      true
-	"shift":     true
-	"hyper":     true
-	"primary":   true
-	"secondary": true
-	"pinky":     true
-	"thumb":     true
-}
-
-Keys: relativeKeys: {
-	"hyper": {
-		Linux: ["super", "ctrl", "alt"]
-		Mac: ["cmd", "ctrl", "opt"]
-		Mac2: ["cmd", "ctrl", "opt"]
-		Windows: ["super", "ctrl", "alt"]
+relativeKeys: {
+	// "Hyper": {
+	// 	Linux: ["Super", "Ctrl", "Alt"]
+	// 	Mac: ["Super", "Ctrl", "Alt"] // ["Cmd", "Ctrl", "Opt"]
+	// 	Mac2: ["Super", "Ctrl", "Alt"] // ["Cmd", "Ctrl", "Opt"]
+	// 	Windows: ["Super", "Ctrl", "Alt"] // ["Super", "Ctrl", "Alt"]
+	// }
+	// "Super": {
+	// 	Linux: ["Super"]
+	// 	Mac: ["Super"]
+	// 	Mac2: ["Super"]
+	// 	Windows: ["Super"]
+	// }
+	"Primary": {
+		Linux: ["Ctrl"]
+		Mac: ["Super"] // Cmd
+		Mac2: ["Super"] // Cmd
+		Windows: ["Ctrl"]
 	}
-	"super": {
-		Linux: ["super"]
-		Mac: ["super"]
-		Mac2: ["super"]
-		Windows: ["super"]
+	"Secondary": {
+		Linux: ["Super", "Alt"] // todo: Ubuntu showing this as combo
+		Mac: ["Ctrl"]
+		Mac2: ["Ctrl"]
+		Windows: ["Alt"]
 	}
-	"primary": {
-		Linux: ["ctrl"]
-		Mac: ["cmd"]
-		Mac2: ["cmd"]
-		Windows: ["ctrl"]
+	"Pinky": {
+		Linux: ["Ctrl"]
+		Mac: ["Ctrl"]
+		Mac2: ["Super"]
+		Windows: ["Ctrl"]
 	}
-	"secondary": {
-		Linux: ["super", "alt"]
-		Mac: ["ctrl"]
-		Mac2: ["ctrl"]
-		Windows: ["alt"]
-	}
-	"pinky": {
-		Linux: ["ctrl"]
-		Mac: ["ctrl"]
-		Mac2: ["super"]
-		Windows: ["ctrl"]
-	}
-	"thumb": {
-		Linux: ["super", "alt"]
-		Mac: ["cmd"]
-		Mac2: ["ctrl"]
-		Windows: ["alt"]
+	"Thumb": {
+		Linux: ["Super", "Alt"]
+		Mac: ["Super"] //Cmd
+		Mac2: ["Ctrl"]
+		Windows: ["Alt"]
 	}
 }
 
-Keys: compoundKeys: {
-	"hyper": {
-		ctrl:  true
-		alt:   true
-		super: true
+compoundKeys: {
+	"Hyper": {
+		Ctrl:  true
+		Alt:   true
+		Super: true
 	}
 }

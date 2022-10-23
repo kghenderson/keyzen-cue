@@ -4,18 +4,20 @@ package keys
 #KeyName:  string
 
 // Keys is the wrapper collection of package objects
-#Keys: {
-	KeyNames: [...#KeyName]
-	KeyMap: #KeyMap
-	//                                 keyNamesLookup: [keyName=#KeyName]: #KeyIndex
-	keyIndexLookup: [keyName=#KeyName]: #KeyIndex
-	modifierKeys?: [keyName=#KeyName]:  bool
-	relativeKeys?: [keyName=#KeyName]: {...}
-	compoundKeys?: {...}
+//#Keys: {
+ActualKeyNames: [...#KeyName]
 
-	zzCheckAllKeyNamesInKeysMap?: [keyName=#KeyName]: bool
-	zzCheckAllMapKeysInKeyNames?: [keyName=#KeyName]: bool
-}
+DefinableKeyNames: [...#KeyName]
+DefinableKeyMap: #KeyMap
+//                                 keyNamesLookup: [keyName=#KeyName]: #KeyIndex
+definableKeyIndexLookup: [keyName=#KeyName]: #KeyIndex
+modifierKeys?: [keyName=#KeyName]:           bool
+relativeKeys?: [keyName=#KeyName]: {...}
+compoundKeys?: {...}
+
+zzCheckAllKeyNamesInKeysMap?: [keyName=#KeyName]: bool
+zzCheckAllMapKeysInKeyNames?: [keyName=#KeyName]: bool
+//}
 
 #KeyDef: {
 	Index: #KeyIndex

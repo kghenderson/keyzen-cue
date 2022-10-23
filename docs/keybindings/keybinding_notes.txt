@@ -1,0 +1,20 @@
+
+
+
+
+https://docs.qmk.fm/#/keycodes
+
+https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes_basic.md
+
+
+
+https://www.lookuptables.com/coding/keyboard-scan-codes
+
+
+jargon:
+http://catb.org/jargon/html/A/ASCII.html
+
+https://blog.codinghorror.com/ascii-pronunciation-rules-for-programmers/
+
+
+splat, bang
