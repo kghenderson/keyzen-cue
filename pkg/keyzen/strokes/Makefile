@@ -2,7 +2,7 @@ eval_filename = "_eval_$(notdir $(CURDIR)).cue"
 export_filename = "_$(notdir $(CURDIR)).yaml"
 
 .PHONY: "all"
-all: fmt vet eval exp
+all: fmt eval vet exp
 
 .PHONY: "clean"
 clean:

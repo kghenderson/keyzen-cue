@@ -6,9 +6,9 @@ import (
 )
 
 #SubstituteKey: [keyName=keys.#KeyName]: {
-	Linux: string
-	Mac: string
-	Mac2: string
+	Linux:   string
+	Mac:     string
+	Mac2:    string
 	Windows: string
 }
 
@@ -16,11 +16,9 @@ import (
 // 	"": ""
 // }
 
-
-
 // keynames:
 EditorKeys: {
-	for keyName, keyDef in keys.Keys.KeyMap {
+	for keyName, keyDef in keys.DefinableKeyMap {
 		"\(keyName)": true
 	}
 }

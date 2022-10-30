@@ -1,16 +1,16 @@
 package strokes
 
 import (
-	// "strings"
 
 	"github.com/kghenderson/keyzen/commands"
+	// "strings"
 )
 
 #Strokes: {
 	Name:             string
 	StrokeCmdDefsMap: #StrokeCmdDefsMap
 	// StrokesMap:       #StrokesMap
-	...
+	//	...
 }
 
 // Stroke Definitions - Universal, Human-form, e.g. hyper+i

@@ -6,59 +6,59 @@ let thisStrokes = #Strokes & {
 	Name: "ZenStrokes1"
 
 	StrokeCmdDefsMap: {
-		"CursorMoveToCharBackward": [["left"], ["hyper+j"]] // left
-		"CursorMoveToCharBackwardSelect": [["shift+left"], ["hyper+shift+j"]] // select left
-		"CursorMoveToCharForward": [["right"], ["hyper+l"]] // right
-		"CursorMoveToCharForwardSelect": [["shift+right"], ["hyper+shift+l"]] // select right
-		"CursorMoveToLineBackward": [["up"], ["hyper+i"]] // up
-		"CursorMoveToLineBackwardSelect": [["shift+up"], ["hyper+shift+i"]] // select up
-		"CursorMoveToLineBegin": [["home"], ["hyper+y"], ["pinky+thumb+left"]] // line begin
-		"CursorMoveToLineBeginSelect": [["shift+home"], ["hyper+shift+y"], ["pinky+thumb+shift+left"]] // select line begin
-		"CursorMoveToLineEnd": [["end"], ["hyper+p"], ["pinky+thumb+right"]] // line end
-		"CursorMoveToLineEndSelect": [["shift+end"], ["hyper+shift+p"], ["pinky+thumb+shift+right"]] // select line end
-		"CursorMoveToLineForward": [["down"], ["hyper+k"]] // down
-		"CursorMoveToLineForwardSelect": [["shift+down"], ["hyper+shift+k"]] // select down
-		"CursorMoveToPageBackward": [["pageup"], ["hyper+y"]] // page up
-		"CursorMoveToPageBackwardSelect": [["shift+pageup"], ["hyper+shift+y"]] // select page up
-		"CursorMoveToPageForward": [["pagedown"], ["hyper+h"]] // page down
-		"CursorMoveToPageForwardSelect": [["shift+pagedown"], ["hyper+shift+h"]] // select page down
-		"CursorMoveToSubwordBackward": [["thumb+left"]] // subword left
-		"CursorMoveToSubwordBackwardSelect": [["thumb+shift+left"]] // select subword left
-		"CursorMoveToSubwordForward": [["thumb+right"]] // subword right
-		"CursorMoveToSubwordForwardSelect": [["thumb+shift+right"]] // select subword right
-		"CursorMoveToTextBegin": [["pinky+home"], ["hyper+t"]] // file top
-		"CursorMoveToTextBeginSelect": [["pinky+shift+home"], ["hyper+shift+t"]] // select file top
-		"CursorMoveToTextEnd": [["pinky+end"], ["hyper+b"]] // file bottom
-		"CursorMoveToTextEndSelect": [["pinky+shift+end"], ["hyper+shift+b"]] // select file bottom
-		"CursorMoveToWordBackward": [["pinky+left"], ["hyper+u"]] // word left
-		"CursorMoveToWordBackwardSelect": [["pinky+shift+left"], ["hyper+shift+u"]] // select word left
-		"CursorMoveToWordForward": [["pinky+right"], ["hyper+o"]] // word right
-		"CursorMoveToWordForwardSelect": [["pinky+shift+right"], ["hyper+shift+o"]] // select word right
+		"CursorMoveToCharBackward": [["Left"], ["Hyper+J"]] // left
+		"CursorMoveToCharBackwardSelect": [["Shift+Left"], ["Hyper+Shift+J"]] // select left
+		"CursorMoveToCharForward": [["Right"], ["Hyper+L"]] // right
+		"CursorMoveToCharForwardSelect": [["Shift+Right"], ["Hyper+Shift+L"]] // select right
+		"CursorMoveToLineBackward": [["Up"], ["Hyper+I"]] // up
+		"CursorMoveToLineBackwardSelect": [["Shift+Up"], ["Hyper+Shift+I"]] // select up
+		"CursorMoveToLineBegin": [["Home"], ["Hyper+Y"], ["Pinky+Thumb+Left"]] // line begin
+		"CursorMoveToLineBeginSelect": [["Shift+Home"], ["Hyper+Shift+Y"], ["Pinky+Thumb+Shift+Left"]] // select line begin
+		"CursorMoveToLineEnd": [["End"], ["Hyper+P"], ["Pinky+Thumb+Right"]] // line end
+		"CursorMoveToLineEndSelect": [["Shift+End"], ["Hyper+Shift+P"], ["Pinky+Thumb+Shift+Right"]] // select line end
+		"CursorMoveToLineForward": [["Down"], ["Hyper+K"]] // down
+		"CursorMoveToLineForwardSelect": [["Shift+Down"], ["Hyper+Shift+K"]] // select down
+		"CursorMoveToPageBackward": [["PageUp"], ["Hyper+Y"]] // page up
+		"CursorMoveToPageBackwardSelect": [["Shift+PageUp"], ["Hyper+Shift+Y"]] // select page up
+		"CursorMoveToPageForward": [["PageDown"], ["Hyper+H"]] // page down
+		"CursorMoveToPageForwardSelect": [["Shift+PageDown"], ["Hyper+Shift+H"]] // select page down
+		"CursorMoveToSubwordBackward": [["Thumb+Left"]] // subword left
+		"CursorMoveToSubwordBackwardSelect": [["Thumb+Shift+Left"]] // select subword left
+		"CursorMoveToSubwordForward": [["Thumb+Right"]] // subword right
+		"CursorMoveToSubwordForwardSelect": [["Thumb+Shift+Right"]] // select subword right
+		"CursorMoveToTextBegin": [["Pinky+Home"], ["Hyper+T"]] // file top
+		"CursorMoveToTextBeginSelect": [["Pinky+Shift+Home"], ["Hyper+Shift+T"]] // select file top
+		"CursorMoveToTextEnd": [["Pinky+End"], ["Hyper+B"]] // file bottom
+		"CursorMoveToTextEndSelect": [["Pinky+Shift+End"], ["Hyper+Shift+B"]] // select file bottom
+		"CursorMoveToWordBackward": [["Pinky+Left"], ["Hyper+U"]] // word left
+		"CursorMoveToWordBackwardSelect": [["Pinky+Shift+Left"], ["Hyper+Shift+U"]] // select word left
+		"CursorMoveToWordForward": [["Pinky+Right"], ["Hyper+O"]] // word right
+		"CursorMoveToWordForwardSelect": [["Pinky+Shift+Right"], ["Hyper+Shift+O"]] // select word right
 
-		"CursorMultiCloneAbove": [["thumb+shift+up"]] // clone cursor up
-		"CursorMultiCloneBelow": [["thumb+shift+down"]] // clone cursor down
+		"CursorMultiCloneAbove": [["Thumb+Shift+Up"]] // clone cursor up
+		"CursorMultiCloneBelow": [["Thumb+Shift+Down"]] // clone cursor down
 
 		//  "CursorMultiCloneOnLineEnds": [[""]
 		//  "CursorSelectAll": [[""]
-		//  "CursorSelectionContract": [["pinky+shift+"]
-		//  "CursorSelectionExpand": [["pinky+shift+"]
-		"EditNodeMoveDown": [["pinky+shift+k"]]
-		"EditNodeMoveUp": [["pinky+shift+i"]]
-		"EditNodeMoveIn": [["pinky+shift+l"]]
-		"EditNodeMoveOut": [["pinky+shift+j"]]
+		//  "CursorSelectionContract": [["Pinky+Shift+"]
+		//  "CursorSelectionExpand": [["Pinky+Shift+"]
+		"EditNodeMoveDown": [["Pinky+Shift+K"]]
+		"EditNodeMoveUp": [["Pinky+Shift+I"]]
+		"EditNodeMoveIn": [["Pinky+Shift+L"]]
+		"EditNodeMoveOut": [["Pinky+Shift+J"]]
 
-		"EditNodeInsertAboveSibling": [["pinky+shift+u"]]
-		"EditNodeInsertBelowSibling": [["pinky+shift+n"]]
-		"EditNodeInsertAboveParent": [["pinky+shift+y"]]
-		"EditNodeInsertBelowChild": [["pinky+shift+m"]]
-		"EditNodeInsertDuplicate": [["pinky+d"]]
+		"EditNodeInsertAboveSibling": [["Pinky+Shift+U"]]
+		"EditNodeInsertBelowSibling": [["Pinky+Shift+N"]]
+		"EditNodeInsertAboveParent": [["Pinky+Shift+Y"]]
+		"EditNodeInsertBelowChild": [["Pinky+Shift+M"]]
+		"EditNodeInsertDuplicate": [["Pinky+D"]]
 
-		"EditNodeRename": [["pinky+t"]]
-		"EditNodeDelete": [["pinky+shift+x"]]
-		"EditNodeJoin": [["pinky+shift+o"]]
-		"EditNodeSplit": [["pinky+enter"]]
+		"EditNodeRename": [["Pinky+T"]]
+		"EditNodeDelete": [["Pinky+Shift+X"]]
+		"EditNodeJoin": [["Pinky+Shift+O"]]
+		"EditNodeSplit": [["Pinky+Enter"]]
 
-		"GotoEditorSettings": [["pinky+,"]]
+		"GotoEditorSettings": [["Pinky+Comma"]]
 
 	}
 

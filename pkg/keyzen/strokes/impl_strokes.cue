@@ -18,7 +18,7 @@ import (
 						let defKeyList = strings.SplitN(cmdDefText, "+", -1)
 						DefText: "\(cmdDefText)"
 						for _, dkn in defKeyList {
-							let keyDetailBindings = keys.Keys.KeyMap["\(dkn)"].Bindings
+							let keyDetailBindings = keys.DefinableKeyMap["\(dkn)"].Bindings
 							Bindings: {
 								Linux:   keyDetailBindings.Linux
 								Mac:     keyDetailBindings.Mac
