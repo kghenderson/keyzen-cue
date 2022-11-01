@@ -1,17 +1,17 @@
-package keyzen
+package tangle_sublime
 
 import (
 	"encoding/yaml"
 	"list"
 	"strings"
-	"text/template"
+//	"text/template"
 	"tool/cli"
 	"tool/file"
 
 	"github.com/kghenderson/keyzen"
 )
 
-command: tangle_sublimetext: {
+command: tangle_sublime: {
 	args: {
 		editorName:   "SublimeText"
 		strokesName:  "ZenStrokes1"
@@ -19,39 +19,45 @@ command: tangle_sublimetext: {
 		fileName:     "_" + strings.ToLower(editorName) + "_strokes.json5"
 	}
 
+	cmdNames: keyzen.KeyZen.Commands.CommandNames
+	editorCmds:  keyzen.KeyZen.Editors["\(args.editorName)"].EditorCommandNameMap
+ 	 editorCmdsDebug: cli.Print & {text: "editorCmds: "+ yaml.Marshal(editorCmds)  }
+ 	
+ strokeCmdsMap: keyzen.KeyZen.Strokes["\(args.strokesName)"].StrokesMap
+ // strokeCmdsMapDebug: cli.Print & {text: "strokeCmdsMap: "+ yaml.Marshal(strokeCmdsMap)  }
+
 	do: {
 		buildSource: {
-			source: {
+			// source: {
 				EditorName:   args.editorName
 				StrokesName:  args.strokesName
 				PlatformName: args.platformName
-				let editorCmds = keyzen.KeyZen.Editors["\(EditorName)"].EditorCommandNameMap
-				let cmdNames = keyzen.KeyZen.Commands.CommandNames
+				// }
 
 				//    debugEditorCmds: editorCmds
 				//    debugCommandNames: keyzen.KeyZen.Commands.CommandNames
 				// debugStrokes:       keyzen.KeyZen.Strokes["\(strokesName)"]
-				// debugStrokeCmdsMap: keyzen.KeyZen.Strokes["\(strokesName)"].StrokesMap
+
 				// debugBindings: keyzen.KeyZen.Strokes["\(strokesName)"].StrokesMap.Bindings[platformName]
 				// not every editor implements every command
 				CommandBindingsCount: len(CommandBindings)
-
-				if CommandBindingsCount == 0 {{CommandBindingsMax: 0}}
-				if CommandBindingsCount > 0 {{CommandBindingsMax: CommandBindingsCount - 1}}
-
+//
+//				if CommandBindingsCount == 0 {{CommandBindingsMax: 0}}
+//				if CommandBindingsCount > 0 {{CommandBindingsMax: CommandBindingsCount - 1}}
+//
 				CommandBindings: [
 					for cmdIdx, cmdName in cmdNames
 					if keyzen.KeyZen.Strokes[StrokesName].StrokesMap[cmdName] != _|_ &&
 						editorCmds[cmdName] != _|_ {
-
+//
 						let cmdDetails = keyzen.KeyZen.Commands.CommandDetailsMap[cmdName]
-						let strokeDefs = keyzen.KeyZen.Strokes[StrokesName].StrokesMap[cmdName]
+						 let strokeDefs = keyzen.KeyZen.Strokes[StrokesName].StrokesMap[cmdName]
 						let editorCmd = editorCmds[cmdName]
-
-						//      let editorCmdArgs = editorCmd.args
+//
+						// let editorCmdArgs = editorCmd.args
 						let editorCmdText = editorCmd.argsText
 						let editorCmdTextCommand = "\"command\": \"" + editorCmd.command + "\""
-
+//
 						CmdName:      cmdName
 						CmdHumanName: cmdDetails["Human"]
 
@@ -77,32 +83,34 @@ command: tangle_sublimetext: {
 					},
 				]
 			}
-		}
-		// debugSourceCli: cli.Print & {text: yaml.Marshal(buildSource.source)}
-		debugSourceFile: file.Create & {filename: "_tangle_sublime_src.yaml", contents: yaml.Marshal(buildSource.source)}
+//		// debugSourceCli: cli.Print & {text: yaml.Marshal(buildSource.source)}
+		debugSourceFile: file.Create & {filename: "_tangle_sublime_src.yaml", contents: yaml.Marshal(buildSource)}
 
-		genText: {
-			$after: buildSource
-			text:   template.Execute(sublimeKeymapTemplate, buildSource.source)
-		}
-		// debugGenText: cli.Print & {text: genText.text}
-
-		createFile: file.Create & {
-			$after:   genText
-			filename: args.fileName
-			contents: genText.text
-		}
-
-		doneMsg: "done tangling: " + args.strokesName + " for " + args.editorName + " on " + args.platformName
-	}
-
-	done: {
-		$after: do
-		print:  cli.Print & {
-			text: do.doneMsg
 		}
 	}
-}
+//		genText: {
+//			$after: buildSource
+//			text:   template.Execute(sublimeKeymapTemplate, buildSource.source)
+//		}
+//		// debugGenText: cli.Print & {text: genText.text}
+//
+//		createFile: file.Create & {
+//			$after:   genText
+//			filename: args.fileName
+//			contents: genText.text
+//		}
+//
+//		doneMsg: "done tangling: " + args.strokesName + " for " + args.editorName + " on " + args.platformName
+//	}
+//
+//	done: {
+//		$after: do
+//		print:  cli.Print & {
+//			text: do.doneMsg
+//		}
+//	}
+
+
 //
 
 // language=gotemplate

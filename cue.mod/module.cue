@@ -1,1 +1,1 @@
-module: "github.com/kghenderson/keyzen"
+module: "github.com/kghenderson"

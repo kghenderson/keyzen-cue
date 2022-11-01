@@ -1,6 +1,6 @@
-package jetbrains
+package intellij
 
-#JetbrainsCommand: {
+#IntellijCommand: {
 	Label:    string
 	ActionId: string
 	...

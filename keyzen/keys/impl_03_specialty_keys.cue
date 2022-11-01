@@ -1,9 +1,6 @@
 package keys
 
-// Keys: #Keys & {
-// }
-
-modifierKeys: {
+Keys: modifierKeys: {
 	"Super":     true
 	"Alt":       true
 	"Ctrl":      true
@@ -15,19 +12,14 @@ modifierKeys: {
 	"Thumb":     true
 }
 
-relativeKeys: {
-	// "Hyper": {
-	// 	Linux: ["Super", "Ctrl", "Alt"]
-	// 	Mac: ["Super", "Ctrl", "Alt"] // ["Cmd", "Ctrl", "Opt"]
-	// 	Mac2: ["Super", "Ctrl", "Alt"] // ["Cmd", "Ctrl", "Opt"]
-	// 	Windows: ["Super", "Ctrl", "Alt"] // ["Super", "Ctrl", "Alt"]
-	// }
-	// "Super": {
-	// 	Linux: ["Super"]
-	// 	Mac: ["Super"]
-	// 	Mac2: ["Super"]
-	// 	Windows: ["Super"]
-	// }
+Keys: expansionKeys: {
+	// hyper is always the same logical keys, but treating it special simplifies lookup
+	"Hyper": {
+		Linux: ["Super", "Ctrl", "Alt"]
+		Mac: ["Super", "Ctrl", "Alt"] // ["Cmd", "Ctrl", "Opt"]
+		Mac2: ["Super", "Ctrl", "Alt"] // ["Cmd", "Ctrl", "Opt"]
+		Windows: ["Super", "Ctrl", "Alt"] // ["Super", "Ctrl", "Alt"]
+	}
 	"Primary": {
 		Linux: ["Ctrl"]
 		Mac: ["Super"] // Cmd
@@ -35,7 +27,7 @@ relativeKeys: {
 		Windows: ["Ctrl"]
 	}
 	"Secondary": {
-		Linux: ["Super", "Alt"] // todo: Ubuntu showing this as combo
+		Linux: ["Super", "Alt"] // todo: why ubuntu showing this as combo key?
 		Mac: ["Ctrl"]
 		Mac2: ["Ctrl"]
 		Windows: ["Alt"]
@@ -54,10 +46,10 @@ relativeKeys: {
 	}
 }
 
-compoundKeys: {
-	"Hyper": {
-		Ctrl:  true
-		Alt:   true
-		Super: true
-	}
-}
+// Keys: compoundKeys: {
+// 	"Hyper": {
+// 		Ctrl:  true
+// 		Alt:   true
+// 		Super: true
+// 	}
+// }

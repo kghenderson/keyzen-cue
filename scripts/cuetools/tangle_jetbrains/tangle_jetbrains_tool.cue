@@ -1,4 +1,4 @@
-package keyzen
+package tangle_jebrains
 
 import (
 	"encoding/yaml"

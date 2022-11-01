@@ -1,15 +1,17 @@
 package keys
 
-definableKeyIndexLookup: {
-	for keyIndex, keyName in DefinableKeyNames {
+// see here: https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes_basic.md
+
+Keys: logicalKeyNamesLookup: {
+	for keyIndex, keyName in Keys.logicalKeyNamesList {
 		"\(keyName)": keyIndex
 	}
 }
 
-// see here: https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes_basic.md
-
 // Universal Keys are the same across operating systems
-ActualKeyNamesUniversal: [
+Keys: logicalKeyNamesList: [
+	"Super",
+	"Alt",
 	"Ctrl",
 	"Shift",
 
@@ -77,29 +79,4 @@ ActualKeyNamesUniversal: [
 	"7",
 	"8",
 	"9",
-]
-
-ActualKeyNamesMac: [
-	"Cmd",
-	"Opt", // Alt
-]
-
-ActualKeyNamesWindows: [
-	"Win",
-]
-
-DefinableKeyNames: [
-	"Hyper",
-	"Primary",
-	"Secondary",
-	"Pinky",
-	"Thumb",
-
-	"Super", // Win, Cmd, Meta
-	"Alt",   // Opt
-
-	for keyIndex, keyName in ActualKeyNamesUniversal {
-		keyName
-	},
-
 ]

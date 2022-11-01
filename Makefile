@@ -2,11 +2,11 @@
 GEN_PATH="./_gen/"
 
 .PHONY: "all"
-all: hello 
+all: hello exp
 
 .PHONY: "hello"
 hello:
-	echo "hello, $(whoami)"
+	echo "hello, $(shell whoami)"
 
 .PHONY: "init"
 init:
@@ -15,19 +15,28 @@ init:
 
 
 .PHONY: "exp"
-exp: exp-keys exp-commands
+exp: exp-keys exp-commands exp-strokes exp-editors exp-keyzen
+
+.PHONY: "exp-keyzen"
+exp-keyzen:
+	cue export ./keyzen -o ${GEN_PATH}/keyzen.yaml -f
 
 .PHONY: "exp-commands"
 exp-commands:
-	cue export ./pkg/commands -o ${GEN_PATH}/commands.yaml -f
+	cue export ./keyzen/commands -o ${GEN_PATH}/_keyzen_commands.yaml -f
 
 .PHONY: "exp-keys"
 exp-keys:
-	cue export ./pkg/keys -o ${GEN_PATH}/keys.yaml -f
+	cue export ./keyzen/keys -o ${GEN_PATH}/_keyzen_keys.yaml -f
 
 .PHONY: "exp-strokes"
 exp-strokes:
-	cue export ./pkg/strokes -o ${GEN_PATH}/strokes.yaml -f
+	cue export ./keyzen/strokes -o ${GEN_PATH}/_keyzen_strokes.yaml -f
+
+
+.PHONY: "exp-editors"
+exp-editors:
+	cue export ./keyzen/editors -o ${GEN_PATH}/_keyzen_editors.yaml -f
 
 #
 #eval_filename = "_eval_$(notdir $(CURDIR)).cue"

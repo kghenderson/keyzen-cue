@@ -1,5 +1,4 @@
-//
-package jetbrains
+package intellij
 
 import (
 	"github.com/kghenderson/keyzen/keys"
@@ -18,7 +17,7 @@ import (
 
 // keynames:
 EditorKeys: {
-	for keyName, keyDef in keys.DefinableKeyMap {
+	for keyName, keyDef in keys.Keys.KeyMap {
 		"\(keyName)": true
 	}
 }

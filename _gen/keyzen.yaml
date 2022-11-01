@@ -1,0 +1,3824 @@
+KeyZen:
+  Commands:
+    CategoryNames:
+      - FileCursorsNav
+      - FileCursorsMulti
+      - FileOutlineEditing
+      - FileOutlineFolding
+      - FileOutlineCommenting
+      - FileTextEditing
+      - FileEditMisc
+      - Misc
+    CommandNames:
+      - CursorMoveToLineForward
+      - CursorMoveToLineBackward
+      - CursorMoveToCharForward
+      - CursorMoveToCharBackward
+      - CursorMoveToSubwordForward
+      - CursorMoveToSubwordBackward
+      - CursorMoveToWordForward
+      - CursorMoveToWordBackward
+      - CursorMoveToLineEnd
+      - CursorMoveToLineBegin
+      - CursorMoveToPageForward
+      - CursorMoveToPageBackward
+      - CursorMoveToTextEnd
+      - CursorMoveToTextBegin
+      - CursorMultiCloneAbove
+      - CursorMultiCloneBelow
+      - CursorMultiCloneOnLineEnds
+      - CursorMoveToLineForwardSelect
+      - CursorMoveToLineBackwardSelect
+      - CursorMoveToCharForwardSelect
+      - CursorMoveToCharBackwardSelect
+      - CursorMoveToSubwordForwardSelect
+      - CursorMoveToSubwordBackwardSelect
+      - CursorMoveToWordForwardSelect
+      - CursorMoveToWordBackwardSelect
+      - CursorMoveToLineEndSelect
+      - CursorMoveToLineBeginSelect
+      - CursorMoveToPageForwardSelect
+      - CursorMoveToPageBackwardSelect
+      - CursorMoveToTextEndSelect
+      - CursorMoveToTextBeginSelect
+      - CursorSelectAll
+      - CursorSelectScopeExpand
+      - CursorSelectScopeContract
+      - EditNodeInsertAboveParent
+      - EditNodeInsertAboveSibling
+      - EditNodeInsertBelowSibling
+      - EditNodeInsertBelowChild
+      - EditNodeInsertDuplicate
+      - EditNodeMoveUp
+      - EditNodeMoveDown
+      - EditNodeMoveOut
+      - EditNodeMoveIn
+      - EditNodeRename
+      - EditNodeJoin
+      - EditNodeSplit
+      - EditNodeDelete
+      - GotoEditorSettings
+    ContextNames:
+      - Reading
+      - Navigating
+      - Editing
+      - Refactoring
+      - Multi-Cursors
+      - SearchReplace
+      - Debugging
+      - Bookmarking
+    ScopeNames:
+      - File
+      - Editor
+      - Text
+      - Tree
+      - Pane
+      - Window
+      - Terminal
+      - SQL
+    commandNamesLookup:
+      CursorMoveToLineForward: true
+      CursorMoveToLineBackward: true
+      CursorMoveToCharForward: true
+      CursorMoveToCharBackward: true
+      CursorMoveToSubwordForward: true
+      CursorMoveToSubwordBackward: true
+      CursorMoveToWordForward: true
+      CursorMoveToWordBackward: true
+      CursorMoveToLineEnd: true
+      CursorMoveToLineBegin: true
+      CursorMoveToPageForward: true
+      CursorMoveToPageBackward: true
+      CursorMoveToTextEnd: true
+      CursorMoveToTextBegin: true
+      CursorMultiCloneAbove: true
+      CursorMultiCloneBelow: true
+      CursorMultiCloneOnLineEnds: true
+      CursorMoveToLineForwardSelect: true
+      CursorMoveToLineBackwardSelect: true
+      CursorMoveToCharForwardSelect: true
+      CursorMoveToCharBackwardSelect: true
+      CursorMoveToSubwordForwardSelect: true
+      CursorMoveToSubwordBackwardSelect: true
+      CursorMoveToWordForwardSelect: true
+      CursorMoveToWordBackwardSelect: true
+      CursorMoveToLineEndSelect: true
+      CursorMoveToLineBeginSelect: true
+      CursorMoveToPageForwardSelect: true
+      CursorMoveToPageBackwardSelect: true
+      CursorMoveToTextEndSelect: true
+      CursorMoveToTextBeginSelect: true
+      CursorSelectAll: true
+      CursorSelectScopeExpand: true
+      CursorSelectScopeContract: true
+      EditNodeInsertAboveParent: true
+      EditNodeInsertAboveSibling: true
+      EditNodeInsertBelowSibling: true
+      EditNodeInsertBelowChild: true
+      EditNodeInsertDuplicate: true
+      EditNodeMoveUp: true
+      EditNodeMoveDown: true
+      EditNodeMoveOut: true
+      EditNodeMoveIn: true
+      EditNodeRename: true
+      EditNodeJoin: true
+      EditNodeSplit: true
+      EditNodeDelete: true
+      GotoEditorSettings: true
+    zzCheckCommandNamesUnique: true
+    zzCheckAllCommandsNamesInCommands:
+      CursorMoveToLineForward: true
+      CursorMoveToLineBackward: true
+      CursorMoveToCharForward: true
+      CursorMoveToCharBackward: true
+      CursorMoveToSubwordForward: true
+      CursorMoveToSubwordBackward: true
+      CursorMoveToWordForward: true
+      CursorMoveToWordBackward: true
+      CursorMoveToLineEnd: true
+      CursorMoveToLineBegin: true
+      CursorMoveToPageForward: true
+      CursorMoveToPageBackward: true
+      CursorMoveToTextEnd: true
+      CursorMoveToTextBegin: true
+      CursorMultiCloneAbove: true
+      CursorMultiCloneBelow: true
+      CursorMultiCloneOnLineEnds: true
+      CursorMoveToLineForwardSelect: true
+      CursorMoveToLineBackwardSelect: true
+      CursorMoveToCharForwardSelect: true
+      CursorMoveToCharBackwardSelect: true
+      CursorMoveToSubwordForwardSelect: true
+      CursorMoveToSubwordBackwardSelect: true
+      CursorMoveToWordForwardSelect: true
+      CursorMoveToWordBackwardSelect: true
+      CursorMoveToLineEndSelect: true
+      CursorMoveToLineBeginSelect: true
+      CursorMoveToPageForwardSelect: true
+      CursorMoveToPageBackwardSelect: true
+      CursorMoveToTextEndSelect: true
+      CursorMoveToTextBeginSelect: true
+      CursorSelectAll: true
+      CursorSelectScopeExpand: true
+      CursorSelectScopeContract: true
+      EditNodeInsertAboveParent: true
+      EditNodeInsertAboveSibling: true
+      EditNodeInsertBelowSibling: true
+      EditNodeInsertBelowChild: true
+      EditNodeInsertDuplicate: true
+      EditNodeMoveUp: true
+      EditNodeMoveDown: true
+      EditNodeMoveOut: true
+      EditNodeMoveIn: true
+      EditNodeRename: true
+      EditNodeJoin: true
+      EditNodeSplit: true
+      EditNodeDelete: true
+      GotoEditorSettings: true
+    zzCheckAllCommandsInCommandNames: true
+    CommandDetailsMap:
+      CursorMoveToLineBackward:
+        Human: Cursor Up
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToLineBackwardSelect:
+        Human: Select Up
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToLineForward:
+        Human: Cursor Down
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToLineForwardSelect:
+        Human: Select Down
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToCharBackward:
+        Human: Cursor Left
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToCharBackwardSelect:
+        Human: Select to Left
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToCharForward:
+        Human: Cursor to Right
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToCharForwardSelect:
+        Human: Select Right
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToPageBackward:
+        Human: Cursor to Page Up
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToPageBackwardSelect:
+        Human: Select Page Up
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToPageForward:
+        Human: Cursor to Page Down
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToPageForwardSelect:
+        Human: Select Page Down
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToLineBegin:
+        Human: Cursor to Line Begin
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToLineBeginSelect:
+        Human: Select to Line Begin
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToLineEnd:
+        Human: Cursor to Line End
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToLineEndSelect:
+        Human: Select to Line End
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToTextBegin:
+        Human: Cursor to File Begin
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToTextBeginSelect:
+        Human: Select to File Begin
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToTextEnd:
+        Human: Cursor to File End
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToTextEndSelect:
+        Human: Select to File End
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToSubwordForward:
+        Human: Cursor to Subword Right
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToSubwordForwardSelect:
+        Human: Select to Subword Right
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToSubwordBackward:
+        Human: Cursor to Subword Left
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToSubwordBackwardSelect:
+        Human: Select to Subword Left
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToWordForward:
+        Human: Cursor to Word Right
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToWordForwardSelect:
+        Human: Select to Word Right
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToWordBackward:
+        Human: Cursor to Word Left
+        Category: Cursor
+        Subcategory: ""
+      CursorMoveToWordBackwardSelect:
+        Human: Select to Word Left
+        Category: Cursor
+        Subcategory: ""
+      CursorSelectAll:
+        Human: Select All
+        Category: Cursor
+        Subcategory: ""
+      CursorSelectScopeContract:
+        Human: Selection Scope Contract
+        Category: Cursor
+        Subcategory: ""
+      CursorSelectScopeExpand:
+        Human: Selection Scope Expand
+        Category: Cursor
+        Subcategory: ""
+      CursorMultiCloneAbove:
+        Human: Caret Above
+        Category: Cursor
+        Subcategory: Multi
+      CursorMultiCloneBelow:
+        Human: Caret Below
+        Category: Cursor
+        Subcategory: Multi
+      CursorMultiCloneOnLineEnds:
+        Human: Carets to Line Ends
+        Category: Cursor
+        Subcategory: Multi
+      EditNodeInsertAboveParent:
+        Human: Insert Parent Node Above
+        Category: Edit
+        Subcategory: ""
+      EditNodeInsertAboveSibling:
+        Human: Insert Sibling Node Above
+        Category: Edit
+        Subcategory: ""
+      EditNodeInsertBelowSibling:
+        Human: Insert Sibling Node Below
+        Category: Edit
+        Subcategory: ""
+      EditNodeInsertBelowChild:
+        Human: Insert Child Node Below
+        Category: Edit
+        Subcategory: ""
+      EditNodeInsertDuplicate:
+        Human: Duplicate Node
+        Category: Edit
+      EditNodeMoveUp:
+        Human: Move Node Up
+        Category: Edit
+      EditNodeMoveDown:
+        Human: Move Node Down
+        Category: Edit
+      EditNodeMoveIn:
+        Human: Move Node Right
+        Category: Edit
+      EditNodeMoveOut:
+        Human: Move Node Left
+        Category: Edit
+      EditNodeRename:
+        Human: Rename Node
+        Category: Edit
+      EditNodeJoin:
+        Human: Join Nodes
+        Category: Edit
+      EditNodeSplit:
+        Category: Edit
+        Human: Split Node
+      EditNodeDelete:
+        Human: Delete Node
+        Category: Edit
+      GotoEditorSettings:
+        Human: Open Editor Settings
+        Category: Goto
+  Editors:
+    IntelliJ:
+      Name: IntelliJ
+      EditorCommandNameMap:
+        CursorMoveToLineForward:
+          Label: Down
+          ActionId: EditorDown
+        CursorMoveToLineBackward:
+          Label: Up
+          ActionId: EditorUp
+        CursorMoveToCharForward:
+          Label: Right
+          ActionId: EditorRight
+        CursorMoveToCharBackward:
+          Label: Left
+          ActionId: EditorLeft
+        CursorMoveToSubwordForward:
+          Label: Move Caret to Next Word in Different "CamelHumps" Mode
+          ActionId: EditorNextWordInDifferentHumpsMode
+        CursorMoveToSubwordBackward:
+          Label: Move Caret to Previous Word in Different "CamelHumps" Mode
+          ActionId: EditorPreviousWordInDifferentHumpsMode
+        CursorMoveToWordForward:
+          Label: Move Caret to Next Word
+          ActionId: EditorNextWord
+        CursorMoveToWordBackward:
+          Label: Move Caret to Previous Word
+          ActionId: EditorPreviousWord
+        CursorMoveToPageForward:
+          Label: Page Down
+          ActionId: EditorPageDown
+        CursorMoveToPageBackward:
+          Label: Page Up
+          ActionId: EditorPageUp
+        CursorMoveToLineEnd:
+          Label: Move Caret to Line End
+          ActionId: EditorLineEnd
+        CursorMoveToLineBegin:
+          Label: Move Caret to Line Start
+          ActionId: EditorLineStart
+        CursorMoveToTextEnd:
+          Label: Move Caret to Text End
+          ActionId: EditorTextEnd
+        CursorMoveToTextBegin:
+          Label: Move Caret to Text Start
+          ActionId: EditorTextStart
+        CursorMoveToLineForwardSelect:
+          Label: Down with Selection
+          ActionId: EditorDownWithSelection
+        CursorMoveToLineBackwardSelect:
+          Label: Up with Selection
+          ActionId: EditorUpWithSelection
+        CursorMoveToCharForwardSelect:
+          Label: Right with Selection
+          ActionId: EditorRightWithSelection
+        CursorMoveToCharBackwardSelect:
+          Label: Left with Selection
+          ActionId: EditorLeftWithSelection
+        CursorMoveToSubwordForwardSelect:
+          Label: Move Caret to Next Word in Different "CamelHumps" Mode with Selection
+          ActionId: EditorNextWordInDifferentHumpsModeWithSelection
+        CursorMoveToSubwordBackwardSelect:
+          Label: Move Caret to Previous Word in Different "CamelHumps" Mode with Selection
+          ActionId: EditorPreviousWordInDifferentHumpsModeWithSelection
+        CursorMoveToWordForwardSelect:
+          Label: Move Caret to Next Word with Selection
+          ActionId: EditorNextWordWithSelection
+        CursorMoveToWordBackwardSelect:
+          Label: Move Caret to Previous Word with Selection
+          ActionId: EditorPreviousWordWithSelection
+        CursorMoveToPageForwardSelect:
+          Label: Page Down with Selection
+          ActionId: EditorPageDownWithSelection
+        CursorMoveToPageBackwardSelect:
+          Label: Page Up with Selection
+          ActionId: EditorPageUpWithSelection
+        CursorMoveToLineEndSelect:
+          Label: Move Caret to Line End with Selection
+          ActionId: EditorLineEndWithSelection
+        CursorMoveToLineBeginSelect:
+          Label: Move Caret to Line Start with Selection
+          ActionId: EditorLineStartWithSelection
+        CursorMoveToTextEndSelect:
+          Label: Move Caret to Text End with Selection
+          ActionId: EditorTextEndWithSelection
+        CursorMoveToTextBeginSelect:
+          Label: Move Caret to Text Start with Selection
+          ActionId: EditorTextStartWithSelection
+        CursorMultiCloneAbove:
+          Label: Clone Caret Above
+          ActionId: EditorCloneCaretAbove
+        CursorMultiCloneBelow:
+          Label: Clone Caret Below
+          ActionId: EditorCloneCaretBelow
+        CursorMultiCloneOnLineEnds:
+          Label: Add Carets to Ends of Selected Lines
+          ActionId: EditorAddCaretPerSelectedLine
+        CursorSelectAll:
+          Label: Select All
+          ActionId: $SelectAll
+        CursorSelectionContract:
+          Label: Shrink Selection
+          ActionId: EditorUnSelectWord
+        CursorSelectionExpand:
+          Label: Extend Selection
+          ActionId: EditorSelectWord
+        EditNodeMoveUp:
+          Label: Move Line Up
+          ActionId: MoveLineUp
+        EditNodeMoveDown:
+          Label: Move Line Down
+          ActionId: MoveLineDown
+        EditNodeMoveIn:
+          Label: Move Line Right
+          ActionId: EditorIndentLineOrSelection
+        EditNodeMoveOut:
+          Label: Move Line Left
+          ActionId: EditorUnindentSelection
+        EditNodeRename:
+          Label: Rename...
+          ActionId: RenameElement
+        EditNodeDelete:
+          Label: Delete Line
+          ActionId: EditorDeleteLine
+        EditNodeInsertAboveParent:
+          Label: Start New Line Before Current
+          ActionId: EditorStartNewLineBefore
+        EditNodeInsertAboveSibling:
+          Label: Start New Line Before Current
+          ActionId: EditorStartNewLineBefore
+        EditNodeInsertBelowChild:
+          Label: Start New Line
+          ActionId: EditorStartNewLine
+        EditNodeInsertBelowSibling:
+          Label: Start New Line
+          ActionId: EditorStartNewLine
+        EditNodeInsertDuplicate:
+          Label: Duplicate Entire Lines
+          ActionId: EditorDuplicateLines
+        EditNodeJoin:
+          Label: Join Line
+          ActionId: EditorJoinLines
+        EditNodeSplit:
+          Label: Split Line
+          ActionId: EditorSplitLine
+        GotoEditorSettings:
+          Label: Settings...
+          ActionId: ShowSettings
+      EditorKeys:
+        Hyper: true
+        Primary: true
+        Secondary: true
+        Pinky: true
+        Thumb: true
+        Super: true
+        Alt: true
+        Ctrl: true
+        Shift: true
+        Up: true
+        Down: true
+        Left: true
+        Right: true
+        Enter: true
+        Space: true
+        Tab: true
+        PageUp: true
+        PageDown: true
+        Home: true
+        End: true
+        Escape: true
+        Insert: true
+        Delete: true
+        Minus: true
+        Equal: true
+        LeftBracket: true
+        RightBracket: true
+        Backslash: true
+        Semicolon: true
+        Quote: true
+        Comma: true
+        Dot: true
+        Slash: true
+        Grave: true
+        A: true
+        B: true
+        C: true
+        D: true
+        E: true
+        "F": true
+        G: true
+        H: true
+        I: true
+        J: true
+        K: true
+        L: true
+        M: true
+        "N": true
+        O: true
+        P: true
+        Q: true
+        R: true
+        S: true
+        "T": true
+        U: true
+        V: true
+        W: true
+        X: true
+        "Y": true
+        Z: true
+        "0": true
+        "1": true
+        "2": true
+        "3": true
+        "4": true
+        "5": true
+        "6": true
+        "7": true
+        "8": true
+        "9": true
+    SublimeText:
+      Name: SublimeText
+      EditorCommandNameMap:
+        CursorMoveToLineForward:
+          command: move
+          args:
+            by: lines
+            forward: true
+            extend: false
+          argsText: '{"by":"lines","forward":true,"extend":false}'
+        CursorMoveToCharForward:
+          command: move
+          args:
+            by: characters
+            forward: true
+            extend: false
+          argsText: '{"by":"characters","forward":true,"extend":false}'
+        CursorMoveToSubwordForward:
+          command: move
+          args:
+            by: subwords
+            forward: true
+            extend: false
+          argsText: '{"by":"subwords","forward":true,"extend":false}'
+        CursorMoveToWordForward:
+          command: move
+          args:
+            by: words
+            forward: true
+            extend: false
+          argsText: '{"by":"words","forward":true,"extend":false}'
+        CursorMoveToPageForward:
+          command: move
+          args:
+            by: pages
+            forward: true
+            extend: false
+          argsText: '{"by":"pages","forward":true,"extend":false}'
+        CursorMoveToLineBackward:
+          command: move
+          args:
+            by: lines
+            forward: false
+            extend: false
+          argsText: '{"by":"lines","forward":false,"extend":false}'
+        CursorMoveToCharBackward:
+          command: move
+          args:
+            by: characters
+            forward: false
+            extend: false
+          argsText: '{"by":"characters","forward":false,"extend":false}'
+        CursorMoveToSubwordBackward:
+          command: move
+          args:
+            by: subwords
+            forward: false
+            extend: false
+          argsText: '{"by":"subwords","forward":false,"extend":false}'
+        CursorMoveToWordBackward:
+          command: move
+          args:
+            by: words
+            forward: false
+            extend: false
+          argsText: '{"by":"words","forward":false,"extend":false}'
+        CursorMoveToPageBackward:
+          command: move
+          args:
+            by: pages
+            forward: false
+            extend: false
+          argsText: '{"by":"pages","forward":false,"extend":false}'
+        CursorMoveToLineBegin:
+          command: move_to
+          args:
+            to: bol
+            extend: false
+          argsText: '{"to":"bol","extend":false}'
+        CursorMoveToLineEnd:
+          command: move_to
+          args:
+            to: eol
+            extend: false
+          argsText: '{"to":"eol","extend":false}'
+        CursorMoveToTextEnd:
+          command: move_to
+          args:
+            to: eof
+            extend: false
+          argsText: '{"to":"eof","extend":false}'
+        CursorMoveToTextBegin:
+          command: move_to
+          args:
+            to: bof
+            extend: false
+          argsText: '{"to":"bof","extend":false}'
+        CursorMoveToLineForwardSelect:
+          command: move
+          args:
+            by: lines
+            forward: true
+            extend: true
+          argsText: '{"by":"lines","forward":true,"extend":true}'
+        CursorMoveToLineBackwardSelect:
+          command: move
+          args:
+            by: lines
+            forward: false
+            extend: true
+          argsText: '{"by":"lines","forward":false,"extend":true}'
+        CursorMoveToCharForwardSelect:
+          command: move
+          args:
+            by: characters
+            forward: true
+            extend: true
+          argsText: '{"by":"characters","forward":true,"extend":true}'
+        CursorMoveToCharBackwardSelect:
+          command: move
+          args:
+            by: characters
+            forward: false
+            extend: true
+          argsText: '{"by":"characters","forward":false,"extend":true}'
+        CursorMoveToSubwordForwardSelect:
+          command: move
+          args:
+            by: subwords
+            forward: true
+            extend: true
+          argsText: '{"by":"subwords","forward":true,"extend":true}'
+        CursorMoveToSubwordBackwardSelect:
+          command: move
+          args:
+            by: subwords
+            forward: false
+            extend: true
+          argsText: '{"by":"subwords","forward":false,"extend":true}'
+        CursorMoveToWordForwardSelect:
+          command: move
+          args:
+            by: words
+            forward: true
+            extend: true
+          argsText: '{"by":"words","forward":true,"extend":true}'
+        CursorMoveToWordBackwardSelect:
+          command: move
+          args:
+            by: words
+            forward: false
+            extend: true
+          argsText: '{"by":"words","forward":false,"extend":true}'
+        CursorMoveToLineEndSelect:
+          command: move_to
+          args:
+            to: eol
+            extend: true
+          argsText: '{"to":"eol","extend":true}'
+        CursorMoveToLineBeginSelect:
+          command: move_to
+          args:
+            to: bol
+            extend: true
+          argsText: '{"to":"bol","extend":true}'
+        CursorMoveToPageForwardSelect:
+          command: move
+          args:
+            by: pages
+            forward: true
+            extend: true
+          argsText: '{"by":"pages","forward":true,"extend":true}'
+        CursorMoveToPageBackwardSelect:
+          command: move
+          args:
+            by: pages
+            forward: false
+            extend: true
+          argsText: '{"by":"pages","forward":false,"extend":true}'
+        CursorMoveToTextEndSelect:
+          command: move_to
+          args:
+            to: eof
+            extend: true
+          argsText: '{"to":"eof","extend":true}'
+        CursorMoveToTextBeginSelect:
+          command: move_to
+          args:
+            to: bof
+            extend: true
+          argsText: '{"to":"bof","extend":true}'
+        CursorMultiCloneAbove:
+          command: select_lines
+          args:
+            forward: false
+          argsText: '{"forward":false}'
+        CursorMultiCloneBelow:
+          command: select_lines
+          args:
+            forward: true
+          argsText: '{"forward":true}'
+        CursorMultiCloneOnLineEnds:
+          command: split_selection_into_lines
+        CursorSelectAll:
+          command: select_all
+        EditNodeDelete:
+          command: run_macro_file
+          args:
+            file: res://Packages/Default/Delete Line.sublime-macro
+          argsText: '{"file":"res://Packages/Default/Delete Line.sublime-macro"}'
+        EditNodeInsertAboveParent:
+          command: run_macro_file
+          args:
+            file: res://Packages/Default/Add Line Before.sublime-macro
+          argsText: '{"file":"res://Packages/Default/Add Line Before.sublime-macro"}'
+        EditNodeInsertAboveSibling:
+          command: run_macro_file
+          args:
+            file: res://Packages/Default/Add Line Before.sublime-macro
+          argsText: '{"file":"res://Packages/Default/Add Line Before.sublime-macro"}'
+        EditNodeInsertBelowChild:
+          command: run_macro_file
+          args:
+            file: res://Packages/Default/Add Line.sublime-macro
+          argsText: '{"file":"res://Packages/Default/Add Line.sublime-macro"}'
+        EditNodeInsertBelowSibling:
+          command: run_macro_file
+          args:
+            file: res://Packages/Default/Add Line.sublime-macro
+          argsText: '{"file":"res://Packages/Default/Add Line.sublime-macro"}'
+        EditNodeInsertDuplicate:
+          command: duplicate_line
+        EditNodeJoin:
+          command: join_lines
+        EditNodeMoveDown:
+          command: swap_line_down
+        EditNodeMoveIn:
+          command: indent
+        EditNodeMoveOut:
+          command: unindent
+        EditNodeMoveUp:
+          command: swap_line_up
+        EditNodeSplit:
+          command: insert
+          args:
+            characters: |2+
+          argsText: '{"characters":"\n"}'
+        GotoEditorSettings:
+          command: edit_settings
+          args:
+            base_file: ${packages}/Default/Preferences.sublime-settings
+            default: |
+              // Settings in here override those in "Default/Preferences.sublime-settings",
+              // and are overridden in turn by syntax-specific settings.
+              {
+              	$0
+              }
+          argsText: '{"base_file":"${packages}/Default/Preferences.sublime-settings","default":"// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"}'
+    VisualStudioCode:
+      Name: VisualStudioCode
+      EditorCommandNameMap:
+        CursorMoveToCharBackward:
+          Label: cursorLeft
+        CursorMoveToCharBackwardSelect:
+          Label: cursorLeftSelect
+        CursorMoveToCharForward:
+          Label: cursorRight
+        CursorMoveToCharForwardSelect:
+          Label: cursorRightSelect
+        CursorMoveToLineBackward:
+          Label: cursorUp
+        CursorMoveToLineBackwardSelect:
+          Label: cursorUpSelect
+        CursorMoveToLineBegin:
+          Label: cursorLineStart
+        CursorMoveToLineBeginSelect:
+          Label: cursorLineStartSelect
+        CursorMoveToLineEnd:
+          Label: cursorLineEnd
+        CursorMoveToLineEndSelect:
+          Label: cursorLineEndSelect
+        CursorMoveToLineForward:
+          Label: cursorDown
+        CursorMoveToLineForwardSelect:
+          Label: cursorDownSelect
+        CursorMoveToPageBackward:
+          Label: cursorPageUp
+        CursorMoveToPageBackwardSelect:
+          Label: cursorPageUpSelect
+        CursorMoveToPageForward:
+          Label: cursorPageDown
+        CursorMoveToPageForwardSelect:
+          Label: cursorPageDownSelect
+        CursorMoveToSubwordBackward:
+          Label: cursorWordPartLeft
+        CursorMoveToSubwordBackwardSelect:
+          Label: cursorWordPartLeftSelect
+        CursorMoveToSubwordForward:
+          Label: cursorWordPartRight
+        CursorMoveToSubwordForwardSelect:
+          Label: cursorWordPartRightSelect
+        CursorMoveToTextBegin:
+          Label: cursorTop
+        CursorMoveToTextBeginSelect:
+          Label: cursorTopSelect
+        CursorMoveToTextEnd:
+          Label: cursorBottom
+        CursorMoveToTextEndSelect:
+          Label: cursorBottomSelect
+        CursorMoveToWordBackward:
+          Label: cursorWordLeft
+        CursorMoveToWordBackwardSelect:
+          Label: cursorWordLeftSelect
+        CursorMoveToWordForward:
+          Label: cursorWordRight
+        CursorMoveToWordForwardSelect:
+          Label: cursorWordRightSelect
+        CursorMultiCloneAbove:
+          Label: editor.action.insertCursorAbove
+        CursorMultiCloneBelow:
+          Label: editor.action.insertCursorBelow
+        CursorMultiCloneOnLineEnds:
+          Label: editor.action.insertCursorAtEndOfEachLineSelected
+        CursorSelectAll:
+          Label: editor.action.selectAll
+        CursorSelectionContract:
+          Label: editor.action.smartSelect.shrink
+        CursorSelectionExpand:
+          Label: editor.action.smartSelect.expand
+        EditNodeDelete:
+          Label: editor.action.deleteLines
+        EditNodeInsertAboveParent:
+          Label: editor.action.insertLineBefore
+        EditNodeInsertAboveSibling:
+          Label: editor.action.insertLineBefore
+        EditNodeInsertBelowChild:
+          Label: editor.action.insertLineAfter
+        EditNodeInsertBelowSibling:
+          Label: editor.action.insertLineAfter
+        EditNodeInsertDuplicate:
+          Label: editor.action.copyLinesDownAction
+        EditNodeJoin:
+          Label: editor.action.joinLines
+        EditNodeMoveDown:
+          Label: editor.action.moveLinesDownAction
+        EditNodeMoveIn:
+          Label: editor.action.indentLines
+        EditNodeMoveOut:
+          Label: editor.action.outdentLines
+        EditNodeMoveUp:
+          Label: editor.action.moveLinesUpAction
+        EditNodeRename:
+          Label: renameFile
+        EditNodeSplit:
+          Label: ""
+  Keys:
+    logicalKeyNamesLookup:
+      Super: 0
+      Alt: 1
+      Ctrl: 2
+      Shift: 3
+      Up: 4
+      Down: 5
+      Left: 6
+      Right: 7
+      Enter: 8
+      Space: 9
+      Tab: 10
+      PageUp: 11
+      PageDown: 12
+      Home: 13
+      End: 14
+      Escape: 15
+      Insert: 16
+      Delete: 17
+      Minus: 18
+      Equal: 19
+      LeftBracket: 20
+      RightBracket: 21
+      Backslash: 22
+      Semicolon: 23
+      Quote: 24
+      Comma: 25
+      Dot: 26
+      Slash: 27
+      Grave: 28
+      A: 29
+      B: 30
+      C: 31
+      D: 32
+      E: 33
+      "F": 34
+      G: 35
+      H: 36
+      I: 37
+      J: 38
+      K: 39
+      L: 40
+      M: 41
+      "N": 42
+      O: 43
+      P: 44
+      Q: 45
+      R: 46
+      S: 47
+      "T": 48
+      U: 49
+      V: 50
+      W: 51
+      X: 52
+      "Y": 53
+      Z: 54
+      "0": 55
+      "1": 56
+      "2": 57
+      "3": 58
+      "4": 59
+      "5": 60
+      "6": 61
+      "7": 62
+      "8": 63
+      "9": 64
+    logicalKeyNamesList:
+      - Super
+      - Alt
+      - Ctrl
+      - Shift
+      - Up
+      - Down
+      - Left
+      - Right
+      - Enter
+      - Space
+      - Tab
+      - PageUp
+      - PageDown
+      - Home
+      - End
+      - Escape
+      - Insert
+      - Delete
+      - Minus
+      - Equal
+      - LeftBracket
+      - RightBracket
+      - Backslash
+      - Semicolon
+      - Quote
+      - Comma
+      - Dot
+      - Slash
+      - Grave
+      - A
+      - B
+      - C
+      - D
+      - E
+      - "F"
+      - G
+      - H
+      - I
+      - J
+      - K
+      - L
+      - M
+      - "N"
+      - O
+      - P
+      - Q
+      - R
+      - S
+      - "T"
+      - U
+      - V
+      - W
+      - X
+      - "Y"
+      - Z
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+    definableKeyNamesLookup:
+      Hyper: 0
+      Primary: 1
+      Secondary: 2
+      Pinky: 3
+      Thumb: 4
+      Super: 5
+      Alt: 6
+      Ctrl: 7
+      Shift: 8
+      Up: 9
+      Down: 10
+      Left: 11
+      Right: 12
+      Enter: 13
+      Space: 14
+      Tab: 15
+      PageUp: 16
+      PageDown: 17
+      Home: 18
+      End: 19
+      Escape: 20
+      Insert: 21
+      Delete: 22
+      Minus: 23
+      Equal: 24
+      LeftBracket: 25
+      RightBracket: 26
+      Backslash: 27
+      Semicolon: 28
+      Quote: 29
+      Comma: 30
+      Dot: 31
+      Slash: 32
+      Grave: 33
+      A: 34
+      B: 35
+      C: 36
+      D: 37
+      E: 38
+      "F": 39
+      G: 40
+      H: 41
+      I: 42
+      J: 43
+      K: 44
+      L: 45
+      M: 46
+      "N": 47
+      O: 48
+      P: 49
+      Q: 50
+      R: 51
+      S: 52
+      "T": 53
+      U: 54
+      V: 55
+      W: 56
+      X: 57
+      "Y": 58
+      Z: 59
+      "0": 60
+      "1": 61
+      "2": 62
+      "3": 63
+      "4": 64
+      "5": 65
+      "6": 66
+      "7": 67
+      "8": 68
+      "9": 69
+    definableKeyNamesList:
+      - Hyper
+      - Primary
+      - Secondary
+      - Pinky
+      - Thumb
+      - Super
+      - Alt
+      - Ctrl
+      - Shift
+      - Up
+      - Down
+      - Left
+      - Right
+      - Enter
+      - Space
+      - Tab
+      - PageUp
+      - PageDown
+      - Home
+      - End
+      - Escape
+      - Insert
+      - Delete
+      - Minus
+      - Equal
+      - LeftBracket
+      - RightBracket
+      - Backslash
+      - Semicolon
+      - Quote
+      - Comma
+      - Dot
+      - Slash
+      - Grave
+      - A
+      - B
+      - C
+      - D
+      - E
+      - "F"
+      - G
+      - H
+      - I
+      - J
+      - K
+      - L
+      - M
+      - "N"
+      - O
+      - P
+      - Q
+      - R
+      - S
+      - "T"
+      - U
+      - V
+      - W
+      - X
+      - "Y"
+      - Z
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+    modifierKeys:
+      Super: true
+      Alt: true
+      Ctrl: true
+      Shift: true
+      Hyper: true
+      Primary: true
+      Secondary: true
+      Pinky: true
+      Thumb: true
+    expansionKeys:
+      Hyper:
+        Linux:
+          - Super
+          - Ctrl
+          - Alt
+        Mac:
+          - Super
+          - Ctrl
+          - Alt
+        Mac2:
+          - Super
+          - Ctrl
+          - Alt
+        Windows:
+          - Super
+          - Ctrl
+          - Alt
+      Primary:
+        Linux:
+          - Ctrl
+        Mac:
+          - Super
+        Mac2:
+          - Super
+        Windows:
+          - Ctrl
+      Secondary:
+        Linux:
+          - Super
+          - Alt
+        Mac:
+          - Ctrl
+        Mac2:
+          - Ctrl
+        Windows:
+          - Alt
+      Pinky:
+        Linux:
+          - Ctrl
+        Mac:
+          - Ctrl
+        Mac2:
+          - Super
+        Windows:
+          - Ctrl
+      Thumb:
+        Linux:
+          - Super
+          - Alt
+        Mac:
+          - Super
+        Mac2:
+          - Ctrl
+        Windows:
+          - Alt
+    KeyMap:
+      Hyper:
+        Index: 0
+        IsLogical: false
+        IsDefinable: true
+        IsModifier: true
+        IsExpansion: true
+        Bindings:
+          Linux:
+            Super: 5
+            Ctrl: 7
+            Alt: 6
+          Mac:
+            Super: 5
+            Ctrl: 7
+            Alt: 6
+          Mac2:
+            Super: 5
+            Ctrl: 7
+            Alt: 6
+          Windows:
+            Super: 5
+            Ctrl: 7
+            Alt: 6
+      Primary:
+        Index: 1
+        IsLogical: false
+        IsDefinable: true
+        IsModifier: true
+        IsExpansion: true
+        Bindings:
+          Linux:
+            Ctrl: 7
+          Mac:
+            Super: 5
+          Mac2:
+            Super: 5
+          Windows:
+            Ctrl: 7
+      Secondary:
+        Index: 2
+        IsLogical: false
+        IsDefinable: true
+        IsModifier: true
+        IsExpansion: true
+        Bindings:
+          Linux:
+            Super: 5
+            Alt: 6
+          Mac:
+            Ctrl: 7
+          Mac2:
+            Ctrl: 7
+          Windows:
+            Alt: 6
+      Pinky:
+        Index: 3
+        IsLogical: false
+        IsDefinable: true
+        IsModifier: true
+        IsExpansion: true
+        Bindings:
+          Linux:
+            Ctrl: 7
+          Mac:
+            Ctrl: 7
+          Mac2:
+            Super: 5
+          Windows:
+            Ctrl: 7
+      Thumb:
+        Index: 4
+        IsLogical: false
+        IsDefinable: true
+        IsModifier: true
+        IsExpansion: true
+        Bindings:
+          Linux:
+            Super: 5
+            Alt: 6
+          Mac:
+            Super: 5
+          Mac2:
+            Ctrl: 7
+          Windows:
+            Alt: 6
+      Super:
+        Index: 5
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: true
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Super: 5
+          Mac:
+            Super: 5
+          Mac2:
+            Super: 5
+          Windows:
+            Super: 5
+      Alt:
+        Index: 6
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: true
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Alt: 6
+          Mac:
+            Alt: 6
+          Mac2:
+            Alt: 6
+          Windows:
+            Alt: 6
+      Ctrl:
+        Index: 7
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: true
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Ctrl: 7
+          Mac:
+            Ctrl: 7
+          Mac2:
+            Ctrl: 7
+          Windows:
+            Ctrl: 7
+      Shift:
+        Index: 8
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: true
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Shift: 8
+          Mac:
+            Shift: 8
+          Mac2:
+            Shift: 8
+          Windows:
+            Shift: 8
+      Up:
+        Index: 9
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Up: 9
+          Mac:
+            Up: 9
+          Mac2:
+            Up: 9
+          Windows:
+            Up: 9
+      Down:
+        Index: 10
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Down: 10
+          Mac:
+            Down: 10
+          Mac2:
+            Down: 10
+          Windows:
+            Down: 10
+      Left:
+        Index: 11
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Left: 11
+          Mac:
+            Left: 11
+          Mac2:
+            Left: 11
+          Windows:
+            Left: 11
+      Right:
+        Index: 12
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Right: 12
+          Mac:
+            Right: 12
+          Mac2:
+            Right: 12
+          Windows:
+            Right: 12
+      Enter:
+        Index: 13
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Enter: 13
+          Mac:
+            Enter: 13
+          Mac2:
+            Enter: 13
+          Windows:
+            Enter: 13
+      Space:
+        Index: 14
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Space: 14
+          Mac:
+            Space: 14
+          Mac2:
+            Space: 14
+          Windows:
+            Space: 14
+      Tab:
+        Index: 15
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Tab: 15
+          Mac:
+            Tab: 15
+          Mac2:
+            Tab: 15
+          Windows:
+            Tab: 15
+      PageUp:
+        Index: 16
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            PageUp: 16
+          Mac:
+            PageUp: 16
+          Mac2:
+            PageUp: 16
+          Windows:
+            PageUp: 16
+      PageDown:
+        Index: 17
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            PageDown: 17
+          Mac:
+            PageDown: 17
+          Mac2:
+            PageDown: 17
+          Windows:
+            PageDown: 17
+      Home:
+        Index: 18
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Home: 18
+          Mac:
+            Home: 18
+          Mac2:
+            Home: 18
+          Windows:
+            Home: 18
+      End:
+        Index: 19
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            End: 19
+          Mac:
+            End: 19
+          Mac2:
+            End: 19
+          Windows:
+            End: 19
+      Escape:
+        Index: 20
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Escape: 20
+          Mac:
+            Escape: 20
+          Mac2:
+            Escape: 20
+          Windows:
+            Escape: 20
+      Insert:
+        Index: 21
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Insert: 21
+          Mac:
+            Insert: 21
+          Mac2:
+            Insert: 21
+          Windows:
+            Insert: 21
+      Delete:
+        Index: 22
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Delete: 22
+          Mac:
+            Delete: 22
+          Mac2:
+            Delete: 22
+          Windows:
+            Delete: 22
+      Minus:
+        Index: 23
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Minus: 23
+          Mac:
+            Minus: 23
+          Mac2:
+            Minus: 23
+          Windows:
+            Minus: 23
+      Equal:
+        Index: 24
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Equal: 24
+          Mac:
+            Equal: 24
+          Mac2:
+            Equal: 24
+          Windows:
+            Equal: 24
+      LeftBracket:
+        Index: 25
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            LeftBracket: 25
+          Mac:
+            LeftBracket: 25
+          Mac2:
+            LeftBracket: 25
+          Windows:
+            LeftBracket: 25
+      RightBracket:
+        Index: 26
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            RightBracket: 26
+          Mac:
+            RightBracket: 26
+          Mac2:
+            RightBracket: 26
+          Windows:
+            RightBracket: 26
+      Backslash:
+        Index: 27
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Backslash: 27
+          Mac:
+            Backslash: 27
+          Mac2:
+            Backslash: 27
+          Windows:
+            Backslash: 27
+      Semicolon:
+        Index: 28
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Semicolon: 28
+          Mac:
+            Semicolon: 28
+          Mac2:
+            Semicolon: 28
+          Windows:
+            Semicolon: 28
+      Quote:
+        Index: 29
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Quote: 29
+          Mac:
+            Quote: 29
+          Mac2:
+            Quote: 29
+          Windows:
+            Quote: 29
+      Comma:
+        Index: 30
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Comma: 30
+          Mac:
+            Comma: 30
+          Mac2:
+            Comma: 30
+          Windows:
+            Comma: 30
+      Dot:
+        Index: 31
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Dot: 31
+          Mac:
+            Dot: 31
+          Mac2:
+            Dot: 31
+          Windows:
+            Dot: 31
+      Slash:
+        Index: 32
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Slash: 32
+          Mac:
+            Slash: 32
+          Mac2:
+            Slash: 32
+          Windows:
+            Slash: 32
+      Grave:
+        Index: 33
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Grave: 33
+          Mac:
+            Grave: 33
+          Mac2:
+            Grave: 33
+          Windows:
+            Grave: 33
+      A:
+        Index: 34
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            A: 34
+          Mac:
+            A: 34
+          Mac2:
+            A: 34
+          Windows:
+            A: 34
+      B:
+        Index: 35
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            B: 35
+          Mac:
+            B: 35
+          Mac2:
+            B: 35
+          Windows:
+            B: 35
+      C:
+        Index: 36
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            C: 36
+          Mac:
+            C: 36
+          Mac2:
+            C: 36
+          Windows:
+            C: 36
+      D:
+        Index: 37
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            D: 37
+          Mac:
+            D: 37
+          Mac2:
+            D: 37
+          Windows:
+            D: 37
+      E:
+        Index: 38
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            E: 38
+          Mac:
+            E: 38
+          Mac2:
+            E: 38
+          Windows:
+            E: 38
+      "F":
+        Index: 39
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            "F": 39
+          Mac:
+            "F": 39
+          Mac2:
+            "F": 39
+          Windows:
+            "F": 39
+      G:
+        Index: 40
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            G: 40
+          Mac:
+            G: 40
+          Mac2:
+            G: 40
+          Windows:
+            G: 40
+      H:
+        Index: 41
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            H: 41
+          Mac:
+            H: 41
+          Mac2:
+            H: 41
+          Windows:
+            H: 41
+      I:
+        Index: 42
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            I: 42
+          Mac:
+            I: 42
+          Mac2:
+            I: 42
+          Windows:
+            I: 42
+      J:
+        Index: 43
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            J: 43
+          Mac:
+            J: 43
+          Mac2:
+            J: 43
+          Windows:
+            J: 43
+      K:
+        Index: 44
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            K: 44
+          Mac:
+            K: 44
+          Mac2:
+            K: 44
+          Windows:
+            K: 44
+      L:
+        Index: 45
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            L: 45
+          Mac:
+            L: 45
+          Mac2:
+            L: 45
+          Windows:
+            L: 45
+      M:
+        Index: 46
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            M: 46
+          Mac:
+            M: 46
+          Mac2:
+            M: 46
+          Windows:
+            M: 46
+      "N":
+        Index: 47
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            "N": 47
+          Mac:
+            "N": 47
+          Mac2:
+            "N": 47
+          Windows:
+            "N": 47
+      O:
+        Index: 48
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            O: 48
+          Mac:
+            O: 48
+          Mac2:
+            O: 48
+          Windows:
+            O: 48
+      P:
+        Index: 49
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            P: 49
+          Mac:
+            P: 49
+          Mac2:
+            P: 49
+          Windows:
+            P: 49
+      Q:
+        Index: 50
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Q: 50
+          Mac:
+            Q: 50
+          Mac2:
+            Q: 50
+          Windows:
+            Q: 50
+      R:
+        Index: 51
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            R: 51
+          Mac:
+            R: 51
+          Mac2:
+            R: 51
+          Windows:
+            R: 51
+      S:
+        Index: 52
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            S: 52
+          Mac:
+            S: 52
+          Mac2:
+            S: 52
+          Windows:
+            S: 52
+      "T":
+        Index: 53
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            "T": 53
+          Mac:
+            "T": 53
+          Mac2:
+            "T": 53
+          Windows:
+            "T": 53
+      U:
+        Index: 54
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            U: 54
+          Mac:
+            U: 54
+          Mac2:
+            U: 54
+          Windows:
+            U: 54
+      V:
+        Index: 55
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            V: 55
+          Mac:
+            V: 55
+          Mac2:
+            V: 55
+          Windows:
+            V: 55
+      W:
+        Index: 56
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            W: 56
+          Mac:
+            W: 56
+          Mac2:
+            W: 56
+          Windows:
+            W: 56
+      X:
+        Index: 57
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            X: 57
+          Mac:
+            X: 57
+          Mac2:
+            X: 57
+          Windows:
+            X: 57
+      "Y":
+        Index: 58
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            "Y": 58
+          Mac:
+            "Y": 58
+          Mac2:
+            "Y": 58
+          Windows:
+            "Y": 58
+      Z:
+        Index: 59
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            Z: 59
+          Mac:
+            Z: 59
+          Mac2:
+            Z: 59
+          Windows:
+            Z: 59
+      "0":
+        Index: 60
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            "0": 60
+          Mac:
+            "0": 60
+          Mac2:
+            "0": 60
+          Windows:
+            "0": 60
+      "1":
+        Index: 61
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            "1": 61
+          Mac:
+            "1": 61
+          Mac2:
+            "1": 61
+          Windows:
+            "1": 61
+      "2":
+        Index: 62
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            "2": 62
+          Mac:
+            "2": 62
+          Mac2:
+            "2": 62
+          Windows:
+            "2": 62
+      "3":
+        Index: 63
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            "3": 63
+          Mac:
+            "3": 63
+          Mac2:
+            "3": 63
+          Windows:
+            "3": 63
+      "4":
+        Index: 64
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            "4": 64
+          Mac:
+            "4": 64
+          Mac2:
+            "4": 64
+          Windows:
+            "4": 64
+      "5":
+        Index: 65
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            "5": 65
+          Mac:
+            "5": 65
+          Mac2:
+            "5": 65
+          Windows:
+            "5": 65
+      "6":
+        Index: 66
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            "6": 66
+          Mac:
+            "6": 66
+          Mac2:
+            "6": 66
+          Windows:
+            "6": 66
+      "7":
+        Index: 67
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            "7": 67
+          Mac:
+            "7": 67
+          Mac2:
+            "7": 67
+          Windows:
+            "7": 67
+      "8":
+        Index: 68
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            "8": 68
+          Mac:
+            "8": 68
+          Mac2:
+            "8": 68
+          Windows:
+            "8": 68
+      "9":
+        Index: 69
+        IsLogical: true
+        IsDefinable: true
+        IsModifier: false
+        IsExpansion: false
+        Bindings:
+          Linux:
+            "9": 69
+          Mac:
+            "9": 69
+          Mac2:
+            "9": 69
+          Windows:
+            "9": 69
+  Strokes:
+    ZenStrokes1:
+      Name: ZenStrokes1
+      StrokeCmdDefsMap:
+        CursorMoveToCharBackward:
+          - - Left
+          - - Hyper+J
+        CursorMoveToCharBackwardSelect:
+          - - Shift+Left
+          - - Hyper+Shift+J
+        CursorMoveToCharForward:
+          - - Right
+          - - Hyper+L
+        CursorMoveToCharForwardSelect:
+          - - Shift+Right
+          - - Hyper+Shift+L
+        CursorMoveToLineBackward:
+          - - Up
+          - - Hyper+I
+        CursorMoveToLineBackwardSelect:
+          - - Shift+Up
+          - - Hyper+Shift+I
+        CursorMoveToLineBegin:
+          - - Home
+          - - Hyper+H
+          - - Pinky+Thumb+Left
+        CursorMoveToLineBeginSelect:
+          - - Shift+Home
+          - - Hyper+Shift+H
+          - - Pinky+Thumb+Shift+Left
+        CursorMoveToLineEnd:
+          - - End
+          - - Hyper+Semicolon
+          - - Pinky+Thumb+Right
+        CursorMoveToLineEndSelect:
+          - - Shift+End
+          - - Hyper+Shift+Semicolon
+          - - Pinky+Thumb+Shift+Right
+        CursorMoveToLineForward:
+          - - Down
+          - - Hyper+K
+        CursorMoveToLineForwardSelect:
+          - - Shift+Down
+          - - Hyper+Shift+K
+        CursorMoveToPageBackward:
+          - - PageUp
+          - - Hyper+Y
+        CursorMoveToPageBackwardSelect:
+          - - Shift+PageUp
+          - - Hyper+Shift+Y
+        CursorMoveToPageForward:
+          - - PageDown
+          - - Hyper+H
+        CursorMoveToPageForwardSelect:
+          - - Shift+PageDown
+          - - Hyper+Shift+H
+        CursorMoveToSubwordBackward:
+          - - Thumb+Left
+        CursorMoveToSubwordBackwardSelect:
+          - - Thumb+Shift+Left
+        CursorMoveToSubwordForward:
+          - - Thumb+Right
+        CursorMoveToSubwordForwardSelect:
+          - - Thumb+Shift+Right
+        CursorMoveToTextBegin:
+          - - Pinky+Home
+          - - Hyper+T
+        CursorMoveToTextBeginSelect:
+          - - Pinky+Shift+Home
+          - - Hyper+Shift+T
+        CursorMoveToTextEnd:
+          - - Pinky+End
+          - - Hyper+B
+        CursorMoveToTextEndSelect:
+          - - Pinky+Shift+End
+          - - Hyper+Shift+B
+        CursorMoveToWordBackward:
+          - - Pinky+Left
+          - - Hyper+U
+        CursorMoveToWordBackwardSelect:
+          - - Pinky+Shift+Left
+          - - Hyper+Shift+U
+        CursorMoveToWordForward:
+          - - Pinky+Right
+          - - Hyper+O
+        CursorMoveToWordForwardSelect:
+          - - Pinky+Shift+Right
+          - - Hyper+Shift+O
+        CursorMultiCloneAbove:
+          - - Thumb+Shift+Up
+        CursorMultiCloneBelow:
+          - - Thumb+Shift+Down
+        EditNodeMoveDown:
+          - - Pinky+Shift+K
+        EditNodeMoveUp:
+          - - Pinky+Shift+I
+        EditNodeMoveIn:
+          - - Pinky+Shift+L
+        EditNodeMoveOut:
+          - - Pinky+Shift+J
+        EditNodeInsertAboveSibling:
+          - - Pinky+Shift+U
+        EditNodeInsertBelowSibling:
+          - - Pinky+Shift+N
+        EditNodeInsertAboveParent:
+          - - Pinky+Shift+Y
+        EditNodeInsertBelowChild:
+          - - Pinky+Shift+M
+        EditNodeInsertDuplicate:
+          - - Pinky+D
+        EditNodeRename:
+          - - Pinky+T
+        EditNodeDelete:
+          - - Pinky+Shift+X
+        EditNodeJoin:
+          - - Pinky+Shift+O
+        EditNodeSplit:
+          - - Pinky+Enter
+        GotoEditorSettings:
+          - - Pinky+Comma
+      StrokesMap:
+        CursorMoveToCharBackward:
+          - DefText: Left
+            Bindings:
+              Linux:
+                Left: 11
+              Mac:
+                Left: 11
+              Mac2:
+                Left: 11
+              Windows:
+                Left: 11
+          - DefText: Hyper+J
+            Bindings:
+              Linux:
+                J: 43
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                J: 43
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                J: 43
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                J: 43
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToCharBackwardSelect:
+          - DefText: Shift+Left
+            Bindings:
+              Linux:
+                Shift: 8
+                Left: 11
+              Mac:
+                Shift: 8
+                Left: 11
+              Mac2:
+                Shift: 8
+                Left: 11
+              Windows:
+                Shift: 8
+                Left: 11
+          - DefText: Hyper+Shift+J
+            Bindings:
+              Linux:
+                Shift: 8
+                J: 43
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                Shift: 8
+                J: 43
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                Shift: 8
+                J: 43
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                Shift: 8
+                J: 43
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToCharForward:
+          - DefText: Right
+            Bindings:
+              Linux:
+                Right: 12
+              Mac:
+                Right: 12
+              Mac2:
+                Right: 12
+              Windows:
+                Right: 12
+          - DefText: Hyper+L
+            Bindings:
+              Linux:
+                L: 45
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                L: 45
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                L: 45
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                L: 45
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToCharForwardSelect:
+          - DefText: Shift+Right
+            Bindings:
+              Linux:
+                Shift: 8
+                Right: 12
+              Mac:
+                Shift: 8
+                Right: 12
+              Mac2:
+                Shift: 8
+                Right: 12
+              Windows:
+                Shift: 8
+                Right: 12
+          - DefText: Hyper+Shift+L
+            Bindings:
+              Linux:
+                Shift: 8
+                L: 45
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                Shift: 8
+                L: 45
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                Shift: 8
+                L: 45
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                Shift: 8
+                L: 45
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToLineBackward:
+          - DefText: Up
+            Bindings:
+              Linux:
+                Up: 9
+              Mac:
+                Up: 9
+              Mac2:
+                Up: 9
+              Windows:
+                Up: 9
+          - DefText: Hyper+I
+            Bindings:
+              Linux:
+                I: 42
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                I: 42
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                I: 42
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                I: 42
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToLineBackwardSelect:
+          - DefText: Shift+Up
+            Bindings:
+              Linux:
+                Shift: 8
+                Up: 9
+              Mac:
+                Shift: 8
+                Up: 9
+              Mac2:
+                Shift: 8
+                Up: 9
+              Windows:
+                Shift: 8
+                Up: 9
+          - DefText: Hyper+Shift+I
+            Bindings:
+              Linux:
+                Shift: 8
+                I: 42
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                Shift: 8
+                I: 42
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                Shift: 8
+                I: 42
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                Shift: 8
+                I: 42
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToLineBegin:
+          - DefText: Home
+            Bindings:
+              Linux:
+                Home: 18
+              Mac:
+                Home: 18
+              Mac2:
+                Home: 18
+              Windows:
+                Home: 18
+          - DefText: Hyper+H
+            Bindings:
+              Linux:
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+          - DefText: Pinky+Thumb+Left
+            Bindings:
+              Linux:
+                Left: 11
+                Ctrl: 7
+                Super: 5
+                Alt: 6
+              Mac:
+                Left: 11
+                Ctrl: 7
+                Super: 5
+              Mac2:
+                Left: 11
+                Super: 5
+                Ctrl: 7
+              Windows:
+                Left: 11
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToLineBeginSelect:
+          - DefText: Shift+Home
+            Bindings:
+              Linux:
+                Shift: 8
+                Home: 18
+              Mac:
+                Shift: 8
+                Home: 18
+              Mac2:
+                Shift: 8
+                Home: 18
+              Windows:
+                Shift: 8
+                Home: 18
+          - DefText: Hyper+Shift+H
+            Bindings:
+              Linux:
+                Shift: 8
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                Shift: 8
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                Shift: 8
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                Shift: 8
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+          - DefText: Pinky+Thumb+Shift+Left
+            Bindings:
+              Linux:
+                Shift: 8
+                Left: 11
+                Ctrl: 7
+                Super: 5
+                Alt: 6
+              Mac:
+                Shift: 8
+                Left: 11
+                Ctrl: 7
+                Super: 5
+              Mac2:
+                Shift: 8
+                Left: 11
+                Super: 5
+                Ctrl: 7
+              Windows:
+                Shift: 8
+                Left: 11
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToLineEnd:
+          - DefText: End
+            Bindings:
+              Linux:
+                End: 19
+              Mac:
+                End: 19
+              Mac2:
+                End: 19
+              Windows:
+                End: 19
+          - DefText: Hyper+Semicolon
+            Bindings:
+              Linux:
+                Semicolon: 28
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                Semicolon: 28
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                Semicolon: 28
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                Semicolon: 28
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+          - DefText: Pinky+Thumb+Right
+            Bindings:
+              Linux:
+                Right: 12
+                Ctrl: 7
+                Super: 5
+                Alt: 6
+              Mac:
+                Right: 12
+                Ctrl: 7
+                Super: 5
+              Mac2:
+                Right: 12
+                Super: 5
+                Ctrl: 7
+              Windows:
+                Right: 12
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToLineEndSelect:
+          - DefText: Shift+End
+            Bindings:
+              Linux:
+                Shift: 8
+                End: 19
+              Mac:
+                Shift: 8
+                End: 19
+              Mac2:
+                Shift: 8
+                End: 19
+              Windows:
+                Shift: 8
+                End: 19
+          - DefText: Hyper+Shift+Semicolon
+            Bindings:
+              Linux:
+                Shift: 8
+                Semicolon: 28
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                Shift: 8
+                Semicolon: 28
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                Shift: 8
+                Semicolon: 28
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                Shift: 8
+                Semicolon: 28
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+          - DefText: Pinky+Thumb+Shift+Right
+            Bindings:
+              Linux:
+                Shift: 8
+                Right: 12
+                Ctrl: 7
+                Super: 5
+                Alt: 6
+              Mac:
+                Shift: 8
+                Right: 12
+                Ctrl: 7
+                Super: 5
+              Mac2:
+                Shift: 8
+                Right: 12
+                Super: 5
+                Ctrl: 7
+              Windows:
+                Shift: 8
+                Right: 12
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToLineForward:
+          - DefText: Down
+            Bindings:
+              Linux:
+                Down: 10
+              Mac:
+                Down: 10
+              Mac2:
+                Down: 10
+              Windows:
+                Down: 10
+          - DefText: Hyper+K
+            Bindings:
+              Linux:
+                K: 44
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                K: 44
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                K: 44
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                K: 44
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToLineForwardSelect:
+          - DefText: Shift+Down
+            Bindings:
+              Linux:
+                Shift: 8
+                Down: 10
+              Mac:
+                Shift: 8
+                Down: 10
+              Mac2:
+                Shift: 8
+                Down: 10
+              Windows:
+                Shift: 8
+                Down: 10
+          - DefText: Hyper+Shift+K
+            Bindings:
+              Linux:
+                Shift: 8
+                K: 44
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                Shift: 8
+                K: 44
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                Shift: 8
+                K: 44
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                Shift: 8
+                K: 44
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToPageBackward:
+          - DefText: PageUp
+            Bindings:
+              Linux:
+                PageUp: 16
+              Mac:
+                PageUp: 16
+              Mac2:
+                PageUp: 16
+              Windows:
+                PageUp: 16
+          - DefText: Hyper+Y
+            Bindings:
+              Linux:
+                "Y": 58
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                "Y": 58
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                "Y": 58
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                "Y": 58
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToPageBackwardSelect:
+          - DefText: Shift+PageUp
+            Bindings:
+              Linux:
+                Shift: 8
+                PageUp: 16
+              Mac:
+                Shift: 8
+                PageUp: 16
+              Mac2:
+                Shift: 8
+                PageUp: 16
+              Windows:
+                Shift: 8
+                PageUp: 16
+          - DefText: Hyper+Shift+Y
+            Bindings:
+              Linux:
+                Shift: 8
+                "Y": 58
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                Shift: 8
+                "Y": 58
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                Shift: 8
+                "Y": 58
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                Shift: 8
+                "Y": 58
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToPageForward:
+          - DefText: PageDown
+            Bindings:
+              Linux:
+                PageDown: 17
+              Mac:
+                PageDown: 17
+              Mac2:
+                PageDown: 17
+              Windows:
+                PageDown: 17
+          - DefText: Hyper+H
+            Bindings:
+              Linux:
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToPageForwardSelect:
+          - DefText: Shift+PageDown
+            Bindings:
+              Linux:
+                Shift: 8
+                PageDown: 17
+              Mac:
+                Shift: 8
+                PageDown: 17
+              Mac2:
+                Shift: 8
+                PageDown: 17
+              Windows:
+                Shift: 8
+                PageDown: 17
+          - DefText: Hyper+Shift+H
+            Bindings:
+              Linux:
+                Shift: 8
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                Shift: 8
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                Shift: 8
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                Shift: 8
+                H: 41
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToSubwordBackward:
+          - DefText: Thumb+Left
+            Bindings:
+              Linux:
+                Left: 11
+                Super: 5
+                Alt: 6
+              Mac:
+                Left: 11
+                Super: 5
+              Mac2:
+                Left: 11
+                Ctrl: 7
+              Windows:
+                Left: 11
+                Alt: 6
+        CursorMoveToSubwordBackwardSelect:
+          - DefText: Thumb+Shift+Left
+            Bindings:
+              Linux:
+                Shift: 8
+                Left: 11
+                Super: 5
+                Alt: 6
+              Mac:
+                Shift: 8
+                Left: 11
+                Super: 5
+              Mac2:
+                Shift: 8
+                Left: 11
+                Ctrl: 7
+              Windows:
+                Shift: 8
+                Left: 11
+                Alt: 6
+        CursorMoveToSubwordForward:
+          - DefText: Thumb+Right
+            Bindings:
+              Linux:
+                Right: 12
+                Super: 5
+                Alt: 6
+              Mac:
+                Right: 12
+                Super: 5
+              Mac2:
+                Right: 12
+                Ctrl: 7
+              Windows:
+                Right: 12
+                Alt: 6
+        CursorMoveToSubwordForwardSelect:
+          - DefText: Thumb+Shift+Right
+            Bindings:
+              Linux:
+                Shift: 8
+                Right: 12
+                Super: 5
+                Alt: 6
+              Mac:
+                Shift: 8
+                Right: 12
+                Super: 5
+              Mac2:
+                Shift: 8
+                Right: 12
+                Ctrl: 7
+              Windows:
+                Shift: 8
+                Right: 12
+                Alt: 6
+        CursorMoveToTextBegin:
+          - DefText: Pinky+Home
+            Bindings:
+              Linux:
+                Home: 18
+                Ctrl: 7
+              Mac:
+                Home: 18
+                Ctrl: 7
+              Mac2:
+                Home: 18
+                Super: 5
+              Windows:
+                Home: 18
+                Ctrl: 7
+          - DefText: Hyper+T
+            Bindings:
+              Linux:
+                "T": 53
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                "T": 53
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                "T": 53
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                "T": 53
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToTextBeginSelect:
+          - DefText: Pinky+Shift+Home
+            Bindings:
+              Linux:
+                Shift: 8
+                Home: 18
+                Ctrl: 7
+              Mac:
+                Shift: 8
+                Home: 18
+                Ctrl: 7
+              Mac2:
+                Shift: 8
+                Home: 18
+                Super: 5
+              Windows:
+                Shift: 8
+                Home: 18
+                Ctrl: 7
+          - DefText: Hyper+Shift+T
+            Bindings:
+              Linux:
+                Shift: 8
+                "T": 53
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                Shift: 8
+                "T": 53
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                Shift: 8
+                "T": 53
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                Shift: 8
+                "T": 53
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToTextEnd:
+          - DefText: Pinky+End
+            Bindings:
+              Linux:
+                End: 19
+                Ctrl: 7
+              Mac:
+                End: 19
+                Ctrl: 7
+              Mac2:
+                End: 19
+                Super: 5
+              Windows:
+                End: 19
+                Ctrl: 7
+          - DefText: Hyper+B
+            Bindings:
+              Linux:
+                B: 35
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                B: 35
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                B: 35
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                B: 35
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToTextEndSelect:
+          - DefText: Pinky+Shift+End
+            Bindings:
+              Linux:
+                Shift: 8
+                End: 19
+                Ctrl: 7
+              Mac:
+                Shift: 8
+                End: 19
+                Ctrl: 7
+              Mac2:
+                Shift: 8
+                End: 19
+                Super: 5
+              Windows:
+                Shift: 8
+                End: 19
+                Ctrl: 7
+          - DefText: Hyper+Shift+B
+            Bindings:
+              Linux:
+                Shift: 8
+                B: 35
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                Shift: 8
+                B: 35
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                Shift: 8
+                B: 35
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                Shift: 8
+                B: 35
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToWordBackward:
+          - DefText: Pinky+Left
+            Bindings:
+              Linux:
+                Left: 11
+                Ctrl: 7
+              Mac:
+                Left: 11
+                Ctrl: 7
+              Mac2:
+                Left: 11
+                Super: 5
+              Windows:
+                Left: 11
+                Ctrl: 7
+          - DefText: Hyper+U
+            Bindings:
+              Linux:
+                U: 54
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                U: 54
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                U: 54
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                U: 54
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToWordBackwardSelect:
+          - DefText: Pinky+Shift+Left
+            Bindings:
+              Linux:
+                Shift: 8
+                Left: 11
+                Ctrl: 7
+              Mac:
+                Shift: 8
+                Left: 11
+                Ctrl: 7
+              Mac2:
+                Shift: 8
+                Left: 11
+                Super: 5
+              Windows:
+                Shift: 8
+                Left: 11
+                Ctrl: 7
+          - DefText: Hyper+Shift+U
+            Bindings:
+              Linux:
+                Shift: 8
+                U: 54
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                Shift: 8
+                U: 54
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                Shift: 8
+                U: 54
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                Shift: 8
+                U: 54
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToWordForward:
+          - DefText: Pinky+Right
+            Bindings:
+              Linux:
+                Right: 12
+                Ctrl: 7
+              Mac:
+                Right: 12
+                Ctrl: 7
+              Mac2:
+                Right: 12
+                Super: 5
+              Windows:
+                Right: 12
+                Ctrl: 7
+          - DefText: Hyper+O
+            Bindings:
+              Linux:
+                O: 48
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                O: 48
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                O: 48
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                O: 48
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMoveToWordForwardSelect:
+          - DefText: Pinky+Shift+Right
+            Bindings:
+              Linux:
+                Shift: 8
+                Right: 12
+                Ctrl: 7
+              Mac:
+                Shift: 8
+                Right: 12
+                Ctrl: 7
+              Mac2:
+                Shift: 8
+                Right: 12
+                Super: 5
+              Windows:
+                Shift: 8
+                Right: 12
+                Ctrl: 7
+          - DefText: Hyper+Shift+O
+            Bindings:
+              Linux:
+                Shift: 8
+                O: 48
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac:
+                Shift: 8
+                O: 48
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Mac2:
+                Shift: 8
+                O: 48
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+              Windows:
+                Shift: 8
+                O: 48
+                Super: 5
+                Ctrl: 7
+                Alt: 6
+        CursorMultiCloneAbove:
+          - DefText: Thumb+Shift+Up
+            Bindings:
+              Linux:
+                Shift: 8
+                Up: 9
+                Super: 5
+                Alt: 6
+              Mac:
+                Shift: 8
+                Up: 9
+                Super: 5
+              Mac2:
+                Shift: 8
+                Up: 9
+                Ctrl: 7
+              Windows:
+                Shift: 8
+                Up: 9
+                Alt: 6
+        CursorMultiCloneBelow:
+          - DefText: Thumb+Shift+Down
+            Bindings:
+              Linux:
+                Shift: 8
+                Down: 10
+                Super: 5
+                Alt: 6
+              Mac:
+                Shift: 8
+                Down: 10
+                Super: 5
+              Mac2:
+                Shift: 8
+                Down: 10
+                Ctrl: 7
+              Windows:
+                Shift: 8
+                Down: 10
+                Alt: 6
+        EditNodeMoveDown:
+          - DefText: Pinky+Shift+K
+            Bindings:
+              Linux:
+                Shift: 8
+                K: 44
+                Ctrl: 7
+              Mac:
+                Shift: 8
+                K: 44
+                Ctrl: 7
+              Mac2:
+                Shift: 8
+                K: 44
+                Super: 5
+              Windows:
+                Shift: 8
+                K: 44
+                Ctrl: 7
+        EditNodeMoveUp:
+          - DefText: Pinky+Shift+I
+            Bindings:
+              Linux:
+                Shift: 8
+                I: 42
+                Ctrl: 7
+              Mac:
+                Shift: 8
+                I: 42
+                Ctrl: 7
+              Mac2:
+                Shift: 8
+                I: 42
+                Super: 5
+              Windows:
+                Shift: 8
+                I: 42
+                Ctrl: 7
+        EditNodeMoveIn:
+          - DefText: Pinky+Shift+L
+            Bindings:
+              Linux:
+                Shift: 8
+                L: 45
+                Ctrl: 7
+              Mac:
+                Shift: 8
+                L: 45
+                Ctrl: 7
+              Mac2:
+                Shift: 8
+                L: 45
+                Super: 5
+              Windows:
+                Shift: 8
+                L: 45
+                Ctrl: 7
+        EditNodeMoveOut:
+          - DefText: Pinky+Shift+J
+            Bindings:
+              Linux:
+                Shift: 8
+                J: 43
+                Ctrl: 7
+              Mac:
+                Shift: 8
+                J: 43
+                Ctrl: 7
+              Mac2:
+                Shift: 8
+                J: 43
+                Super: 5
+              Windows:
+                Shift: 8
+                J: 43
+                Ctrl: 7
+        EditNodeInsertAboveSibling:
+          - DefText: Pinky+Shift+U
+            Bindings:
+              Linux:
+                Shift: 8
+                U: 54
+                Ctrl: 7
+              Mac:
+                Shift: 8
+                U: 54
+                Ctrl: 7
+              Mac2:
+                Shift: 8
+                U: 54
+                Super: 5
+              Windows:
+                Shift: 8
+                U: 54
+                Ctrl: 7
+        EditNodeInsertBelowSibling:
+          - DefText: Pinky+Shift+N
+            Bindings:
+              Linux:
+                Shift: 8
+                "N": 47
+                Ctrl: 7
+              Mac:
+                Shift: 8
+                "N": 47
+                Ctrl: 7
+              Mac2:
+                Shift: 8
+                "N": 47
+                Super: 5
+              Windows:
+                Shift: 8
+                "N": 47
+                Ctrl: 7
+        EditNodeInsertAboveParent:
+          - DefText: Pinky+Shift+Y
+            Bindings:
+              Linux:
+                Shift: 8
+                "Y": 58
+                Ctrl: 7
+              Mac:
+                Shift: 8
+                "Y": 58
+                Ctrl: 7
+              Mac2:
+                Shift: 8
+                "Y": 58
+                Super: 5
+              Windows:
+                Shift: 8
+                "Y": 58
+                Ctrl: 7
+        EditNodeInsertBelowChild:
+          - DefText: Pinky+Shift+M
+            Bindings:
+              Linux:
+                Shift: 8
+                M: 46
+                Ctrl: 7
+              Mac:
+                Shift: 8
+                M: 46
+                Ctrl: 7
+              Mac2:
+                Shift: 8
+                M: 46
+                Super: 5
+              Windows:
+                Shift: 8
+                M: 46
+                Ctrl: 7
+        EditNodeInsertDuplicate:
+          - DefText: Pinky+D
+            Bindings:
+              Linux:
+                D: 37
+                Ctrl: 7
+              Mac:
+                D: 37
+                Ctrl: 7
+              Mac2:
+                D: 37
+                Super: 5
+              Windows:
+                D: 37
+                Ctrl: 7
+        EditNodeRename:
+          - DefText: Pinky+T
+            Bindings:
+              Linux:
+                "T": 53
+                Ctrl: 7
+              Mac:
+                "T": 53
+                Ctrl: 7
+              Mac2:
+                "T": 53
+                Super: 5
+              Windows:
+                "T": 53
+                Ctrl: 7
+        EditNodeDelete:
+          - DefText: Pinky+Shift+X
+            Bindings:
+              Linux:
+                Shift: 8
+                X: 57
+                Ctrl: 7
+              Mac:
+                Shift: 8
+                X: 57
+                Ctrl: 7
+              Mac2:
+                Shift: 8
+                X: 57
+                Super: 5
+              Windows:
+                Shift: 8
+                X: 57
+                Ctrl: 7
+        EditNodeJoin:
+          - DefText: Pinky+Shift+O
+            Bindings:
+              Linux:
+                Shift: 8
+                O: 48
+                Ctrl: 7
+              Mac:
+                Shift: 8
+                O: 48
+                Ctrl: 7
+              Mac2:
+                Shift: 8
+                O: 48
+                Super: 5
+              Windows:
+                Shift: 8
+                O: 48
+                Ctrl: 7
+        EditNodeSplit:
+          - DefText: Pinky+Enter
+            Bindings:
+              Linux:
+                Enter: 13
+                Ctrl: 7
+              Mac:
+                Enter: 13
+                Ctrl: 7
+              Mac2:
+                Enter: 13
+                Super: 5
+              Windows:
+                Enter: 13
+                Ctrl: 7
+        GotoEditorSettings:
+          - DefText: Pinky+Comma
+            Bindings:
+              Linux:
+                Comma: 30
+                Ctrl: 7
+              Mac:
+                Comma: 30
+                Ctrl: 7
+              Mac2:
+                Comma: 30
+                Super: 5
+              Windows:
+                Comma: 30
+                Ctrl: 7

@@ -1,8 +1,8 @@
-package jetbrains
+package intellij
 
-Name: "Jetbrains"
+Name: "IntelliJ"
 
-EditorCommandNameMap: [cmdName=string]: #JetbrainsCommand
+EditorCommandNameMap: [cmdName=string]: #IntellijCommand
 
 EditorCommandNameMap: {
 

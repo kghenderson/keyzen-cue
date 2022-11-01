@@ -12,10 +12,10 @@ let thisStrokes = #Strokes & {
 		"CursorMoveToCharForwardSelect": [["Shift+Right"], ["Hyper+Shift+L"]] // select right
 		"CursorMoveToLineBackward": [["Up"], ["Hyper+I"]] // up
 		"CursorMoveToLineBackwardSelect": [["Shift+Up"], ["Hyper+Shift+I"]] // select up
-		"CursorMoveToLineBegin": [["Home"], ["Hyper+Y"], ["Pinky+Thumb+Left"]] // line begin
-		"CursorMoveToLineBeginSelect": [["Shift+Home"], ["Hyper+Shift+Y"], ["Pinky+Thumb+Shift+Left"]] // select line begin
-		"CursorMoveToLineEnd": [["End"], ["Hyper+P"], ["Pinky+Thumb+Right"]] // line end
-		"CursorMoveToLineEndSelect": [["Shift+End"], ["Hyper+Shift+P"], ["Pinky+Thumb+Shift+Right"]] // select line end
+		"CursorMoveToLineBegin": [["Home"], ["Hyper+H"], ["Pinky+Thumb+Left"]] // line begin
+		"CursorMoveToLineBeginSelect": [["Shift+Home"], ["Hyper+Shift+H"], ["Pinky+Thumb+Shift+Left"]] // select line begin
+		"CursorMoveToLineEnd": [["End"], ["Hyper+Semicolon"], ["Pinky+Thumb+Right"]] // line end
+		"CursorMoveToLineEndSelect": [["Shift+End"], ["Hyper+Shift+Semicolon"], ["Pinky+Thumb+Shift+Right"]] // select line end
 		"CursorMoveToLineForward": [["Down"], ["Hyper+K"]] // down
 		"CursorMoveToLineForwardSelect": [["Shift+Down"], ["Hyper+Shift+K"]] // select down
 		"CursorMoveToPageBackward": [["PageUp"], ["Hyper+Y"]] // page up
