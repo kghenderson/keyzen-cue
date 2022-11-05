@@ -7,17 +7,33 @@ creates local underscore files for debugging:
 cue eval   => __eval_DIRNAME.cue
 cue export => _DIRNAME.
 
-all      : runs all commands
-fmt,f    : cue format
-eval,ev  : cue eval
-vet,v    : cue vet
-exp,ex,x : cue export\n
-clean,c  : remove temp files
-help,h   : displays this message
-version  : displays script version
+# local commands
+all             : runs all commands
+fmt,f           : cue format
+eval,ev         : cue eval
+vet,v           : cue vet
+exp,ex,x        : cue export\n
+clean,c         : remove temp files
+help,h          : displays this message
+version         : displays script version
+
+# remote commands
+discuss         : opens CUE discussions 
+issues          : opens CUE issues
+packages,pkg    : opens CUE packages on pkg.go for function references
+playground,play : opens CUE playground
+proposals       : opens CUE proposals
+wiki            : opens CUE wiki
 
 "
 version="0.1.0"
+cuelang_discussions_url="https://github.com/cue-lang/cue/discussions"
+cuelang_docs_url="https://cuelang.org/docs/"
+cuelang_issues_url="https://github.com/cue-lang/cue/issues"
+cuelang_packages_url=https://pkg.go.dev/cuelang.org/go@v0.4.3
+cuelang_playground_url="https://cuelang.org/play"
+cuelang_proposals_url="https://github.com/cue-lang/cue/labels/Proposal"
+cuelang_wiki_url="https://github.com/cue-lang/cue/wiki"
 
 # use these flags for debugging
 # set -x
@@ -72,6 +88,32 @@ function cmd_cuemake_version() {
   printf "%s\n" "$version"
 }
 
+function cmd_cuemake_openurl() {
+  printf "nohup open %q >/dev/null 2>&1 &\n" "$1" >&2
+  nohup open "$1" >/dev/null 2>&1
+}
+
+function cmd_cuelang_discuss() {
+  cmd_cuemake_openurl $cuelang_discussions_url
+}
+function cmd_cuelang_docs() {
+  cmd_cuemake_openurl $cuelang_docs_url
+}
+function cmd_cuelang_issues() {
+  cmd_cuemake_openurl $cuelang_issues_url
+}
+function cmd_cuelang_proposals() {
+  cmd_cuemake_openurl $cuelang_proposals_url
+}
+function cmd_cuelang_playground() {
+  cmd_cuemake_openurl $cuelang_playground_url
+}
+function cmd_cuelang_packages() {
+  cmd_cuemake_openurl $cuelang_packages_url
+}
+function cmd_cuelang_wiki() {
+  cmd_cuemake_openurl $cuelang_wiki_url
+}
 
 # command is the first argument (optional)
 cmd_arg=$1
@@ -93,6 +135,20 @@ elif [ "$cmd_arg" == "clean" ] || [ "$cmd_arg" == "c" ]; then
   cmd_cuemake_clean
 elif [ "$cmd_arg" == "version" ] || [ "$cmd_arg" == "ver" ]; then
   cmd_cuemake_version
+elif [ "$cmd_arg" == "discuss" ]; then
+  cmd_cuelang_discuss
+elif [ "$cmd_arg" == "docs" ]; then
+  cmd_cuelang_docs
+elif [ "$cmd_arg" == "issues" ]; then
+  cmd_cuelang_issues
+elif [ "$cmd_arg" == "playground" ] || [ "$cmd_arg" == "play" ]; then
+  cmd_cuelang_playground
+elif [ "$cmd_arg" == "proposals" ]; then
+  cmd_cuelang_proposals
+elif [ "$cmd_arg" == "packages" ] || [ "$cmd_arg" == "pkg" ]; then
+  cmd_cuelang_proposals
+elif [ "$cmd_arg" == "wiki" ]; then
+  cmd_cuelang_wiki
 elif [ "$cmd_arg" == "help" ] || [ "$cmd_arg" == "h" ]; then
   cmd_cuemake_help
 else
